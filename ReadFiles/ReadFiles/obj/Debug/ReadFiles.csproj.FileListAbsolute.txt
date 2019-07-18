@@ -1,1 +1,8 @@
 C:\Users\SF-010-E\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\ReadFiles.exe.config
+C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\ReadFiles.exe.config
+C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\ReadFiles.exe
+C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\ReadFiles.pdb
+C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Debug\ReadFiles.csprojAssemblyReference.cache
+C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Debug\ReadFiles.csproj.CoreCompileInputs.cache
+C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Debug\ReadFiles.exe
+C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Debug\ReadFiles.pdb
