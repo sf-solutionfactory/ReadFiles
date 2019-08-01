@@ -22,7 +22,7 @@ namespace ReadFilesConfig
         }
         private void Guardar()
         {
-
+            btnGuardar.Enabled = false;
             settings.sap_name = txtDescripcion.Text;
             settings.sap_host = txtServidor.Text;
             settings.sap_sysnumber = txtInstancia.Text;
@@ -45,12 +45,52 @@ namespace ReadFilesConfig
             settings.directorioCtesI = txtClienteI.Text;
             settings.directorioProvI = txtProveedorI.Text;
             settings.directorioNomI = txtNominaI.Text;
+            settings.esActivoCteC = chkClienteC.Checked;
+            settings.esActivoProvC = chkProveedorC.Checked;
+            settings.esActivoNomC = chkNominaC.Checked;
+            settings.esActivoCteI = chkClienteI.Checked;
+            settings.esActivoProvI = chkProveedorI.Checked;
+            settings.esActivoNomI = chkNominaI.Checked;
 
+            settings.prox_act = chkProxy.Checked;
             settings.prox_host = txtIPProxy.Text;
             settings.prox_puert = Convert.ToInt32(txtPuerProxy.Text);
             settings.prox_user = txtUsuProxy.Text;
             settings.prox_pass = txtPassProxy.Text;
+            if (String.IsNullOrEmpty(settings.directorioLog))
+            {
+                MessageBox.Show("Agrege un directorio en el Log", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnGuardar.Enabled = true;
+                return;
+            }
+            if (String.IsNullOrEmpty(settings.prox_host) && chkProxy.Checked )
+            {
+                MessageBox.Show("Agrege la direccion del proxy", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnGuardar.Enabled = true;
+                return;
+            }
             AppSettings.SettConfig(settings);//guarda la configuracion
+            string mensajeconn = "";
+            if (chkProxy.Checked)
+            {
+                mensajeconn = funcionProxy();
+                if (mensajeconn != "")
+                {
+                    MessageBox.Show(mensajeconn, "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    btnGuardar.Enabled = true;
+                    return;
+                }
+            }
+            mensajeconn = SAP_Connection.Save_sap_settings(settings);//valida la conexion en sap
+            btnGuardar.Enabled = true;
+            if (mensajeconn == "")
+            {
+                MessageBox.Show("¡¡Guardado Correctamente!!", "¡Correcto!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(mensajeconn, "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void CargarConf()
         {
@@ -77,7 +117,14 @@ namespace ReadFilesConfig
             txtClienteI.Text = settings.directorioCtesI;
             txtProveedorI.Text = settings.directorioProvI;
             txtNominaI.Text = settings.directorioNomI;
+            chkClienteC.Checked = settings.esActivoCteC;
+            chkProveedorC.Checked = settings.esActivoProvC;
+            chkNominaC.Checked = settings.esActivoNomC;
+            chkClienteI.Checked = settings.esActivoCteI;
+            chkProveedorI.Checked = settings.esActivoProvI;
+            chkNominaI.Checked = settings.esActivoNomI;
 
+            chkProxy.Checked = settings.prox_act;
             txtIPProxy.Text = settings.prox_host;
             txtPuerProxy.Text = settings.prox_puert.ToString();
             txtUsuProxy.Text = settings.prox_user;
@@ -85,7 +132,7 @@ namespace ReadFilesConfig
         }
         private string examinarRuta(string dir)
         {
-            string res = "";
+            string res = dir;
             folderBrowserDialog1.SelectedPath = dir;
             DialogResult result = folderBrowserDialog1.ShowDialog();
 
@@ -121,12 +168,28 @@ namespace ReadFilesConfig
             }
             return msm;
         }
-        private void txtPuerProxy_KeyPress(object sender, KeyPressEventArgs e)
+        private void SoloNum(ref KeyPressEventArgs e)
         {
-            if (Char.IsNumber(e.KeyChar))
+            if (Char.IsDigit(e.KeyChar))
             {
                 e.Handled = false;
             }
+            else
+            {
+                if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso 
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    //el resto de teclas pulsadas se desactivan 
+                    e.Handled = true;
+                }
+            }
+        }
+        private void txtPuerProxy_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNum(ref e);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -136,10 +199,7 @@ namespace ReadFilesConfig
 
         private void txtMandante_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsNumber(e.KeyChar))
-            {
-                e.Handled = false;
-            }
+            SoloNum(ref e);
         }
 
         private void btnProveedor_Click(object sender, EventArgs e)
@@ -159,37 +219,44 @@ namespace ReadFilesConfig
 
         private void btnLog_Click(object sender, EventArgs e)
         {
-            this.txtNomina.Text = examinarRuta(txtLog.Text);
+            this.txtLog.Text = examinarRuta(txtLog.Text);
         }
 
         private void btnProveedorC_Click(object sender, EventArgs e)
         {
-            this.txtProveedor.Text = examinarRuta(txtProveedorC.Text);
+            this.txtProveedorC.Text = examinarRuta(txtProveedorC.Text);
         }
 
         private void btnClienteC_Click(object sender, EventArgs e)
         {
-            this.txtNomina.Text = examinarRuta(txtClienteC.Text);
+            this.txtClienteC.Text = examinarRuta(txtClienteC.Text);
         }
 
         private void btnNominaC_Click(object sender, EventArgs e)
         {
-            this.txtNomina.Text = examinarRuta(txtNominaC.Text);
+            this.txtNominaC.Text = examinarRuta(txtNominaC.Text);
         }
 
         private void btnProveedorI_Click(object sender, EventArgs e)
         {
-            this.txtProveedor.Text = examinarRuta(txtProveedorI.Text);
+            this.txtProveedorI.Text = examinarRuta(txtProveedorI.Text);
         }
 
         private void btnClienteI_Click(object sender, EventArgs e)
         {
-            this.txtNomina.Text = examinarRuta(txtClienteI.Text);
+            this.txtClienteI.Text = examinarRuta(txtClienteI.Text);
         }
 
         private void btnNominaI_Click(object sender, EventArgs e)
         {
-            this.txtNomina.Text = examinarRuta(txtNominaI.Text);
+            this.txtNominaI.Text = examinarRuta(txtNominaI.Text);
         }
+
+        private void txtInstancia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNum(ref e);
+        }
+
+        
     }
 }

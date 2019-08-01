@@ -6,3 +6,14 @@ C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Debug\ReadFi
 C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Debug\ReadFiles.csproj.CoreCompileInputs.cache
 C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Debug\ReadFiles.exe
 C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Debug\ReadFiles.pdb
+C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\sapnco.dll
+C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\sapnco_utils.dll
+C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\SAT.Services.dll
+C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\SW-sdk-45.dll
+C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\Newtonsoft.Json.dll
+C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\SAT.Services.pdb
+C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\SAT.Services.dll.config
+C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\SW-sdk-45.pdb
+C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\SW-sdk-45.dll.config
+C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\Newtonsoft.Json.xml
+C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Debug\ReadFiles.csproj.CopyComplete

@@ -124,6 +124,24 @@ namespace SharedSettings
         public bool prox_act
         { get; set; }
 
+        public bool esActivoProvC
+        { get; set; }
+
+        public bool esActivoCteC
+        { get; set; }
+
+        public bool esActivoNomC
+        { get; set; }
+
+        public bool esActivoProvI
+        { get; set; }
+
+        public bool esActivoCteI
+        { get; set; }
+
+        public bool esActivoNomI
+        { get; set; }
+
         public Settings()
         {
             sap_client = "";
@@ -148,6 +166,12 @@ namespace SharedSettings
             directorioCtesI = "";
             directorioNomC = "";
             directorioNomI = "";
+            esActivoProvC = false;
+            esActivoCteC = false;
+            esActivoNomC = false;
+            esActivoProvI = false;
+            esActivoCteI = false;
+            esActivoNomI = false;
 
             prox_act = false;
             prox_host = "";

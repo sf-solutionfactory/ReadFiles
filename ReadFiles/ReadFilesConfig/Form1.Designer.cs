@@ -65,36 +65,36 @@
             this.btnNomina = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.chkProveedorI = new System.Windows.Forms.CheckBox();
+            this.chkClienteI = new System.Windows.Forms.CheckBox();
+            this.chkNominaI = new System.Windows.Forms.CheckBox();
+            this.txtProveedorI = new System.Windows.Forms.TextBox();
+            this.btnNominaI = new System.Windows.Forms.Button();
+            this.btnProveedorI = new System.Windows.Forms.Button();
+            this.txtNominaI = new System.Windows.Forms.TextBox();
+            this.txtClienteI = new System.Windows.Forms.TextBox();
+            this.btnClienteI = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.txtPassProxy = new System.Windows.Forms.TextBox();
-            this.txtUsuProxy = new System.Windows.Forms.TextBox();
-            this.txtPuerProxy = new System.Windows.Forms.TextBox();
-            this.txtIPProxy = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.chkNominaC = new System.Windows.Forms.CheckBox();
+            this.chkClienteC = new System.Windows.Forms.CheckBox();
+            this.chkProveedorC = new System.Windows.Forms.CheckBox();
             this.txtProveedorC = new System.Windows.Forms.TextBox();
             this.btnProveedorC = new System.Windows.Forms.Button();
             this.txtClienteC = new System.Windows.Forms.TextBox();
             this.btnClienteC = new System.Windows.Forms.Button();
             this.txtNominaC = new System.Windows.Forms.TextBox();
             this.btnNominaC = new System.Windows.Forms.Button();
-            this.txtProveedorI = new System.Windows.Forms.TextBox();
-            this.btnProveedorI = new System.Windows.Forms.Button();
-            this.txtClienteI = new System.Windows.Forms.TextBox();
-            this.btnClienteI = new System.Windows.Forms.Button();
-            this.txtNominaI = new System.Windows.Forms.TextBox();
-            this.btnNominaI = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.chkProxy = new System.Windows.Forms.CheckBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtPassProxy = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtUsuProxy = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtPuerProxy = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtIPProxy = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
@@ -163,6 +163,7 @@
             this.txtInstancia.Name = "txtInstancia";
             this.txtInstancia.Size = new System.Drawing.Size(54, 20);
             this.txtInstancia.TabIndex = 19;
+            this.txtInstancia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInstancia_KeyPress);
             // 
             // txtMandante
             // 
@@ -464,9 +465,9 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.label17);
-            this.groupBox4.Controls.Add(this.label18);
-            this.groupBox4.Controls.Add(this.label19);
+            this.groupBox4.Controls.Add(this.chkProveedorI);
+            this.groupBox4.Controls.Add(this.chkClienteI);
+            this.groupBox4.Controls.Add(this.chkNominaI);
             this.groupBox4.Controls.Add(this.txtProveedorI);
             this.groupBox4.Controls.Add(this.btnNominaI);
             this.groupBox4.Controls.Add(this.btnProveedorI);
@@ -480,11 +481,92 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Directorio destino incorrecto";
             // 
+            // chkProveedorI
+            // 
+            this.chkProveedorI.AutoSize = true;
+            this.chkProveedorI.Location = new System.Drawing.Point(50, 23);
+            this.chkProveedorI.Name = "chkProveedorI";
+            this.chkProveedorI.Size = new System.Drawing.Size(78, 17);
+            this.chkProveedorI.TabIndex = 27;
+            this.chkProveedorI.Text = "Proveedor:";
+            this.chkProveedorI.UseVisualStyleBackColor = true;
+            // 
+            // chkClienteI
+            // 
+            this.chkClienteI.AutoSize = true;
+            this.chkClienteI.Location = new System.Drawing.Point(50, 81);
+            this.chkClienteI.Name = "chkClienteI";
+            this.chkClienteI.Size = new System.Drawing.Size(61, 17);
+            this.chkClienteI.TabIndex = 28;
+            this.chkClienteI.Text = "Cliente:";
+            this.chkClienteI.UseVisualStyleBackColor = true;
+            // 
+            // chkNominaI
+            // 
+            this.chkNominaI.AutoSize = true;
+            this.chkNominaI.Location = new System.Drawing.Point(50, 141);
+            this.chkNominaI.Name = "chkNominaI";
+            this.chkNominaI.Size = new System.Drawing.Size(65, 17);
+            this.chkNominaI.TabIndex = 29;
+            this.chkNominaI.Text = "Nomina:";
+            this.chkNominaI.UseVisualStyleBackColor = true;
+            // 
+            // txtProveedorI
+            // 
+            this.txtProveedorI.Location = new System.Drawing.Point(50, 46);
+            this.txtProveedorI.Name = "txtProveedorI";
+            this.txtProveedorI.Size = new System.Drawing.Size(435, 20);
+            this.txtProveedorI.TabIndex = 32;
+            // 
+            // btnNominaI
+            // 
+            this.btnNominaI.Location = new System.Drawing.Point(526, 161);
+            this.btnNominaI.Name = "btnNominaI";
+            this.btnNominaI.Size = new System.Drawing.Size(94, 25);
+            this.btnNominaI.TabIndex = 25;
+            this.btnNominaI.Text = "Examinar";
+            this.btnNominaI.UseVisualStyleBackColor = true;
+            this.btnNominaI.Click += new System.EventHandler(this.btnNominaI_Click);
+            // 
+            // btnProveedorI
+            // 
+            this.btnProveedorI.Location = new System.Drawing.Point(526, 43);
+            this.btnProveedorI.Name = "btnProveedorI";
+            this.btnProveedorI.Size = new System.Drawing.Size(94, 25);
+            this.btnProveedorI.TabIndex = 31;
+            this.btnProveedorI.Text = "Examinar";
+            this.btnProveedorI.UseVisualStyleBackColor = true;
+            this.btnProveedorI.Click += new System.EventHandler(this.btnProveedorI_Click);
+            // 
+            // txtNominaI
+            // 
+            this.txtNominaI.Location = new System.Drawing.Point(50, 164);
+            this.txtNominaI.Name = "txtNominaI";
+            this.txtNominaI.Size = new System.Drawing.Size(435, 20);
+            this.txtNominaI.TabIndex = 26;
+            // 
+            // txtClienteI
+            // 
+            this.txtClienteI.Location = new System.Drawing.Point(50, 104);
+            this.txtClienteI.Name = "txtClienteI";
+            this.txtClienteI.Size = new System.Drawing.Size(435, 20);
+            this.txtClienteI.TabIndex = 29;
+            // 
+            // btnClienteI
+            // 
+            this.btnClienteI.Location = new System.Drawing.Point(526, 101);
+            this.btnClienteI.Name = "btnClienteI";
+            this.btnClienteI.Size = new System.Drawing.Size(94, 25);
+            this.btnClienteI.TabIndex = 28;
+            this.btnClienteI.Text = "Examinar";
+            this.btnClienteI.UseVisualStyleBackColor = true;
+            this.btnClienteI.Click += new System.EventHandler(this.btnClienteI_Click);
+            // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.label16);
-            this.groupBox5.Controls.Add(this.label15);
-            this.groupBox5.Controls.Add(this.label14);
+            this.groupBox5.Controls.Add(this.chkNominaC);
+            this.groupBox5.Controls.Add(this.chkClienteC);
+            this.groupBox5.Controls.Add(this.chkProveedorC);
             this.groupBox5.Controls.Add(this.txtProveedorC);
             this.groupBox5.Controls.Add(this.btnProveedorC);
             this.groupBox5.Controls.Add(this.txtClienteC);
@@ -498,82 +580,35 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Directorio destino correcto";
             // 
-            // tabPage4
+            // chkNominaC
             // 
-            this.tabPage4.Controls.Add(this.groupBox6);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(768, 477);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Proxy";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.chkNominaC.AutoSize = true;
+            this.chkNominaC.Location = new System.Drawing.Point(51, 137);
+            this.chkNominaC.Name = "chkNominaC";
+            this.chkNominaC.Size = new System.Drawing.Size(65, 17);
+            this.chkNominaC.TabIndex = 26;
+            this.chkNominaC.Text = "Nomina:";
+            this.chkNominaC.UseVisualStyleBackColor = true;
             // 
-            // txtPassProxy
+            // chkClienteC
             // 
-            this.txtPassProxy.Location = new System.Drawing.Point(33, 160);
-            this.txtPassProxy.Name = "txtPassProxy";
-            this.txtPassProxy.Size = new System.Drawing.Size(134, 20);
-            this.txtPassProxy.TabIndex = 7;
-            this.txtPassProxy.UseSystemPasswordChar = true;
+            this.chkClienteC.AutoSize = true;
+            this.chkClienteC.Location = new System.Drawing.Point(51, 78);
+            this.chkClienteC.Name = "chkClienteC";
+            this.chkClienteC.Size = new System.Drawing.Size(61, 17);
+            this.chkClienteC.TabIndex = 25;
+            this.chkClienteC.Text = "Cliente:";
+            this.chkClienteC.UseVisualStyleBackColor = true;
             // 
-            // txtUsuProxy
+            // chkProveedorC
             // 
-            this.txtUsuProxy.Location = new System.Drawing.Point(33, 109);
-            this.txtUsuProxy.Name = "txtUsuProxy";
-            this.txtUsuProxy.Size = new System.Drawing.Size(134, 20);
-            this.txtUsuProxy.TabIndex = 6;
-            // 
-            // txtPuerProxy
-            // 
-            this.txtPuerProxy.Location = new System.Drawing.Point(186, 63);
-            this.txtPuerProxy.Name = "txtPuerProxy";
-            this.txtPuerProxy.Size = new System.Drawing.Size(38, 20);
-            this.txtPuerProxy.TabIndex = 5;
-            this.txtPuerProxy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPuerProxy_KeyPress);
-            // 
-            // txtIPProxy
-            // 
-            this.txtIPProxy.Location = new System.Drawing.Point(33, 63);
-            this.txtIPProxy.Name = "txtIPProxy";
-            this.txtIPProxy.Size = new System.Drawing.Size(134, 20);
-            this.txtIPProxy.TabIndex = 4;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(30, 144);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(64, 13);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "Contraseña:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(30, 93);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(46, 13);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "Usuario:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(183, 47);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 13);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Puerto:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(30, 47);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 13);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Dirección:";
+            this.chkProveedorC.AutoSize = true;
+            this.chkProveedorC.Location = new System.Drawing.Point(51, 19);
+            this.chkProveedorC.Name = "chkProveedorC";
+            this.chkProveedorC.Size = new System.Drawing.Size(78, 17);
+            this.chkProveedorC.TabIndex = 24;
+            this.chkProveedorC.Text = "Proveedor:";
+            this.chkProveedorC.UseVisualStyleBackColor = true;
             // 
             // txtProveedorC
             // 
@@ -626,110 +661,16 @@
             this.btnNominaC.UseVisualStyleBackColor = true;
             this.btnNominaC.Click += new System.EventHandler(this.btnNominaC_Click);
             // 
-            // txtProveedorI
+            // tabPage4
             // 
-            this.txtProveedorI.Location = new System.Drawing.Point(50, 46);
-            this.txtProveedorI.Name = "txtProveedorI";
-            this.txtProveedorI.Size = new System.Drawing.Size(435, 20);
-            this.txtProveedorI.TabIndex = 32;
-            // 
-            // btnProveedorI
-            // 
-            this.btnProveedorI.Location = new System.Drawing.Point(526, 43);
-            this.btnProveedorI.Name = "btnProveedorI";
-            this.btnProveedorI.Size = new System.Drawing.Size(94, 25);
-            this.btnProveedorI.TabIndex = 31;
-            this.btnProveedorI.Text = "Examinar";
-            this.btnProveedorI.UseVisualStyleBackColor = true;
-            this.btnProveedorI.Click += new System.EventHandler(this.btnProveedorI_Click);
-            // 
-            // txtClienteI
-            // 
-            this.txtClienteI.Location = new System.Drawing.Point(50, 104);
-            this.txtClienteI.Name = "txtClienteI";
-            this.txtClienteI.Size = new System.Drawing.Size(435, 20);
-            this.txtClienteI.TabIndex = 29;
-            // 
-            // btnClienteI
-            // 
-            this.btnClienteI.Location = new System.Drawing.Point(526, 101);
-            this.btnClienteI.Name = "btnClienteI";
-            this.btnClienteI.Size = new System.Drawing.Size(94, 25);
-            this.btnClienteI.TabIndex = 28;
-            this.btnClienteI.Text = "Examinar";
-            this.btnClienteI.UseVisualStyleBackColor = true;
-            this.btnClienteI.Click += new System.EventHandler(this.btnClienteI_Click);
-            // 
-            // txtNominaI
-            // 
-            this.txtNominaI.Location = new System.Drawing.Point(50, 164);
-            this.txtNominaI.Name = "txtNominaI";
-            this.txtNominaI.Size = new System.Drawing.Size(435, 20);
-            this.txtNominaI.TabIndex = 26;
-            // 
-            // btnNominaI
-            // 
-            this.btnNominaI.Location = new System.Drawing.Point(526, 161);
-            this.btnNominaI.Name = "btnNominaI";
-            this.btnNominaI.Size = new System.Drawing.Size(94, 25);
-            this.btnNominaI.TabIndex = 25;
-            this.btnNominaI.Text = "Examinar";
-            this.btnNominaI.UseVisualStyleBackColor = true;
-            this.btnNominaI.Click += new System.EventHandler(this.btnNominaI_Click);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(48, 16);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(59, 13);
-            this.label14.TabIndex = 24;
-            this.label14.Text = "Proveedor:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(48, 76);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(42, 13);
-            this.label15.TabIndex = 25;
-            this.label15.Text = "Cliente:";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(48, 133);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(46, 13);
-            this.label16.TabIndex = 26;
-            this.label16.Text = "Nómina:";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(47, 16);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(59, 13);
-            this.label17.TabIndex = 27;
-            this.label17.Text = "Proveedor:";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(47, 79);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(42, 13);
-            this.label18.TabIndex = 28;
-            this.label18.Text = "Cliente:";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(47, 137);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(46, 13);
-            this.label19.TabIndex = 29;
-            this.label19.Text = "Nómina:";
+            this.tabPage4.Controls.Add(this.groupBox6);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(768, 477);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Proxy";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // groupBox6
             // 
@@ -758,6 +699,72 @@
             this.chkProxy.TabIndex = 8;
             this.chkProxy.Text = "Activar Proxy";
             this.chkProxy.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(30, 47);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(55, 13);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Dirección:";
+            // 
+            // txtPassProxy
+            // 
+            this.txtPassProxy.Location = new System.Drawing.Point(33, 160);
+            this.txtPassProxy.Name = "txtPassProxy";
+            this.txtPassProxy.Size = new System.Drawing.Size(134, 20);
+            this.txtPassProxy.TabIndex = 7;
+            this.txtPassProxy.UseSystemPasswordChar = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(183, 47);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(41, 13);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Puerto:";
+            // 
+            // txtUsuProxy
+            // 
+            this.txtUsuProxy.Location = new System.Drawing.Point(33, 109);
+            this.txtUsuProxy.Name = "txtUsuProxy";
+            this.txtUsuProxy.Size = new System.Drawing.Size(134, 20);
+            this.txtUsuProxy.TabIndex = 6;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(30, 93);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(46, 13);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "Usuario:";
+            // 
+            // txtPuerProxy
+            // 
+            this.txtPuerProxy.Location = new System.Drawing.Point(186, 63);
+            this.txtPuerProxy.Name = "txtPuerProxy";
+            this.txtPuerProxy.Size = new System.Drawing.Size(38, 20);
+            this.txtPuerProxy.TabIndex = 5;
+            this.txtPuerProxy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPuerProxy_KeyPress);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(30, 144);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(64, 13);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "Contraseña:";
+            // 
+            // txtIPProxy
+            // 
+            this.txtIPProxy.Location = new System.Drawing.Point(33, 63);
+            this.txtIPProxy.Name = "txtIPProxy";
+            this.txtIPProxy.Size = new System.Drawing.Size(134, 20);
+            this.txtIPProxy.TabIndex = 4;
             // 
             // btnGuardar
             // 
@@ -858,18 +865,12 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox txtProveedorI;
         private System.Windows.Forms.Button btnNominaI;
         private System.Windows.Forms.Button btnProveedorI;
         private System.Windows.Forms.TextBox txtNominaI;
         private System.Windows.Forms.TextBox txtClienteI;
         private System.Windows.Forms.Button btnClienteI;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtProveedorC;
         private System.Windows.Forms.Button btnProveedorC;
         private System.Windows.Forms.TextBox txtClienteC;
@@ -881,6 +882,12 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.CheckBox chkProveedorI;
+        private System.Windows.Forms.CheckBox chkClienteI;
+        private System.Windows.Forms.CheckBox chkNominaI;
+        private System.Windows.Forms.CheckBox chkNominaC;
+        private System.Windows.Forms.CheckBox chkClienteC;
+        private System.Windows.Forms.CheckBox chkProveedorC;
     }
 }
 

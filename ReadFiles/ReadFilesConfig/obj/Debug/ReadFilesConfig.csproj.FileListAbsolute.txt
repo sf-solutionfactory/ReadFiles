@@ -8,3 +8,4 @@ C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\
 C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.csproj.CoreCompileInputs.cache
 C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.exe
 C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.pdb
+C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.csproj.CopyComplete

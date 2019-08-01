@@ -33,9 +33,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="sapnco, Version=3.1.0.42, Culture=neutral, PublicKeyToken=50436dca5c7f7d23, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReadFilesConfig\bin\Debug\sapnco.dll</HintPath>
+    </Reference>
+    <Reference Include="sapnco_utils, Version=3.1.0.42, Culture=neutral, PublicKeyToken=50436dca5c7f7d23, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReadFilesConfig\bin\Debug\sapnco_utils.dll</HintPath>
+    </Reference>
+    <Reference Include="SAT.Services">
+      <HintPath>..\..\..\..\..\Downloads\sw-sdk-net45-v0.0.8.2\SAT.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="SW-sdk-45">
+      <HintPath>..\..\..\..\..\Downloads\sw-sdk-net45-v0.0.8.2\SW-sdk-45.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,11 +59,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IEntities\Attachment_BE.cs" />
+    <Compile Include="IEntities\catCFDI_tdCFDI_cfdv33.cs" />
+    <Compile Include="IEntities\cfdv32.cs" />
+    <Compile Include="IEntities\MAIL_DATA_BE.cs" />
+    <Compile Include="IEntities\nomina12_catCFDI_tdCFDI_catNomina.cs" />
+    <Compile Include="IEntities\Pagos10_catCFDI_tdCFDI_catPagos.cs" />
+    <Compile Include="IEntities\PARAMETROS_BE.cs" />
+    <Compile Include="IPersistence\DataLayer.cs" />
+    <Compile Include="IPersistence\SAP_Connection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IEntities\TimbreFiscalDigital.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="..\SharedSettings\SharedSettings.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
