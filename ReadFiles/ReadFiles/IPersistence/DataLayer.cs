@@ -13,10 +13,9 @@ namespace ReadFiles.IPersistence
 {
     class DataLayer
     {
-        SAP_CNX conexion = new SAP_CNX();
+        
         public int SAVE_MAIL_DATA(List<MAIL_DATA_BE> mail_data, SharedSettings.Settings settings)
         {
-            conexion.sap_cnx = settings.SAPRouter;
             try
             {
                 //Establecemos conexion con SAP
