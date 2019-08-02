@@ -1,0 +1,8 @@
+C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe.config
+C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Release\ReadFiles.csprojResolveAssemblyReference.cache
+C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe
+C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.pdb
+C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\sapnco.dll
+C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\sapnco_utils.dll
+C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Release\ReadFiles.exe
+C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Release\ReadFiles.pdb

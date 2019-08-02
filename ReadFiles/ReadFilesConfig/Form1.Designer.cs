@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -153,7 +154,7 @@
             this.groupBox1.Location = new System.Drawing.Point(19, 11);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(718, 373);
-            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de conexión";
             // 
@@ -162,7 +163,7 @@
             this.txtInstancia.Location = new System.Drawing.Point(220, 120);
             this.txtInstancia.Name = "txtInstancia";
             this.txtInstancia.Size = new System.Drawing.Size(54, 20);
-            this.txtInstancia.TabIndex = 19;
+            this.txtInstancia.TabIndex = 9;
             this.txtInstancia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInstancia_KeyPress);
             // 
             // txtMandante
@@ -170,7 +171,7 @@
             this.txtMandante.Location = new System.Drawing.Point(220, 160);
             this.txtMandante.Name = "txtMandante";
             this.txtMandante.Size = new System.Drawing.Size(54, 20);
-            this.txtMandante.TabIndex = 18;
+            this.txtMandante.TabIndex = 10;
             this.txtMandante.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMandante_KeyPress);
             // 
             // txtUsuario
@@ -178,14 +179,14 @@
             this.txtUsuario.Location = new System.Drawing.Point(220, 200);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(178, 20);
-            this.txtUsuario.TabIndex = 17;
+            this.txtUsuario.TabIndex = 11;
             // 
             // txtCveA
             // 
             this.txtCveA.Location = new System.Drawing.Point(220, 240);
             this.txtCveA.Name = "txtCveA";
             this.txtCveA.Size = new System.Drawing.Size(178, 20);
-            this.txtCveA.TabIndex = 16;
+            this.txtCveA.TabIndex = 12;
             this.txtCveA.UseSystemPasswordChar = true;
             // 
             // txtRouter
@@ -193,14 +194,14 @@
             this.txtRouter.Location = new System.Drawing.Point(220, 280);
             this.txtRouter.Name = "txtRouter";
             this.txtRouter.Size = new System.Drawing.Size(178, 20);
-            this.txtRouter.TabIndex = 15;
+            this.txtRouter.TabIndex = 13;
             // 
             // txtServidor
             // 
             this.txtServidor.Location = new System.Drawing.Point(220, 79);
             this.txtServidor.Name = "txtServidor";
             this.txtServidor.Size = new System.Drawing.Size(178, 20);
-            this.txtServidor.TabIndex = 14;
+            this.txtServidor.TabIndex = 8;
             // 
             // label7
             // 
@@ -208,7 +209,7 @@
             this.label7.Location = new System.Drawing.Point(40, 280);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(103, 13);
-            this.label7.TabIndex = 13;
+            this.label7.TabIndex = 6;
             this.label7.Text = "String de SAP router";
             // 
             // label6
@@ -217,7 +218,7 @@
             this.label6.Location = new System.Drawing.Point(40, 240);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 13);
-            this.label6.TabIndex = 12;
+            this.label6.TabIndex = 5;
             this.label6.Text = "Clave de acceso";
             // 
             // label5
@@ -226,7 +227,7 @@
             this.label5.Location = new System.Drawing.Point(40, 200);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 13);
-            this.label5.TabIndex = 11;
+            this.label5.TabIndex = 4;
             this.label5.Text = "Usuario";
             // 
             // label4
@@ -235,7 +236,7 @@
             this.label4.Location = new System.Drawing.Point(40, 160);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 13);
-            this.label4.TabIndex = 10;
+            this.label4.TabIndex = 3;
             this.label4.Text = "Mandante";
             // 
             // label3
@@ -244,7 +245,7 @@
             this.label3.Location = new System.Drawing.Point(40, 120);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 13);
-            this.label3.TabIndex = 9;
+            this.label3.TabIndex = 2;
             this.label3.Text = "Número de instancia";
             // 
             // label2
@@ -253,7 +254,7 @@
             this.label2.Location = new System.Drawing.Point(40, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 13);
-            this.label2.TabIndex = 8;
+            this.label2.TabIndex = 1;
             this.label2.Text = "Servidor de aplicación";
             // 
             // txtDescripcion
@@ -261,7 +262,7 @@
             this.txtDescripcion.Location = new System.Drawing.Point(220, 40);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(180, 20);
-            this.txtDescripcion.TabIndex = 2;
+            this.txtDescripcion.TabIndex = 7;
             // 
             // label1
             // 
@@ -269,7 +270,7 @@
             this.label1.Location = new System.Drawing.Point(40, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 13);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Descripción";
             // 
             // tabPage2
@@ -315,7 +316,7 @@
             this.btnAdjuntos.Location = new System.Drawing.Point(533, 47);
             this.btnAdjuntos.Name = "btnAdjuntos";
             this.btnAdjuntos.Size = new System.Drawing.Size(94, 25);
-            this.btnAdjuntos.TabIndex = 4;
+            this.btnAdjuntos.TabIndex = 2;
             this.btnAdjuntos.Text = "Examinar";
             this.btnAdjuntos.UseVisualStyleBackColor = true;
             // 
@@ -324,7 +325,7 @@
             this.txtLog.Location = new System.Drawing.Point(57, 128);
             this.txtLog.Name = "txtLog";
             this.txtLog.Size = new System.Drawing.Size(435, 20);
-            this.txtLog.TabIndex = 3;
+            this.txtLog.TabIndex = 4;
             // 
             // txtAdjuntos
             // 
@@ -332,7 +333,7 @@
             this.txtAdjuntos.Location = new System.Drawing.Point(57, 53);
             this.txtAdjuntos.Name = "txtAdjuntos";
             this.txtAdjuntos.Size = new System.Drawing.Size(435, 20);
-            this.txtAdjuntos.TabIndex = 2;
+            this.txtAdjuntos.TabIndex = 1;
             // 
             // label9
             // 
@@ -340,7 +341,7 @@
             this.label9.Location = new System.Drawing.Point(35, 104);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(138, 13);
-            this.label9.TabIndex = 1;
+            this.label9.TabIndex = 3;
             this.label9.Text = "Registro del proceso (LOG):";
             // 
             // label8
@@ -376,7 +377,7 @@
             this.chkProveedor.Location = new System.Drawing.Point(38, 38);
             this.chkProveedor.Name = "chkProveedor";
             this.chkProveedor.Size = new System.Drawing.Size(78, 17);
-            this.chkProveedor.TabIndex = 15;
+            this.chkProveedor.TabIndex = 0;
             this.chkProveedor.Text = "Proveedor:";
             this.chkProveedor.UseVisualStyleBackColor = true;
             // 
@@ -385,14 +386,14 @@
             this.txtProveedor.Location = new System.Drawing.Point(57, 61);
             this.txtProveedor.Name = "txtProveedor";
             this.txtProveedor.Size = new System.Drawing.Size(435, 20);
-            this.txtProveedor.TabIndex = 14;
+            this.txtProveedor.TabIndex = 1;
             // 
             // btnProveedor
             // 
             this.btnProveedor.Location = new System.Drawing.Point(533, 58);
             this.btnProveedor.Name = "btnProveedor";
             this.btnProveedor.Size = new System.Drawing.Size(94, 25);
-            this.btnProveedor.TabIndex = 13;
+            this.btnProveedor.TabIndex = 2;
             this.btnProveedor.Text = "Examinar";
             this.btnProveedor.UseVisualStyleBackColor = true;
             this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
@@ -403,7 +404,7 @@
             this.chkCliente.Location = new System.Drawing.Point(38, 111);
             this.chkCliente.Name = "chkCliente";
             this.chkCliente.Size = new System.Drawing.Size(61, 17);
-            this.chkCliente.TabIndex = 12;
+            this.chkCliente.TabIndex = 3;
             this.chkCliente.Text = "Cliente:";
             this.chkCliente.UseVisualStyleBackColor = true;
             // 
@@ -412,14 +413,14 @@
             this.txtCliente.Location = new System.Drawing.Point(57, 134);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(435, 20);
-            this.txtCliente.TabIndex = 11;
+            this.txtCliente.TabIndex = 4;
             // 
             // btnCliente
             // 
             this.btnCliente.Location = new System.Drawing.Point(533, 131);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(94, 25);
-            this.btnCliente.TabIndex = 10;
+            this.btnCliente.TabIndex = 5;
             this.btnCliente.Text = "Examinar";
             this.btnCliente.UseVisualStyleBackColor = true;
             this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
@@ -430,7 +431,7 @@
             this.chkNomina.Location = new System.Drawing.Point(38, 190);
             this.chkNomina.Name = "chkNomina";
             this.chkNomina.Size = new System.Drawing.Size(65, 17);
-            this.chkNomina.TabIndex = 9;
+            this.chkNomina.TabIndex = 6;
             this.chkNomina.Text = "Nómina:";
             this.chkNomina.UseVisualStyleBackColor = true;
             // 
@@ -446,7 +447,7 @@
             this.btnNomina.Location = new System.Drawing.Point(533, 210);
             this.btnNomina.Name = "btnNomina";
             this.btnNomina.Size = new System.Drawing.Size(94, 25);
-            this.btnNomina.TabIndex = 6;
+            this.btnNomina.TabIndex = 8;
             this.btnNomina.Text = "Examinar";
             this.btnNomina.UseVisualStyleBackColor = true;
             this.btnNomina.Click += new System.EventHandler(this.btnNomina_Click);
@@ -477,7 +478,7 @@
             this.groupBox4.Location = new System.Drawing.Point(40, 235);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(688, 210);
-            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Directorio destino incorrecto";
             // 
@@ -487,7 +488,7 @@
             this.chkProveedorI.Location = new System.Drawing.Point(50, 23);
             this.chkProveedorI.Name = "chkProveedorI";
             this.chkProveedorI.Size = new System.Drawing.Size(78, 17);
-            this.chkProveedorI.TabIndex = 27;
+            this.chkProveedorI.TabIndex = 0;
             this.chkProveedorI.Text = "Proveedor:";
             this.chkProveedorI.UseVisualStyleBackColor = true;
             // 
@@ -497,7 +498,7 @@
             this.chkClienteI.Location = new System.Drawing.Point(50, 81);
             this.chkClienteI.Name = "chkClienteI";
             this.chkClienteI.Size = new System.Drawing.Size(61, 17);
-            this.chkClienteI.TabIndex = 28;
+            this.chkClienteI.TabIndex = 3;
             this.chkClienteI.Text = "Cliente:";
             this.chkClienteI.UseVisualStyleBackColor = true;
             // 
@@ -507,7 +508,7 @@
             this.chkNominaI.Location = new System.Drawing.Point(50, 141);
             this.chkNominaI.Name = "chkNominaI";
             this.chkNominaI.Size = new System.Drawing.Size(65, 17);
-            this.chkNominaI.TabIndex = 29;
+            this.chkNominaI.TabIndex = 6;
             this.chkNominaI.Text = "Nomina:";
             this.chkNominaI.UseVisualStyleBackColor = true;
             // 
@@ -516,14 +517,14 @@
             this.txtProveedorI.Location = new System.Drawing.Point(50, 46);
             this.txtProveedorI.Name = "txtProveedorI";
             this.txtProveedorI.Size = new System.Drawing.Size(435, 20);
-            this.txtProveedorI.TabIndex = 32;
+            this.txtProveedorI.TabIndex = 1;
             // 
             // btnNominaI
             // 
             this.btnNominaI.Location = new System.Drawing.Point(526, 161);
             this.btnNominaI.Name = "btnNominaI";
             this.btnNominaI.Size = new System.Drawing.Size(94, 25);
-            this.btnNominaI.TabIndex = 25;
+            this.btnNominaI.TabIndex = 8;
             this.btnNominaI.Text = "Examinar";
             this.btnNominaI.UseVisualStyleBackColor = true;
             this.btnNominaI.Click += new System.EventHandler(this.btnNominaI_Click);
@@ -533,7 +534,7 @@
             this.btnProveedorI.Location = new System.Drawing.Point(526, 43);
             this.btnProveedorI.Name = "btnProveedorI";
             this.btnProveedorI.Size = new System.Drawing.Size(94, 25);
-            this.btnProveedorI.TabIndex = 31;
+            this.btnProveedorI.TabIndex = 2;
             this.btnProveedorI.Text = "Examinar";
             this.btnProveedorI.UseVisualStyleBackColor = true;
             this.btnProveedorI.Click += new System.EventHandler(this.btnProveedorI_Click);
@@ -543,21 +544,21 @@
             this.txtNominaI.Location = new System.Drawing.Point(50, 164);
             this.txtNominaI.Name = "txtNominaI";
             this.txtNominaI.Size = new System.Drawing.Size(435, 20);
-            this.txtNominaI.TabIndex = 26;
+            this.txtNominaI.TabIndex = 7;
             // 
             // txtClienteI
             // 
             this.txtClienteI.Location = new System.Drawing.Point(50, 104);
             this.txtClienteI.Name = "txtClienteI";
             this.txtClienteI.Size = new System.Drawing.Size(435, 20);
-            this.txtClienteI.TabIndex = 29;
+            this.txtClienteI.TabIndex = 4;
             // 
             // btnClienteI
             // 
             this.btnClienteI.Location = new System.Drawing.Point(526, 101);
             this.btnClienteI.Name = "btnClienteI";
             this.btnClienteI.Size = new System.Drawing.Size(94, 25);
-            this.btnClienteI.TabIndex = 28;
+            this.btnClienteI.TabIndex = 5;
             this.btnClienteI.Text = "Examinar";
             this.btnClienteI.UseVisualStyleBackColor = true;
             this.btnClienteI.Click += new System.EventHandler(this.btnClienteI_Click);
@@ -576,7 +577,7 @@
             this.groupBox5.Location = new System.Drawing.Point(39, 23);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(690, 206);
-            this.groupBox5.TabIndex = 2;
+            this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Directorio destino correcto";
             // 
@@ -586,7 +587,7 @@
             this.chkNominaC.Location = new System.Drawing.Point(51, 137);
             this.chkNominaC.Name = "chkNominaC";
             this.chkNominaC.Size = new System.Drawing.Size(65, 17);
-            this.chkNominaC.TabIndex = 26;
+            this.chkNominaC.TabIndex = 6;
             this.chkNominaC.Text = "Nomina:";
             this.chkNominaC.UseVisualStyleBackColor = true;
             // 
@@ -596,7 +597,7 @@
             this.chkClienteC.Location = new System.Drawing.Point(51, 78);
             this.chkClienteC.Name = "chkClienteC";
             this.chkClienteC.Size = new System.Drawing.Size(61, 17);
-            this.chkClienteC.TabIndex = 25;
+            this.chkClienteC.TabIndex = 3;
             this.chkClienteC.Text = "Cliente:";
             this.chkClienteC.UseVisualStyleBackColor = true;
             // 
@@ -606,7 +607,7 @@
             this.chkProveedorC.Location = new System.Drawing.Point(51, 19);
             this.chkProveedorC.Name = "chkProveedorC";
             this.chkProveedorC.Size = new System.Drawing.Size(78, 17);
-            this.chkProveedorC.TabIndex = 24;
+            this.chkProveedorC.TabIndex = 0;
             this.chkProveedorC.Text = "Proveedor:";
             this.chkProveedorC.UseVisualStyleBackColor = true;
             // 
@@ -615,14 +616,14 @@
             this.txtProveedorC.Location = new System.Drawing.Point(51, 42);
             this.txtProveedorC.Name = "txtProveedorC";
             this.txtProveedorC.Size = new System.Drawing.Size(435, 20);
-            this.txtProveedorC.TabIndex = 23;
+            this.txtProveedorC.TabIndex = 1;
             // 
             // btnProveedorC
             // 
             this.btnProveedorC.Location = new System.Drawing.Point(527, 39);
             this.btnProveedorC.Name = "btnProveedorC";
             this.btnProveedorC.Size = new System.Drawing.Size(94, 25);
-            this.btnProveedorC.TabIndex = 22;
+            this.btnProveedorC.TabIndex = 2;
             this.btnProveedorC.Text = "Examinar";
             this.btnProveedorC.UseVisualStyleBackColor = true;
             this.btnProveedorC.Click += new System.EventHandler(this.btnProveedorC_Click);
@@ -632,14 +633,14 @@
             this.txtClienteC.Location = new System.Drawing.Point(51, 101);
             this.txtClienteC.Name = "txtClienteC";
             this.txtClienteC.Size = new System.Drawing.Size(435, 20);
-            this.txtClienteC.TabIndex = 20;
+            this.txtClienteC.TabIndex = 4;
             // 
             // btnClienteC
             // 
             this.btnClienteC.Location = new System.Drawing.Point(527, 98);
             this.btnClienteC.Name = "btnClienteC";
             this.btnClienteC.Size = new System.Drawing.Size(94, 25);
-            this.btnClienteC.TabIndex = 19;
+            this.btnClienteC.TabIndex = 5;
             this.btnClienteC.Text = "Examinar";
             this.btnClienteC.UseVisualStyleBackColor = true;
             this.btnClienteC.Click += new System.EventHandler(this.btnClienteC_Click);
@@ -649,14 +650,14 @@
             this.txtNominaC.Location = new System.Drawing.Point(51, 160);
             this.txtNominaC.Name = "txtNominaC";
             this.txtNominaC.Size = new System.Drawing.Size(435, 20);
-            this.txtNominaC.TabIndex = 17;
+            this.txtNominaC.TabIndex = 7;
             // 
             // btnNominaC
             // 
             this.btnNominaC.Location = new System.Drawing.Point(527, 157);
             this.btnNominaC.Name = "btnNominaC";
             this.btnNominaC.Size = new System.Drawing.Size(94, 25);
-            this.btnNominaC.TabIndex = 16;
+            this.btnNominaC.TabIndex = 8;
             this.btnNominaC.Text = "Examinar";
             this.btnNominaC.UseVisualStyleBackColor = true;
             this.btnNominaC.Click += new System.EventHandler(this.btnNominaC_Click);
@@ -686,7 +687,7 @@
             this.groupBox6.Location = new System.Drawing.Point(18, 15);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(733, 395);
-            this.groupBox6.TabIndex = 8;
+            this.groupBox6.TabIndex = 0;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Datos de Conexion";
             // 
@@ -696,7 +697,7 @@
             this.chkProxy.Location = new System.Drawing.Point(33, 19);
             this.chkProxy.Name = "chkProxy";
             this.chkProxy.Size = new System.Drawing.Size(88, 17);
-            this.chkProxy.TabIndex = 8;
+            this.chkProxy.TabIndex = 0;
             this.chkProxy.Text = "Activar Proxy";
             this.chkProxy.UseVisualStyleBackColor = true;
             // 
@@ -706,7 +707,7 @@
             this.label10.Location = new System.Drawing.Point(30, 47);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(55, 13);
-            this.label10.TabIndex = 0;
+            this.label10.TabIndex = 1;
             this.label10.Text = "Dirección:";
             // 
             // txtPassProxy
@@ -714,7 +715,7 @@
             this.txtPassProxy.Location = new System.Drawing.Point(33, 160);
             this.txtPassProxy.Name = "txtPassProxy";
             this.txtPassProxy.Size = new System.Drawing.Size(134, 20);
-            this.txtPassProxy.TabIndex = 7;
+            this.txtPassProxy.TabIndex = 8;
             this.txtPassProxy.UseSystemPasswordChar = true;
             // 
             // label11
@@ -723,7 +724,7 @@
             this.label11.Location = new System.Drawing.Point(183, 47);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(41, 13);
-            this.label11.TabIndex = 1;
+            this.label11.TabIndex = 2;
             this.label11.Text = "Puerto:";
             // 
             // txtUsuProxy
@@ -739,7 +740,7 @@
             this.label12.Location = new System.Drawing.Point(30, 93);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(46, 13);
-            this.label12.TabIndex = 2;
+            this.label12.TabIndex = 5;
             this.label12.Text = "Usuario:";
             // 
             // txtPuerProxy
@@ -747,7 +748,7 @@
             this.txtPuerProxy.Location = new System.Drawing.Point(186, 63);
             this.txtPuerProxy.Name = "txtPuerProxy";
             this.txtPuerProxy.Size = new System.Drawing.Size(38, 20);
-            this.txtPuerProxy.TabIndex = 5;
+            this.txtPuerProxy.TabIndex = 4;
             this.txtPuerProxy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPuerProxy_KeyPress);
             // 
             // label13
@@ -756,7 +757,7 @@
             this.label13.Location = new System.Drawing.Point(30, 144);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(64, 13);
-            this.label13.TabIndex = 3;
+            this.label13.TabIndex = 7;
             this.label13.Text = "Contraseña:";
             // 
             // txtIPProxy
@@ -764,35 +765,39 @@
             this.txtIPProxy.Location = new System.Drawing.Point(33, 63);
             this.txtIPProxy.Name = "txtIPProxy";
             this.txtIPProxy.Size = new System.Drawing.Size(134, 20);
-            this.txtIPProxy.TabIndex = 4;
+            this.txtIPProxy.TabIndex = 3;
             // 
             // btnGuardar
             // 
             this.btnGuardar.Location = new System.Drawing.Point(709, 538);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 1;
+            this.btnGuardar.TabIndex = 0;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.Location = new System.Drawing.Point(611, 538);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 2;
+            this.btnCancelar.TabIndex = 1;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(800, 573);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Configuración ReadFiles";
             this.tabControl1.ResumeLayout(false);

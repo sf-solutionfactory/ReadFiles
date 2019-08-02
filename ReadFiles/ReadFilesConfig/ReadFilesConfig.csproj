@@ -89,6 +89,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="ConfigMail.ico" />
+  </ItemGroup>
   <Import Project="..\SharedSettings\SharedSettings.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

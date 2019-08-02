@@ -35,10 +35,16 @@ namespace SharedSettings
             // Check the path to the file
             if (settingsFile.Directory != null && settingsFile.Directory.Exists)
             {
-                var serializer = new XmlSerializer(typeof(Settings));
-                using (XmlReader reader = new XmlTextReader(File.OpenRead(settingsFile.FullName)))
+                try
                 {
-                    settings = (Settings)serializer.Deserialize(reader);
+                    var serializer = new XmlSerializer(typeof(Settings));
+                    using (XmlReader reader = new XmlTextReader(File.OpenRead(settingsFile.FullName)))
+                    {
+                        settings = (Settings)serializer.Deserialize(reader);
+                    }
+                }
+                catch (Exception)
+                {
                 }
             }
             return settings;

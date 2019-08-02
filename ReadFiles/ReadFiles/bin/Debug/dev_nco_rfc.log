@@ -272,3 +272,197 @@ COUNTER     5
    en SAP.Middleware.Connector.RfcFunction.RfcCallReceive(RfcConnection conn, IRfcIOStream stream, RFCID rid)
    en SAP.Middleware.Connector.RfcFunction.RfcCallReceive(RfcConnection conn)
    en SAP.Middleware.Connector.RfcFunction.Invoke(RfcDestination destination)
+**** Log file opened by process 5096 at 2019-08-01 13:46:15 (UTC-05:00 Hora de verano central (México))
+
+SAP .NET Connector 3.0 with file version 3.0.11.0 running on 32-bit .NET Framework 4.0.30319.42000
+Program: C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\ReadFiles.vshost.exe
+Working directory: C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug
+Operating system: Windows 7 Professional 64-bit Service Pack 1
+Processor: 4x AMD64 (or x64)
+SAP release: 720, Kernel release: 720, Kernel patch level: 426
+Hostname: SF-0006, IP address: 192.168.56.1, IP_v6 address: 
+
+Default trace level: None
+
+>> Error entry 2019-08-01 13:46:15.279 [Thread 9]
+Failure to create pool for destination GPS DEV (ORIGINAL) [NAME=GPS DEV ASHOST=172.29.0.15 SYSNR=10 USER=SOLUTIONF1 PASSWD=******** CLIENT=010 LANG=EN SAPROUTER= POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '172.29.0.15:3310' not reached
+TIME        Thu Aug 01 13:46:15 2019
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 172.29.0.15:3310
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2019-08-01 13:46:15.340 [Thread 9]
+[NAME=GPS DEV ASHOST=172.29.0.15 SYSNR=10 USER=SOLUTIONF1 PASSWD=******** CLIENT=010 LANG=EN SAPROUTER= POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '172.29.0.15:3310' not reached
+TIME        Thu Aug 01 13:46:15 2019
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 172.29.0.15:3310
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   en SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   en SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   en SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+**** Log file opened by process 11552 at 2019-08-01 13:48:38 (UTC-05:00 Hora de verano central (México))
+
+SAP .NET Connector 3.0 with file version 3.0.11.0 running on 32-bit .NET Framework 4.0.30319.42000
+Program: C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\ReadFiles.vshost.exe
+Working directory: C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug
+Operating system: Windows 7 Professional 64-bit Service Pack 1
+Processor: 4x AMD64 (or x64)
+SAP release: 720, Kernel release: 720, Kernel patch level: 426
+Hostname: SF-0006, IP address: 192.168.56.1, IP_v6 address: 
+
+Default trace level: None
+
+>> Error entry 2019-08-01 13:48:38.447 [Thread 10]
+[NAME=GPS DEV ASHOST=172.29.0.15 SYSNR=10 USER=SOLUTIONF1 PASSWD=******** CLIENT=010 LANG=EN SAPROUTER= POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       connection to partner '172.29.0.15:3310' broken
+TIME        Thu Aug 01 13:48:38 2019
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      nixxi.cpp
+LINE        5087
+DETAIL      NiIRead: P=172.29.0.15:3310; L=172.27.243.153:10982
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     5
+
+   en SAP.Middleware.Connector.CpicConnection.CpicReceive(Int32 timeout)
+   en SAP.Middleware.Connector.CpicConnection.Read(Byte* buffer, Int32 offset, Int32 count)
+   en SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   en SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   en SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   en SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   en SAP.Middleware.Connector.RfcFunction.RfcDeserialize(RfcConnection conn, IRfcIOStream stream)
+   en SAP.Middleware.Connector.RfcFunction.RfcCallReceive(RfcConnection conn, IRfcIOStream stream, RFCID rid)
+   en SAP.Middleware.Connector.RfcFunction.RfcCallReceive(RfcConnection conn)
+   en SAP.Middleware.Connector.RfcFunction.Invoke(RfcDestination destination)
+**** Log file opened by process 8316 at 2019-08-01 13:50:47 (UTC-05:00 Hora de verano central (México))
+
+SAP .NET Connector 3.0 with file version 3.0.11.0 running on 32-bit .NET Framework 4.0.30319.42000
+Program: C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\ReadFiles.vshost.exe
+Working directory: C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug
+Operating system: Windows 7 Professional 64-bit Service Pack 1
+Processor: 4x AMD64 (or x64)
+SAP release: 720, Kernel release: 720, Kernel patch level: 426
+Hostname: SF-0006, IP address: 192.168.56.1, IP_v6 address: 
+
+Default trace level: None
+
+>> Error entry 2019-08-01 13:50:47.744 [Thread 9]
+Failure to create pool for destination GPS DEV (ORIGINAL) [NAME=GPS DEV ASHOST=172.29.0.15 SYSNR=10 USER=SOLUTIONF1 PASSWD=******** CLIENT=010 LANG=EN SAPROUTER= POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '172.29.0.15:3310' not reached
+TIME        Thu Aug 01 13:50:47 2019
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 172.29.0.15:3310
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2019-08-01 13:50:47.794 [Thread 9]
+[NAME=GPS DEV ASHOST=172.29.0.15 SYSNR=10 USER=SOLUTIONF1 PASSWD=******** CLIENT=010 LANG=EN SAPROUTER= POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '172.29.0.15:3310' not reached
+TIME        Thu Aug 01 13:50:47 2019
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 172.29.0.15:3310
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   en SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   en SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   en SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+**** Log file opened by process 5864 at 2019-08-01 14:16:02 (UTC-05:00 Hora de verano central (México))
+
+SAP .NET Connector 3.0 with file version 3.0.11.0 running on 32-bit .NET Framework 4.0.30319.42000
+Program: C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\ReadFiles.vshost.exe
+Working directory: C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug
+Operating system: Windows 7 Professional 64-bit Service Pack 1
+Processor: 4x AMD64 (or x64)
+SAP release: 720, Kernel release: 720, Kernel patch level: 426
+Hostname: SF-0006, IP address: 192.168.56.1, IP_v6 address: 
+
+Default trace level: None
+
+>> Error entry 2019-08-01 14:16:02.746 [Thread 10]
+[NAME=GPS DEV ASHOST=172.29.0.15 SYSNR=10 USER=SOLUTIONF1 PASSWD=******** CLIENT=010 LANG=EN SAPROUTER= POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       connection to partner '172.29.0.15:3310' broken
+TIME        Thu Aug 01 14:16:02 2019
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      nixxi.cpp
+LINE        5087
+DETAIL      NiIRead: P=172.29.0.15:3310; L=172.27.243.156:13863
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     5
+
+   en SAP.Middleware.Connector.CpicConnection.CpicReceive(Int32 timeout)
+   en SAP.Middleware.Connector.CpicConnection.Read(Byte* buffer, Int32 offset, Int32 count)
+   en SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   en SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   en SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   en SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   en SAP.Middleware.Connector.RfcFunction.RfcDeserialize(RfcConnection conn, IRfcIOStream stream)
+   en SAP.Middleware.Connector.RfcFunction.RfcCallReceive(RfcConnection conn, IRfcIOStream stream, RFCID rid)
+   en SAP.Middleware.Connector.RfcFunction.RfcCallReceive(RfcConnection conn)
+   en SAP.Middleware.Connector.RfcFunction.Invoke(RfcDestination destination)

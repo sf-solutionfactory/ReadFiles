@@ -16,7 +16,7 @@ namespace ReadFilesConfig
             try
             {
                 //Establecemos conexion con SAP
-                RfcConfigParameters rfc = GetParameters(conexion, settings);
+                RfcConfigParameters rfc = GetParameters(settings);
 
                 RfcDestination rfcDest = null;
                 rfcDest = RfcDestinationManager.GetDestination(rfc);
@@ -77,7 +77,7 @@ namespace ReadFilesConfig
                 return e.Message;
             }
         }
-        public static RfcConfigParameters GetParameters(SAP_CNX cnx, SharedSettings.Settings settings)
+        public static RfcConfigParameters GetParameters(SharedSettings.Settings settings)
         {
             RfcConfigParameters parms = new RfcConfigParameters();
             

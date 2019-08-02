@@ -13,15 +13,14 @@ namespace ReadFiles.IPersistence
 {
     class DataLayer
     {
+        SAP_CNX conexion = new SAP_CNX();
         public int SAVE_MAIL_DATA(List<MAIL_DATA_BE> mail_data, SharedSettings.Settings settings)
         {
-            SAP_CNX conexion = new ReadFilesConfig.SAP_CNX();
-            SAP_Connection conn = new SAP_Connection();
             conexion.sap_cnx = settings.SAPRouter;
             try
             {
                 //Establecemos conexion con SAP
-                RfcConfigParameters rfc = SAP_Connection.GetParameters(conexion, settings);
+                RfcConfigParameters rfc = SAP_Connection.GetParameters(settings);
 
                 RfcDestination rfcDest = null;
                 rfcDest = RfcDestinationManager.GetDestination(rfc);
@@ -29,15 +28,12 @@ namespace ReadFiles.IPersistence
                 //Creamos repositorio para la función
                 RfcRepository repo = rfcDest.Repository;
                 IRfcFunction save_mail = repo.CreateFunction("Z_MAIL_SAVE");
-
-
+                
                 IRfcTable p_maildata = save_mail.GetTable("P_MAILDATA");
                 get_maildata_saptab(mail_data, ref p_maildata);
-
-
+                
                 save_mail.Invoke(rfcDest);
-
-
+                
                 IRfcStructure bapiret = save_mail.GetStructure("BAPIRET");
 
                 //Ejecutamos la consulta
@@ -82,12 +78,11 @@ namespace ReadFiles.IPersistence
 
         public string SAVE_MAIL_DATA(MAIL_DATA_BE mail_data, List<Attachment_BE> attachs, List<Relacionados>relacionados, SharedSettings.Settings settings)
         {
-            SAP_CNX conexion = new SAP_CNX();
             byte[] pdf;
             try
             {
                 //Establecemos conexion con SAP
-                RfcConfigParameters rfc = SAP_Connection.GetParameters(conexion, settings);
+                RfcConfigParameters rfc = SAP_Connection.GetParameters(settings);
 
                 RfcDestination rfcDest = null;
                 rfcDest = RfcDestinationManager.GetDestination(rfc);
@@ -130,8 +125,6 @@ namespace ReadFiles.IPersistence
                 {
                     return ""; //Guardado exitoso
                 }
-
-
             }
             catch (RfcCommunicationException e)
             {
@@ -160,11 +153,10 @@ namespace ReadFiles.IPersistence
         }
         public Attachment_BE VALIDATE_XML(ref Attachment_BE attach, string metodoPago, SharedSettings.Settings settings)
         {
-            SAP_CNX conexion = new SAP_CNX();
             try
             {
                 //Establecemos conexion con SAP
-                RfcConfigParameters rfc = SAP_Connection.GetParameters(conexion, settings);
+                RfcConfigParameters rfc = SAP_Connection.GetParameters(settings);
 
                 RfcDestination rfcDest = null;
                 rfcDest = RfcDestinationManager.GetDestination(rfc);
@@ -231,12 +223,11 @@ namespace ReadFiles.IPersistence
 
         public int VALIDATE_MAIL(string UIDL, SharedSettings.Settings settings)
         {
-            SAP_CNX conexion = new SAP_CNX();
             string value = string.Empty;
             try
             {
                 //Establecemos conexion con SAP
-                RfcConfigParameters rfc = SAP_Connection.GetParameters(conexion, settings);
+                RfcConfigParameters rfc = SAP_Connection.GetParameters(settings);
 
                 RfcDestination rfcDest = null;
                 rfcDest = RfcDestinationManager.GetDestination(rfc);

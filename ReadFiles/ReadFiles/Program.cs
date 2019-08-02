@@ -34,6 +34,7 @@ namespace ReadFiles
             {
                 CargarArchivos();
             }
+            MostrarMensajeConsola("Fin.");
         }
         private static void CargarArchivos()
         {
@@ -43,6 +44,7 @@ namespace ReadFiles
             MostrarMensajeConsola("Cargando archivos");
             if (String.IsNullOrEmpty(settings.directorioProv) == false && settings.esActivoDirProv)
             {
+                MostrarMensajeConsola("Cargando Proveedores");
                 directory = new DirectoryInfo(settings.directorioProv);
                 listfilesxml =  directory.GetFiles("*.*", SearchOption.AllDirectories).Where(x=>x.Extension == ".XML" || x.Extension == ".xml").ToArray();
                 listfilespdf =  directory.GetFiles("*.*", SearchOption.AllDirectories).Where(x=>x.Extension == ".PDF" || x.Extension == ".pdf").ToArray();
@@ -54,6 +56,7 @@ namespace ReadFiles
             }
             if (String.IsNullOrEmpty(settings.directorioCtes) == false && settings.esActivoDirCtes)
             {
+                MostrarMensajeConsola("Cargando Clientes");
                 directory = new DirectoryInfo(settings.directorioProv);
                 listfilesxml = directory.GetFiles("*.*", SearchOption.AllDirectories).Where(x => x.Extension == ".XML" || x.Extension == ".xml").ToArray();
                 listfilespdf = directory.GetFiles("*.*", SearchOption.AllDirectories).Where(x => x.Extension == ".PDF" || x.Extension == ".pdf").ToArray();
@@ -65,6 +68,7 @@ namespace ReadFiles
             }
             if (String.IsNullOrEmpty(settings.directorioNomina) == false && settings.esActivoNomina)
             {
+                MostrarMensajeConsola("Cargando Nomina");
                 directory = new DirectoryInfo(settings.directorioNomina);
                 listfilesxml = directory.GetFiles("*.*", SearchOption.AllDirectories).Where(x => x.Extension == ".XML" || x.Extension == ".xml").ToArray();
                 listfilespdf = directory.GetFiles("*.*", SearchOption.AllDirectories).Where(x => x.Extension == ".PDF" || x.Extension == ".pdf").ToArray();
@@ -145,22 +149,22 @@ namespace ReadFiles
                     attach.RFC_VEND = comprobante.Emisor.Rfc;
                     attach.RFC_COMP = comprobante.Receptor.Rfc;
                     attach.XBLNR = comprobante.Serie + comprobante.Folio;
-                    attach.UUID_XML = timbre.UUID;
+                    attach.UUID_XML = timbre.UUID.ToUpper();
                     if (clase == "P")
                     {
                         dataLayer.VALIDATE_XML(ref attach, comprobante.MetodoPago.ToString(), settings);
                     }
+                    relacionados.Clear();
                     if (pagos.Pago != null)
                     {
-                        relacionados.Clear();
                         for (int j = 0; j < pagos.Pago.Length; j++)
                         {
                             foreach (var relacionado in pagos.Pago[j].DoctoRelacionado)
                             {
                                 relacionados.Add(new Relacionados(
                                     attach.BUKRS,
-                                    timbre.UUID,
-                                    relacionado.IdDocumento,
+                                    timbre.UUID.ToUpper(),
+                                    relacionado.IdDocumento.ToUpper(),
                                     fileInfosxml[i].Name,
                                     relacionado.ImpPagado,
                                     relacionado.Folio,
@@ -172,6 +176,7 @@ namespace ReadFiles
                             }
                         }
                     }
+                    pagos = new Pagos();
                 }
                 else if(xml.Contains("Version=\"3.2\""))
                 {
@@ -233,7 +238,8 @@ namespace ReadFiles
                 {
                     MAIL_DATA_BE mail_data = new MAIL_DATA_BE();
                     attachments.Add(attach);
-                    string r = dataLayer.SAVE_MAIL_DATA(mail_data , attachments, relacionados, settings);
+                    string r = dataLayer.SAVE_MAIL_DATA(mail_data, attachments, relacionados, settings);
+                    //string r = "";
                     if (r == "")
                     {
                         MostrarMensajeConsola("Información guardada en SAP");
@@ -261,7 +267,7 @@ namespace ReadFiles
                         }
                     }
                     attachments.Clear();
-                    attach = new Attachment_BE();
+                    
                 }
                 else
                 {
@@ -275,6 +281,7 @@ namespace ReadFiles
                         }
                     }
                 }
+                attach = new Attachment_BE();
                 MostrarLinea("*");
             }
         }

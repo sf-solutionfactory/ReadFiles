@@ -38,7 +38,7 @@ namespace ReadMail.IEntities
         private string _GENPDF = string.Empty;
 
         public string Desc_Error { set; get; }
-        public string ECALLECOMP { set; get; } 
+        public string ECALLECOMP { set; get; }
         public string E_N_EXTCOMP { set; get; }
         public string ECOLCOMP { set; get; }
         public string EMUNI_COMP { set; get; }
@@ -48,7 +48,7 @@ namespace ReadMail.IEntities
         public string E_N_EXTVEND { set; get; }
         public string ECOLVEND { set; get; }
         public string EMUNI_VEND { set; get; }
-        public string ECPVEND { set; get; } 
+        public string ECPVEND { set; get; }
         public string EPAISVEND { set; get; }
         public string EEDO_COMP { set; get; }
         public string EEDO_VEND { set; get; }
@@ -200,16 +200,145 @@ namespace ReadMail.IEntities
         private string rMETODODEPAGODR;
         private string gJAHR;
 
-        public string BUKRS { get => bUKRS; set => bUKRS = value; }
-        public string RIDDOCUMENTO { get => rIDDOCUMENTO; set => rIDDOCUMENTO = value; }
-        public string UUID { get => uUID; set => uUID = value; }
-        public string FILENAME { get => fILENAME; set => fILENAME = value; }
-        public decimal RIMPPAGADO { get => rIMPPAGADO; set => rIMPPAGADO = value; }
-        public string RFOLIO { get => rFOLIO; set => rFOLIO = value; }
-        public string RSERIEDR { get => rSERIEDR; set => rSERIEDR = value; }
-        public string RMONEDADR { get => rMONEDADR; set => rMONEDADR = value; }
-        public string RMETODODEPAGODR { get => rMETODODEPAGODR; set => rMETODODEPAGODR = value; }
-        public string GJAHR { get => gJAHR; set => gJAHR = value; }
+        //public string BUKRS = "";
+        //public string RIDDOCUMENTO = "";
+        //public string UUID = "";
+        //public string FILENAME = "";
+        //public decimal RIMPPAGADO = 0;
+        //public string RFOLIO = "";
+        //public string RSERIEDR = "";
+        //public string RMONEDADR = "";
+        //public string RMETODODEPAGODR = "";
+        //public string GJAHR = "";
+        public string BUKRS
+        {
+            get
+            {
+                return bUKRS;
+            }
+
+            set
+            {
+                bUKRS = value;
+            }
+        }
+
+        public string RIDDOCUMENTO
+        {
+            get
+            {
+                return rIDDOCUMENTO;
+            }
+
+            set
+            {
+                rIDDOCUMENTO = value;
+            }
+        }
+
+        public string UUID
+        {
+            get
+            {
+                return uUID;
+            }
+
+            set
+            {
+                uUID = value;
+            }
+        }
+
+        public string FILENAME
+        {
+            get
+            {
+                return fILENAME;
+            }
+
+            set
+            {
+                fILENAME = value;
+            }
+        }
+
+        public decimal RIMPPAGADO
+        {
+            get
+            {
+                return rIMPPAGADO;
+            }
+
+            set
+            {
+                rIMPPAGADO = value;
+            }
+        }
+
+        public string RFOLIO
+        {
+            get
+            {
+                return rFOLIO;
+            }
+
+            set
+            {
+                rFOLIO = value;
+            }
+        }
+
+        public string RSERIEDR
+        {
+            get
+            {
+                return rSERIEDR;
+            }
+
+            set
+            {
+                rSERIEDR = value;
+            }
+        }
+
+        public string RMONEDADR
+        {
+            get
+            {
+                return rMONEDADR;
+            }
+
+            set
+            {
+                rMONEDADR = value;
+            }
+        }
+
+        public string RMETODODEPAGODR
+        {
+            get
+            {
+                return rMETODODEPAGODR;
+            }
+
+            set
+            {
+                rMETODODEPAGODR = value;
+            }
+        }
+
+        public string GJAHR
+        {
+            get
+            {
+                return gJAHR;
+            }
+
+            set
+            {
+                gJAHR = value;
+            }
+        }
 
         public Relacionados(string bUKRS, string rIDDOCUMENTO, string uUID, string fILENAME, decimal rIMPPAGADO, string rFOLIO, string rSERIEDR, string rMONEDADR, string rMETODODEPAGODR, string gJAHR)
         {
