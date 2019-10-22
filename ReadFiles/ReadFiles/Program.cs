@@ -153,7 +153,7 @@ namespace ReadFiles
                     attach.UUID_XML = timbre.UUID.ToUpper();
                     if (clase == "P")
                     {
-                        dataLayer.VALIDATE_XML(ref attach, comprobante.MetodoPago.ToString(), settings);
+                        dataLayer.VALIDATE_XML(ref attach, comprobante.MetodoPago, settings);
                     }
                     relacionados.Clear();
                     if (pagos.Pago != null)
