@@ -48,7 +48,7 @@ public partial class Comprobante {
     
     private string selloField;
     
-    private c_FormaPago formaPagoField;
+    private string formaPagoField;
     
     private bool formaPagoFieldSpecified;
     
@@ -72,9 +72,9 @@ public partial class Comprobante {
     
     private decimal totalField;
     
-    private c_TipoDeComprobante tipoDeComprobanteField;
+    private string tipoDeComprobanteField;
     
-    private c_MetodoPago metodoPagoField;
+    private string metodoPagoField;
     
     private bool metodoPagoFieldSpecified;
     
@@ -215,7 +215,7 @@ public partial class Comprobante {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public c_FormaPago FormaPago {
+    public string FormaPago {
         get {
             return this.formaPagoField;
         }
@@ -347,7 +347,7 @@ public partial class Comprobante {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public c_TipoDeComprobante TipoDeComprobante {
+    public string TipoDeComprobante {
         get {
             return this.tipoDeComprobanteField;
         }
@@ -358,7 +358,7 @@ public partial class Comprobante {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public c_MetodoPago MetodoPago {
+    public string MetodoPago {
         get {
             return this.metodoPagoField;
         }
@@ -411,7 +411,7 @@ public partial class ComprobanteCfdiRelacionados {
     
     private ComprobanteCfdiRelacionadosCfdiRelacionado[] cfdiRelacionadoField;
     
-    private c_TipoRelacion tipoRelacionField;
+    private string tipoRelacionField;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("CfdiRelacionado")]
@@ -426,7 +426,7 @@ public partial class ComprobanteCfdiRelacionados {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public c_TipoRelacion TipoRelacion {
+    public string TipoRelacion {
         get {
             return this.tipoRelacionField;
         }
@@ -461,41 +461,6 @@ public partial class ComprobanteCfdiRelacionadosCfdiRelacionado {
 /// <remarks/>
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
 [System.SerializableAttribute()]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos")]
-public enum c_TipoRelacion {
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("01")]
-    Item01,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("02")]
-    Item02,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("03")]
-    Item03,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("04")]
-    Item04,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("05")]
-    Item05,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("06")]
-    Item06,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("07")]
-    Item07,
-}
-
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-[System.SerializableAttribute()]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.sat.gob.mx/cfd/3")]
@@ -505,7 +470,7 @@ public partial class ComprobanteEmisor {
     
     private string nombreField;
     
-    private c_RegimenFiscal regimenFiscalField;
+    private string regimenFiscalField;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
@@ -531,7 +496,7 @@ public partial class ComprobanteEmisor {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public c_RegimenFiscal RegimenFiscal {
+    public string RegimenFiscal {
         get {
             return this.regimenFiscalField;
         }
@@ -539,97 +504,6 @@ public partial class ComprobanteEmisor {
             this.regimenFiscalField = value;
         }
     }
-}
-
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-[System.SerializableAttribute()]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos")]
-public enum c_RegimenFiscal {
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("601")]
-    Item601,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("603")]
-    Item603,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("605")]
-    Item605,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("606")]
-    Item606,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("608")]
-    Item608,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("609")]
-    Item609,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("610")]
-    Item610,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("611")]
-    Item611,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("612")]
-    Item612,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("614")]
-    Item614,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("616")]
-    Item616,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("620")]
-    Item620,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("621")]
-    Item621,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("622")]
-    Item622,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("623")]
-    Item623,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("624")]
-    Item624,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("628")]
-    Item628,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("607")]
-    Item607,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("629")]
-    Item629,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("630")]
-    Item630,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("615")]
-    Item615,
 }
 
 /// <remarks/>
@@ -650,7 +524,7 @@ public partial class ComprobanteReceptor {
     
     private string numRegIdTribField;
     
-    private c_UsoCFDI usoCFDIField;
+    private string usoCFDIField;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
@@ -709,7 +583,7 @@ public partial class ComprobanteReceptor {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public c_UsoCFDI UsoCFDI {
+    public string UsoCFDI {
         get {
             return this.usoCFDIField;
         }
@@ -717,80 +591,6 @@ public partial class ComprobanteReceptor {
             this.usoCFDIField = value;
         }
     }
-}
-
-
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-[System.SerializableAttribute()]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos")]
-public enum c_UsoCFDI {
-    
-    /// <remarks/>
-    G01,
-    
-    /// <remarks/>
-    G02,
-    
-    /// <remarks/>
-    G03,
-    
-    /// <remarks/>
-    I01,
-    
-    /// <remarks/>
-    I02,
-    
-    /// <remarks/>
-    I03,
-    
-    /// <remarks/>
-    I04,
-    
-    /// <remarks/>
-    I05,
-    
-    /// <remarks/>
-    I06,
-    
-    /// <remarks/>
-    I07,
-    
-    /// <remarks/>
-    I08,
-    
-    /// <remarks/>
-    D01,
-    
-    /// <remarks/>
-    D02,
-    
-    /// <remarks/>
-    D03,
-    
-    /// <remarks/>
-    D04,
-    
-    /// <remarks/>
-    D05,
-    
-    /// <remarks/>
-    D06,
-    
-    /// <remarks/>
-    D07,
-    
-    /// <remarks/>
-    D08,
-    
-    /// <remarks/>
-    D09,
-    
-    /// <remarks/>
-    D10,
-    
-    /// <remarks/>
-    P01,
 }
 
 /// <remarks/>
@@ -1039,9 +839,9 @@ public partial class ComprobanteConceptoImpuestosTraslado {
     
     private decimal baseField;
     
-    private c_Impuesto impuestoField;
+    private string impuestoField;
     
-    private c_TipoFactor tipoFactorField;
+    private string tipoFactorField;
     
     private decimal tasaOCuotaField;
     
@@ -1064,7 +864,7 @@ public partial class ComprobanteConceptoImpuestosTraslado {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public c_Impuesto Impuesto {
+    public string Impuesto {
         get {
             return this.impuestoField;
         }
@@ -1075,7 +875,7 @@ public partial class ComprobanteConceptoImpuestosTraslado {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public c_TipoFactor TipoFactor {
+    public string TipoFactor {
         get {
             return this.tipoFactorField;
         }
@@ -1132,41 +932,6 @@ public partial class ComprobanteConceptoImpuestosTraslado {
 /// <remarks/>
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
 [System.SerializableAttribute()]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos")]
-public enum c_Impuesto {
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("001")]
-    Item001,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("002")]
-    Item002,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("003")]
-    Item003,
-}
-
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-[System.SerializableAttribute()]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos")]
-public enum c_TipoFactor {
-    
-    /// <remarks/>
-    Tasa,
-    
-    /// <remarks/>
-    Cuota,
-    
-    /// <remarks/>
-    Exento,
-}
-
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-[System.SerializableAttribute()]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.sat.gob.mx/cfd/3")]
@@ -1174,9 +939,9 @@ public partial class ComprobanteConceptoImpuestosRetencion {
     
     private decimal baseField;
     
-    private c_Impuesto impuestoField;
+    private string impuestoField;
     
-    private c_TipoFactor tipoFactorField;
+    private string tipoFactorField;
     
     private decimal tasaOCuotaField;
     
@@ -1195,7 +960,7 @@ public partial class ComprobanteConceptoImpuestosRetencion {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public c_Impuesto Impuesto {
+    public string Impuesto {
         get {
             return this.impuestoField;
         }
@@ -1206,7 +971,7 @@ public partial class ComprobanteConceptoImpuestosRetencion {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public c_TipoFactor TipoFactor {
+    public string TipoFactor {
         get {
             return this.tipoFactorField;
         }
@@ -1556,13 +1321,13 @@ public partial class ComprobanteImpuestos {
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.sat.gob.mx/cfd/3")]
 public partial class ComprobanteImpuestosRetencion {
     
-    private c_Impuesto impuestoField;
+    private string impuestoField;
     
     private decimal importeField;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public c_Impuesto Impuesto {
+    public string Impuesto {
         get {
             return this.impuestoField;
         }
@@ -1591,9 +1356,9 @@ public partial class ComprobanteImpuestosRetencion {
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.sat.gob.mx/cfd/3")]
 public partial class ComprobanteImpuestosTraslado {
     
-    private c_Impuesto impuestoField;
+    private string impuestoField;
     
-    private c_TipoFactor tipoFactorField;
+    private string tipoFactorField;
     
     private decimal tasaOCuotaField;
     
@@ -1601,7 +1366,7 @@ public partial class ComprobanteImpuestosTraslado {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public c_Impuesto Impuesto {
+    public string Impuesto {
         get {
             return this.impuestoField;
         }
@@ -1612,7 +1377,7 @@ public partial class ComprobanteImpuestosTraslado {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public c_TipoFactor TipoFactor {
+    public string TipoFactor {
         get {
             return this.tipoFactorField;
         }
@@ -1686,133 +1451,6 @@ public partial class ComprobanteAddenda {
             this.anyField = value;
         }
     }
-}
-
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-[System.SerializableAttribute()]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos")]
-public enum c_FormaPago {
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("01")]
-    Item01,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("02")]
-    Item02,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("03")]
-    Item03,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("04")]
-    Item04,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("05")]
-    Item05,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("06")]
-    Item06,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("08")]
-    Item08,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("12")]
-    Item12,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("13")]
-    Item13,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("14")]
-    Item14,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("15")]
-    Item15,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("17")]
-    Item17,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("23")]
-    Item23,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("24")]
-    Item24,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("25")]
-    Item25,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("26")]
-    Item26,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("27")]
-    Item27,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("28")]
-    Item28,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("29")]
-    Item29,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("30")]
-    Item30,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("99")]
-    Item99,
-}
-
-
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-[System.SerializableAttribute()]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos")]
-public enum c_TipoDeComprobante {
-    
-    /// <remarks/>
-    I,
-    
-    /// <remarks/>
-    E,
-    
-    /// <remarks/>
-    T,
-    
-    /// <remarks/>
-    N,
-    
-    /// <remarks/>
-    P,
-}
-
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-[System.SerializableAttribute()]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos")]
-public enum c_MetodoPago {
-    
-    /// <remarks/>
-    PUE,
-    
-    /// <remarks/>
-    PPD,
 }
 
 

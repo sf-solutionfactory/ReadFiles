@@ -93,6 +93,7 @@ namespace ReadFiles
             List<Attachment_BE> attachments = new List<Attachment_BE>();
             List<Relacionados> relacionados = new List<Relacionados>();
             string xml = "";
+            bool errorxml = false;
             MostrarMensajeConsola("Se encontraron " + fileInfosxml.Length + "XML y " + fileInfospdf.Length + " PDFs");
             for (int i = 0; i < fileInfosxml.Length; i++)
             {
@@ -159,20 +160,33 @@ namespace ReadFiles
                     {
                         for (int j = 0; j < pagos.Pago.Length; j++)
                         {
-                            foreach (var relacionado in pagos.Pago[j].DoctoRelacionado)
+                            if (pagos.Pago[j].DoctoRelacionado != null)
                             {
-                                relacionados.Add(new Relacionados(
-                                    attach.BUKRS,
-                                    timbre.UUID.ToUpper(),
-                                    relacionado.IdDocumento.ToUpper(),
-                                    fileInfosxml[i].Name,
-                                    relacionado.ImpPagado,
-                                    relacionado.Folio,
-                                    relacionado.Serie,
-                                    relacionado.MonedaDR.ToString(),
-                                    relacionado.MetodoDePagoDR.ToString(),
-                                    ""
-                                    ));
+                                foreach (var relacionado in pagos.Pago[j].DoctoRelacionado)
+                                {
+                                    if (relacionados.Exists(x=>x.UUID == relacionado.IdDocumento.ToUpper()) == false)
+                                    {
+                                        relacionados.Add(new Relacionados(
+                                        attach.BUKRS,
+                                        timbre.UUID.ToUpper(),
+                                        relacionado.IdDocumento.ToUpper(),
+                                        fileInfosxml[i].Name,
+                                        relacionado.ImpPagado,
+                                        relacionado.Folio,
+                                        relacionado.Serie,
+                                        relacionado.MonedaDR.ToString(),
+                                        relacionado.MetodoDePagoDR.ToString(),
+                                        ""
+                                        ));
+                                    }
+                                }
+                                
+                            }
+                            else
+                            {
+                                errorxml = true;
+                                MostrarMensajeConsola("Coprobante de pago tiene estructura incorrecta");
+                                break;
                             }
                         }
                     }
@@ -238,9 +252,12 @@ namespace ReadFiles
                 {
                     MAIL_DATA_BE mail_data = new MAIL_DATA_BE();
                     attachments.Add(attach);
-                    string r = dataLayer.SAVE_MAIL_DATA(mail_data, attachments, relacionados, settings);
-                    //string r = "";
-                    if (r == "")
+                    string r = "";
+                    if (errorxml == false)
+                    {
+                        r = dataLayer.SAVE_MAIL_DATA(mail_data, attachments, relacionados, settings);
+                    }                    
+                    if (errorxml == false)
                     {
                         MostrarMensajeConsola("Información guardada en SAP");
                         Mover(fileInfosxml[i], attach.EXT, true);
@@ -267,7 +284,6 @@ namespace ReadFiles
                         }
                     }
                     attachments.Clear();
-                    
                 }
                 else
                 {
@@ -283,6 +299,7 @@ namespace ReadFiles
                 }
                 attach = new Attachment_BE();
                 MostrarLinea("*");
+                errorxml = false;
             }
         }
         private static string EstatusCFDI(string rfcemisor, string rfcreceptor, string total, string uuid)

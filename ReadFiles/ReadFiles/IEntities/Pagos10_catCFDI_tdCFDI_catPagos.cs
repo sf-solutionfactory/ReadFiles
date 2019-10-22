@@ -69,9 +69,9 @@ public partial class PagosPago {
     
     private System.DateTime fechaPagoField;
     
-    private c_FormaPago formaDePagoPField;
+    private string formaDePagoPField;
     
-    private c_Moneda monedaPField;
+    private string monedaPField;
     
     private decimal tipoCambioPField;
     
@@ -91,7 +91,7 @@ public partial class PagosPago {
     
     private string ctaBeneficiarioField;
     
-    private c_TipoCadenaPago tipoCadPagoField;
+    private string tipoCadPagoField;
     
     private bool tipoCadPagoFieldSpecified;
     
@@ -136,7 +136,7 @@ public partial class PagosPago {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public c_FormaPago FormaDePagoP {
+    public string FormaDePagoP {
         get {
             return this.formaDePagoPField;
         }
@@ -147,7 +147,7 @@ public partial class PagosPago {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public c_Moneda MonedaP {
+    public string MonedaP {
         get {
             return this.monedaPField;
         }
@@ -257,7 +257,7 @@ public partial class PagosPago {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public c_TipoCadenaPago TipoCadPago {
+    public string TipoCadPago {
         get {
             return this.tipoCadPagoField;
         }
@@ -325,13 +325,13 @@ public partial class PagosPagoDoctoRelacionado {
     
     private string folioField;
     
-    private c_Moneda monedaDRField;
+    private string monedaDRField;
     
     private decimal tipoCambioDRField;
     
     private bool tipoCambioDRFieldSpecified;
     
-    private c_MetodoPago metodoDePagoDRField;
+    private string metodoDePagoDRField;
     
     private string numParcialidadField;
     
@@ -382,7 +382,7 @@ public partial class PagosPagoDoctoRelacionado {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public c_Moneda MonedaDR {
+    public string MonedaDR {
         get {
             return this.monedaDRField;
         }
@@ -415,7 +415,7 @@ public partial class PagosPagoDoctoRelacionado {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public c_MetodoPago MetodoDePagoDR {
+    public string MetodoDePagoDR {
         get {
             return this.metodoDePagoDRField;
         }
@@ -501,560 +501,6 @@ public partial class PagosPagoDoctoRelacionado {
         }
     }
 }
-
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-[System.SerializableAttribute()]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos")]
-public enum c_Moneda {
-    
-    /// <remarks/>
-    AED,
-    
-    /// <remarks/>
-    AFN,
-    
-    /// <remarks/>
-    ALL,
-    
-    /// <remarks/>
-    AMD,
-    
-    /// <remarks/>
-    ANG,
-    
-    /// <remarks/>
-    AOA,
-    
-    /// <remarks/>
-    ARS,
-    
-    /// <remarks/>
-    AUD,
-    
-    /// <remarks/>
-    AWG,
-    
-    /// <remarks/>
-    AZN,
-    
-    /// <remarks/>
-    BAM,
-    
-    /// <remarks/>
-    BBD,
-    
-    /// <remarks/>
-    BDT,
-    
-    /// <remarks/>
-    BGN,
-    
-    /// <remarks/>
-    BHD,
-    
-    /// <remarks/>
-    BIF,
-    
-    /// <remarks/>
-    BMD,
-    
-    /// <remarks/>
-    BND,
-    
-    /// <remarks/>
-    BOB,
-    
-    /// <remarks/>
-    BOV,
-    
-    /// <remarks/>
-    BRL,
-    
-    /// <remarks/>
-    BSD,
-    
-    /// <remarks/>
-    BTN,
-    
-    /// <remarks/>
-    BWP,
-    
-    /// <remarks/>
-    BYR,
-    
-    /// <remarks/>
-    BZD,
-    
-    /// <remarks/>
-    CAD,
-    
-    /// <remarks/>
-    CDF,
-    
-    /// <remarks/>
-    CHE,
-    
-    /// <remarks/>
-    CHF,
-    
-    /// <remarks/>
-    CHW,
-    
-    /// <remarks/>
-    CLF,
-    
-    /// <remarks/>
-    CLP,
-    
-    /// <remarks/>
-    CNY,
-    
-    /// <remarks/>
-    COP,
-    
-    /// <remarks/>
-    COU,
-    
-    /// <remarks/>
-    CRC,
-    
-    /// <remarks/>
-    CUC,
-    
-    /// <remarks/>
-    CUP,
-    
-    /// <remarks/>
-    CVE,
-    
-    /// <remarks/>
-    CZK,
-    
-    /// <remarks/>
-    DJF,
-    
-    /// <remarks/>
-    DKK,
-    
-    /// <remarks/>
-    DOP,
-    
-    /// <remarks/>
-    DZD,
-    
-    /// <remarks/>
-    EGP,
-    
-    /// <remarks/>
-    ERN,
-    
-    /// <remarks/>
-    ETB,
-    
-    /// <remarks/>
-    EUR,
-    
-    /// <remarks/>
-    FJD,
-    
-    /// <remarks/>
-    FKP,
-    
-    /// <remarks/>
-    GBP,
-    
-    /// <remarks/>
-    GEL,
-    
-    /// <remarks/>
-    GHS,
-    
-    /// <remarks/>
-    GIP,
-    
-    /// <remarks/>
-    GMD,
-    
-    /// <remarks/>
-    GNF,
-    
-    /// <remarks/>
-    GTQ,
-    
-    /// <remarks/>
-    GYD,
-    
-    /// <remarks/>
-    HKD,
-    
-    /// <remarks/>
-    HNL,
-    
-    /// <remarks/>
-    HRK,
-    
-    /// <remarks/>
-    HTG,
-    
-    /// <remarks/>
-    HUF,
-    
-    /// <remarks/>
-    IDR,
-    
-    /// <remarks/>
-    ILS,
-    
-    /// <remarks/>
-    INR,
-    
-    /// <remarks/>
-    IQD,
-    
-    /// <remarks/>
-    IRR,
-    
-    /// <remarks/>
-    ISK,
-    
-    /// <remarks/>
-    JMD,
-    
-    /// <remarks/>
-    JOD,
-    
-    /// <remarks/>
-    JPY,
-    
-    /// <remarks/>
-    KES,
-    
-    /// <remarks/>
-    KGS,
-    
-    /// <remarks/>
-    KHR,
-    
-    /// <remarks/>
-    KMF,
-    
-    /// <remarks/>
-    KPW,
-    
-    /// <remarks/>
-    KRW,
-    
-    /// <remarks/>
-    KWD,
-    
-    /// <remarks/>
-    KYD,
-    
-    /// <remarks/>
-    KZT,
-    
-    /// <remarks/>
-    LAK,
-    
-    /// <remarks/>
-    LBP,
-    
-    /// <remarks/>
-    LKR,
-    
-    /// <remarks/>
-    LRD,
-    
-    /// <remarks/>
-    LSL,
-    
-    /// <remarks/>
-    LYD,
-    
-    /// <remarks/>
-    MAD,
-    
-    /// <remarks/>
-    MDL,
-    
-    /// <remarks/>
-    MGA,
-    
-    /// <remarks/>
-    MKD,
-    
-    /// <remarks/>
-    MMK,
-    
-    /// <remarks/>
-    MNT,
-    
-    /// <remarks/>
-    MOP,
-    
-    /// <remarks/>
-    MRO,
-    
-    /// <remarks/>
-    MUR,
-    
-    /// <remarks/>
-    MVR,
-    
-    /// <remarks/>
-    MWK,
-    
-    /// <remarks/>
-    MXN,
-    
-    /// <remarks/>
-    MXV,
-    
-    /// <remarks/>
-    MYR,
-    
-    /// <remarks/>
-    MZN,
-    
-    /// <remarks/>
-    NAD,
-    
-    /// <remarks/>
-    NGN,
-    
-    /// <remarks/>
-    NIO,
-    
-    /// <remarks/>
-    NOK,
-    
-    /// <remarks/>
-    NPR,
-    
-    /// <remarks/>
-    NZD,
-    
-    /// <remarks/>
-    OMR,
-    
-    /// <remarks/>
-    PAB,
-    
-    /// <remarks/>
-    PEN,
-    
-    /// <remarks/>
-    PGK,
-    
-    /// <remarks/>
-    PHP,
-    
-    /// <remarks/>
-    PKR,
-    
-    /// <remarks/>
-    PLN,
-    
-    /// <remarks/>
-    PYG,
-    
-    /// <remarks/>
-    QAR,
-    
-    /// <remarks/>
-    RON,
-    
-    /// <remarks/>
-    RSD,
-    
-    /// <remarks/>
-    RUB,
-    
-    /// <remarks/>
-    RWF,
-    
-    /// <remarks/>
-    SAR,
-    
-    /// <remarks/>
-    SBD,
-    
-    /// <remarks/>
-    SCR,
-    
-    /// <remarks/>
-    SDG,
-    
-    /// <remarks/>
-    SEK,
-    
-    /// <remarks/>
-    SGD,
-    
-    /// <remarks/>
-    SHP,
-    
-    /// <remarks/>
-    SLL,
-    
-    /// <remarks/>
-    SOS,
-    
-    /// <remarks/>
-    SRD,
-    
-    /// <remarks/>
-    SSP,
-    
-    /// <remarks/>
-    STD,
-    
-    /// <remarks/>
-    SVC,
-    
-    /// <remarks/>
-    SYP,
-    
-    /// <remarks/>
-    SZL,
-    
-    /// <remarks/>
-    THB,
-    
-    /// <remarks/>
-    TJS,
-    
-    /// <remarks/>
-    TMT,
-    
-    /// <remarks/>
-    TND,
-    
-    /// <remarks/>
-    TOP,
-    
-    /// <remarks/>
-    TRY,
-    
-    /// <remarks/>
-    TTD,
-    
-    /// <remarks/>
-    TWD,
-    
-    /// <remarks/>
-    TZS,
-    
-    /// <remarks/>
-    UAH,
-    
-    /// <remarks/>
-    UGX,
-    
-    /// <remarks/>
-    USD,
-    
-    /// <remarks/>
-    USN,
-    
-    /// <remarks/>
-    UYI,
-    
-    /// <remarks/>
-    UYU,
-    
-    /// <remarks/>
-    UZS,
-    
-    /// <remarks/>
-    VEF,
-    
-    /// <remarks/>
-    VND,
-    
-    /// <remarks/>
-    VUV,
-    
-    /// <remarks/>
-    WST,
-    
-    /// <remarks/>
-    XAF,
-    
-    /// <remarks/>
-    XAG,
-    
-    /// <remarks/>
-    XAU,
-    
-    /// <remarks/>
-    XBA,
-    
-    /// <remarks/>
-    XBB,
-    
-    /// <remarks/>
-    XBC,
-    
-    /// <remarks/>
-    XBD,
-    
-    /// <remarks/>
-    XCD,
-    
-    /// <remarks/>
-    XDR,
-    
-    /// <remarks/>
-    XOF,
-    
-    /// <remarks/>
-    XPD,
-    
-    /// <remarks/>
-    XPF,
-    
-    /// <remarks/>
-    XPT,
-    
-    /// <remarks/>
-    XSU,
-    
-    /// <remarks/>
-    XTS,
-    
-    /// <remarks/>
-    XUA,
-    
-    /// <remarks/>
-    XXX,
-    
-    /// <remarks/>
-    YER,
-    
-    /// <remarks/>
-    ZAR,
-    
-    /// <remarks/>
-    ZMW,
-    
-    /// <remarks/>
-    ZWL,
-}
-
-/// <remarks/>
-//[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-//[System.SerializableAttribute()]
-//[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos")]
-//public enum c_MetodoPago {
-    
-//    /// <remarks/>
-//    PUE,
-    
-//    /// <remarks/>
-//    PPD,
-//}
 
 /// <remarks/>
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
@@ -1151,13 +597,13 @@ public partial class PagosPagoImpuestos {
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.sat.gob.mx/Pagos")]
 public partial class PagosPagoImpuestosRetencion {
     
-    private c_Impuesto impuestoField;
+    private string impuestoField;
     
     private decimal importeField;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public c_Impuesto Impuesto {
+    public string Impuesto {
         get {
             return this.impuestoField;
         }
@@ -1178,24 +624,6 @@ public partial class PagosPagoImpuestosRetencion {
     }
 }
 
-/// <remarks/>
-//[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-//[System.SerializableAttribute()]
-//[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos")]
-//public enum c_Impuesto {
-    
-//    /// <remarks/>
-//    [System.Xml.Serialization.XmlEnumAttribute("001")]
-//    Item001,
-    
-//    /// <remarks/>
-//    [System.Xml.Serialization.XmlEnumAttribute("002")]
-//    Item002,
-    
-//    /// <remarks/>
-//    [System.Xml.Serialization.XmlEnumAttribute("003")]
-//    Item003,
-//}
 
 /// <remarks/>
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
@@ -1205,9 +633,9 @@ public partial class PagosPagoImpuestosRetencion {
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.sat.gob.mx/Pagos")]
 public partial class PagosPagoImpuestosTraslado {
     
-    private c_Impuesto impuestoField;
+    private string impuestoField;
     
-    private c_TipoFactor tipoFactorField;
+    private string tipoFactorField;
     
     private decimal tasaOCuotaField;
     
@@ -1215,7 +643,7 @@ public partial class PagosPagoImpuestosTraslado {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public c_Impuesto Impuesto {
+    public string Impuesto {
         get {
             return this.impuestoField;
         }
@@ -1226,7 +654,7 @@ public partial class PagosPagoImpuestosTraslado {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public c_TipoFactor TipoFactor {
+    public string TipoFactor {
         get {
             return this.tipoFactorField;
         }
@@ -1258,124 +686,4 @@ public partial class PagosPagoImpuestosTraslado {
     }
 }
 
-/// <remarks/>
-//[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-//[System.SerializableAttribute()]
-//[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos")]
-//public enum c_TipoFactor {
-    
-//    /// <remarks/>
-//    Tasa,
-    
-//    /// <remarks/>
-//    Cuota,
-    
-//    /// <remarks/>
-//    Exento,
-//}
 
-/// <remarks/>
-//[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-//[System.SerializableAttribute()]
-//[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos")]
-//public enum c_FormaPago {
-    
-//    /// <remarks/>
-//    [System.Xml.Serialization.XmlEnumAttribute("01")]
-//    Item01,
-    
-//    /// <remarks/>
-//    [System.Xml.Serialization.XmlEnumAttribute("02")]
-//    Item02,
-    
-//    /// <remarks/>
-//    [System.Xml.Serialization.XmlEnumAttribute("03")]
-//    Item03,
-    
-//    /// <remarks/>
-//    [System.Xml.Serialization.XmlEnumAttribute("04")]
-//    Item04,
-    
-//    /// <remarks/>
-//    [System.Xml.Serialization.XmlEnumAttribute("05")]
-//    Item05,
-    
-//    /// <remarks/>
-//    [System.Xml.Serialization.XmlEnumAttribute("06")]
-//    Item06,
-    
-//    /// <remarks/>
-//    [System.Xml.Serialization.XmlEnumAttribute("08")]
-//    Item08,
-    
-//    /// <remarks/>
-//    [System.Xml.Serialization.XmlEnumAttribute("12")]
-//    Item12,
-    
-//    /// <remarks/>
-//    [System.Xml.Serialization.XmlEnumAttribute("13")]
-//    Item13,
-    
-//    /// <remarks/>
-//    [System.Xml.Serialization.XmlEnumAttribute("14")]
-//    Item14,
-    
-//    /// <remarks/>
-//    [System.Xml.Serialization.XmlEnumAttribute("15")]
-//    Item15,
-    
-//    /// <remarks/>
-//    [System.Xml.Serialization.XmlEnumAttribute("17")]
-//    Item17,
-    
-//    /// <remarks/>
-//    [System.Xml.Serialization.XmlEnumAttribute("23")]
-//    Item23,
-    
-//    /// <remarks/>
-//    [System.Xml.Serialization.XmlEnumAttribute("24")]
-//    Item24,
-    
-//    /// <remarks/>
-//    [System.Xml.Serialization.XmlEnumAttribute("25")]
-//    Item25,
-    
-//    /// <remarks/>
-//    [System.Xml.Serialization.XmlEnumAttribute("26")]
-//    Item26,
-    
-//    /// <remarks/>
-//    [System.Xml.Serialization.XmlEnumAttribute("27")]
-//    Item27,
-    
-//    /// <remarks/>
-//    [System.Xml.Serialization.XmlEnumAttribute("28")]
-//    Item28,
-    
-//    /// <remarks/>
-//    [System.Xml.Serialization.XmlEnumAttribute("29")]
-//    Item29,
-    
-//    /// <remarks/>
-//    [System.Xml.Serialization.XmlEnumAttribute("30")]
-//    Item30,
-    
-//    /// <remarks/>
-//    [System.Xml.Serialization.XmlEnumAttribute("31")]
-//    Item31,
-    
-//    /// <remarks/>
-//    [System.Xml.Serialization.XmlEnumAttribute("99")]
-//    Item99,
-//}
-
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
-[System.SerializableAttribute()]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/Pagos")]
-public enum c_TipoCadenaPago {
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("01")]
-    Item01,
-}
