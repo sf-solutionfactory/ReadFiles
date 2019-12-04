@@ -18,3 +18,13 @@ C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\
 C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.csproj.CopyComplete
 C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.exe
 C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.pdb
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Debug\ReadFilesConfig.exe.config
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Debug\ReadFilesConfig.exe
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Debug\ReadFilesConfig.pdb
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.Form1.resources
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.Properties.Resources.resources
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.csproj.GenerateResource.cache
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.csproj.CopyComplete
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.exe
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.pdb

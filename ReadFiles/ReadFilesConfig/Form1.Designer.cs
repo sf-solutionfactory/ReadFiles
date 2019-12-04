@@ -302,7 +302,7 @@
             // 
             // btnLog
             // 
-            this.btnLog.Location = new System.Drawing.Point(533, 123);
+            this.btnLog.Location = new System.Drawing.Point(533, 48);
             this.btnLog.Name = "btnLog";
             this.btnLog.Size = new System.Drawing.Size(94, 25);
             this.btnLog.TabIndex = 5;
@@ -313,16 +313,17 @@
             // btnAdjuntos
             // 
             this.btnAdjuntos.Enabled = false;
-            this.btnAdjuntos.Location = new System.Drawing.Point(533, 47);
+            this.btnAdjuntos.Location = new System.Drawing.Point(533, 119);
             this.btnAdjuntos.Name = "btnAdjuntos";
             this.btnAdjuntos.Size = new System.Drawing.Size(94, 25);
             this.btnAdjuntos.TabIndex = 2;
             this.btnAdjuntos.Text = "Examinar";
             this.btnAdjuntos.UseVisualStyleBackColor = true;
+            this.btnAdjuntos.Visible = false;
             // 
             // txtLog
             // 
-            this.txtLog.Location = new System.Drawing.Point(57, 128);
+            this.txtLog.Location = new System.Drawing.Point(57, 53);
             this.txtLog.Name = "txtLog";
             this.txtLog.Size = new System.Drawing.Size(435, 20);
             this.txtLog.TabIndex = 4;
@@ -330,15 +331,16 @@
             // txtAdjuntos
             // 
             this.txtAdjuntos.Enabled = false;
-            this.txtAdjuntos.Location = new System.Drawing.Point(57, 53);
+            this.txtAdjuntos.Location = new System.Drawing.Point(57, 125);
             this.txtAdjuntos.Name = "txtAdjuntos";
             this.txtAdjuntos.Size = new System.Drawing.Size(435, 20);
             this.txtAdjuntos.TabIndex = 1;
+            this.txtAdjuntos.Visible = false;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(35, 104);
+            this.label9.Location = new System.Drawing.Point(35, 29);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(138, 13);
             this.label9.TabIndex = 3;
@@ -347,11 +349,12 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(35, 30);
+            this.label8.Location = new System.Drawing.Point(35, 102);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(94, 13);
             this.label8.TabIndex = 0;
             this.label8.Text = "Archivos adjuntos:";
+            this.label8.Visible = false;
             // 
             // groupBox2
             // 

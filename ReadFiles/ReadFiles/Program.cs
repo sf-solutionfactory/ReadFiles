@@ -327,7 +327,7 @@ namespace ReadFiles
                     case "XML":
                         if (settings.esActivoProvC && !String.IsNullOrEmpty(settings.directorioProvC))
                         {
-                            pathfolder = settings.directorioCtesC;
+                            pathfolder = settings.directorioProvC;
                         }
                         break;
                     case "CTE":
@@ -339,7 +339,7 @@ namespace ReadFiles
                     case "NOM":
                         if (settings.esActivoNomC && !String.IsNullOrEmpty(settings.directorioNomC))
                         {
-                            pathfolder = settings.directorioCtesC;
+                            pathfolder = settings.directorioNomC;
                         }
                         break;
                     default:
