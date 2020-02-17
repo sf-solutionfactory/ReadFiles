@@ -273,7 +273,9 @@ namespace ReadFilesConfig
                         tarea.Creator = txtUserWind.Text;
                         tarea.Priority = System.Diagnostics.ProcessPriorityClass.Normal;
                         tarea.Triggers.Add(new DailyTrigger(hora, min));
+                        tarea.Flags = TaskFlags.RunOnlyIfLoggedOn;
                         tarea.Save();
+                        tarea.Close();
                     }
                     else if (chkEdit.Checked)
                     {
@@ -282,7 +284,9 @@ namespace ReadFilesConfig
                         tarea.Triggers.RemoveAt(0);
                         tarea.Triggers.Add(new DailyTrigger(hora, min));
                         tarea.Save();
+                        tarea.Close();
                     }
+                    Tareas.Dispose();
                     Prox_Ejec();
                     txtPassWind.Text = "";
                     return true;
@@ -290,6 +294,7 @@ namespace ReadFilesConfig
                 catch (Exception e)
                 {
                     Tareas.DeleteTask(nombreApp);
+                    Tareas.Dispose();
                     MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Prox_Ejec();
                     return false;
@@ -300,6 +305,7 @@ namespace ReadFilesConfig
                 try
                 {
                     Tareas.DeleteTask(nombreApp);
+                    Tareas.Dispose();
                     Prox_Ejec();
                     return true;
                 }
@@ -329,6 +335,7 @@ namespace ReadFilesConfig
                 label18.Visible = false;
                 label18.Text = "";
                 chkEdit.Visible = false;
+                chkInicioW.Checked = false;
             }
         }
         private void Dehsb()
@@ -355,7 +362,7 @@ namespace ReadFilesConfig
             btnCambiar.Enabled = true;
             TimePicker.Enabled = true;
             txtRutaRead.Text = path;
-            txtUserWind.Text = Environment.UserName;
+            txtUserWind.Text = Environment.UserDomainName + "\\" + Environment.UserName;
             label14.Enabled = true;
             label15.Enabled = true;
             label16.Enabled = true;
