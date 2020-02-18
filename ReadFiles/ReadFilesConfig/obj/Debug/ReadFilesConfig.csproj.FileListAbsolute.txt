@@ -20,3 +20,4 @@ D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfi
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.csproj.CopyComplete
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.exe
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.pdb
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.csprojAssemblyReference.cache

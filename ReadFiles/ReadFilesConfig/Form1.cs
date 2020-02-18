@@ -159,6 +159,27 @@ namespace ReadFilesConfig
 
             return res;
         }
+        private string Ruta(string dir)
+        {
+            string res = dir;
+
+            openFileDialog1.FileName = Path.GetFileName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase).Replace("Config", "");
+            openFileDialog1.InitialDirectory = (Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase).Remove(0, 6));
+            openFileDialog1.Filter = "Exe Files (.exe)|*.exe|All Files (*.*)|*.*";
+            if (openFileDialog1.ShowDialog()==DialogResult.OK)
+            {
+                try
+                {
+                    res = openFileDialog1.FileName;                   
+                }
+                catch(Exception e)
+                {
+
+                }
+            }
+
+            return res;
+        }
         private string funcionProxy()
         {
             WebClient request = new WebClient();
@@ -450,7 +471,7 @@ namespace ReadFilesConfig
 
         private void btnCambiar_Click(object sender, EventArgs e)
         {
-            this.txtRutaRead.Text = examinarRuta(txtRutaRead.Text);
+            this.txtRutaRead.Text = Ruta(txtRutaRead.Text);
         }
 
         private void chkProxy_CheckedChanged(object sender, EventArgs e)
