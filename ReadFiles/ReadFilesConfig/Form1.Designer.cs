@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -97,6 +98,9 @@
             this.txtIPProxy = new System.Windows.Forms.TextBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.chkEdit = new System.Windows.Forms.CheckBox();
+            this.TimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label18 = new System.Windows.Forms.Label();
             this.txtUserWind = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -109,9 +113,6 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.label18 = new System.Windows.Forms.Label();
-            this.TimePicker = new System.Windows.Forms.DateTimePicker();
-            this.chkEdit = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -816,6 +817,38 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Windows";
             // 
+            // chkEdit
+            // 
+            this.chkEdit.AutoSize = true;
+            this.chkEdit.Location = new System.Drawing.Point(35, 51);
+            this.chkEdit.Name = "chkEdit";
+            this.chkEdit.Size = new System.Drawing.Size(53, 17);
+            this.chkEdit.TabIndex = 11;
+            this.chkEdit.Text = "Editar";
+            this.chkEdit.UseVisualStyleBackColor = true;
+            this.chkEdit.Visible = false;
+            this.chkEdit.CheckedChanged += new System.EventHandler(this.chkEdit_CheckedChanged);
+            // 
+            // TimePicker
+            // 
+            this.TimePicker.CustomFormat = "HH:mm";
+            this.TimePicker.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.TimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TimePicker.Location = new System.Drawing.Point(179, 192);
+            this.TimePicker.Name = "TimePicker";
+            this.TimePicker.ShowUpDown = true;
+            this.TimePicker.Size = new System.Drawing.Size(51, 20);
+            this.TimePicker.TabIndex = 10;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(182, 19);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(0, 13);
+            this.label18.TabIndex = 9;
+            this.label18.Visible = false;
+            // 
             // txtUserWind
             // 
             this.txtUserWind.Location = new System.Drawing.Point(179, 81);
@@ -915,38 +948,6 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(182, 19);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(0, 13);
-            this.label18.TabIndex = 9;
-            this.label18.Visible = false;
-            // 
-            // TimePicker
-            // 
-            this.TimePicker.CustomFormat = "HH:mm";
-            this.TimePicker.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.TimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TimePicker.Location = new System.Drawing.Point(179, 192);
-            this.TimePicker.Name = "TimePicker";
-            this.TimePicker.ShowUpDown = true;
-            this.TimePicker.Size = new System.Drawing.Size(51, 20);
-            this.TimePicker.TabIndex = 10;
-            // 
-            // chkEdit
-            // 
-            this.chkEdit.AutoSize = true;
-            this.chkEdit.Location = new System.Drawing.Point(35, 51);
-            this.chkEdit.Name = "chkEdit";
-            this.chkEdit.Size = new System.Drawing.Size(53, 17);
-            this.chkEdit.TabIndex = 11;
-            this.chkEdit.Text = "Editar";
-            this.chkEdit.UseVisualStyleBackColor = true;
-            this.chkEdit.Visible = false;
-            this.chkEdit.CheckedChanged += new System.EventHandler(this.chkEdit_CheckedChanged);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -955,6 +956,7 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Configuración ReadFiles";
             this.tabControl1.ResumeLayout(false);

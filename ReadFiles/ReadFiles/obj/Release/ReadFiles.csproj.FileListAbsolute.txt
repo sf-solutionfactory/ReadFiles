@@ -1,0 +1,8 @@
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe.config
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.pdb
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\sapnco.dll
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\sapnco_utils.dll
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Release\ReadFiles.csproj.CopyComplete
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Release\ReadFiles.exe
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Release\ReadFiles.pdb
