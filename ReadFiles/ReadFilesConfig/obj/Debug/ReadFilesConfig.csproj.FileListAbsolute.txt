@@ -24,7 +24,9 @@ D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Debug\ReadFilesConfi
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.Form1.resources
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.Properties.Resources.resources
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.csproj.GenerateResource.cache
-D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.csproj.CoreCompileInputs.cache
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.csproj.CopyComplete
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.exe
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.pdb
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Debug\TaskScheduler.dll
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Debug\TaskScheduler.xml
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.csprojAssemblyReference.cache

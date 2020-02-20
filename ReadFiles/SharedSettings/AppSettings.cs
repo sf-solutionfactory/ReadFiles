@@ -148,6 +148,8 @@ namespace SharedSettings
         public bool esActivoNomI
         { get; set; }
 
+        public bool esActivoWindows
+        { get; set; }
         public Settings()
         {
             sap_client = "";
@@ -184,6 +186,8 @@ namespace SharedSettings
             prox_pass = "";
             prox_puert = 0;
             prox_user = "";
+
+            esActivoWindows = false;
         }
     }
 }

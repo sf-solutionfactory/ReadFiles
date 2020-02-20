@@ -34,7 +34,6 @@ D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\ReadFiles.pdb
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\sapnco.dll
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\sapnco_utils.dll
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Debug\ReadFiles.csprojAssemblyReference.cache
-D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Debug\ReadFiles.csproj.CoreCompileInputs.cache
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Debug\ReadFiles.csproj.CopyComplete
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Debug\ReadFiles.exe
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Debug\ReadFiles.pdb

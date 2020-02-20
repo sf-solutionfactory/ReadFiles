@@ -24,3 +24,13 @@ C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Release\Read
 C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Release\ReadFiles.csproj.CopyComplete
 C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Release\ReadFiles.exe
 C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Release\ReadFiles.pdb
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe.config
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.pdb
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\sapnco.dll
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\sapnco_utils.dll
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Release\ReadFiles.csproj.CopyComplete
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Release\ReadFiles.exe
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Release\ReadFiles.pdb
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe.CodeAnalysisLog.xml
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe.lastcodeanalysissucceeded
