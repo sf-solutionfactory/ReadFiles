@@ -28,12 +28,9 @@ D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\sapnco.dll
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\sapnco_utils.dll
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\TaskScheduler.dll
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\TaskScheduler.xml
-D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Release\ReadFilesConfig.csprojAssemblyReference.cache
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Release\ReadFilesConfig.Form1.resources
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Release\ReadFilesConfig.Properties.Resources.resources
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Release\ReadFilesConfig.csproj.GenerateResource.cache
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Release\ReadFilesConfig.csproj.CopyComplete
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Release\ReadFilesConfig.exe
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Release\ReadFilesConfig.pdb
-D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\ReadFilesConfig.exe.CodeAnalysisLog.xml
-D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\ReadFilesConfig.exe.lastcodeanalysissucceeded

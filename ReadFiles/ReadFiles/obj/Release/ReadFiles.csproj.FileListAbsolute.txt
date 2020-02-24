@@ -32,5 +32,4 @@ D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\sapnco_utils.dll
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Release\ReadFiles.csproj.CopyComplete
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Release\ReadFiles.exe
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Release\ReadFiles.pdb
-D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe.CodeAnalysisLog.xml
-D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe.lastcodeanalysissucceeded
+D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Release\ReadFiles.csprojAssemblyReference.cache

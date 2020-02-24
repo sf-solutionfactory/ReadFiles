@@ -838,7 +838,7 @@
             this.TimePicker.CustomFormat = "HH:mm";
             this.TimePicker.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.TimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TimePicker.Location = new System.Drawing.Point(179, 192);
+            this.TimePicker.Location = new System.Drawing.Point(179, 126);
             this.TimePicker.Name = "TimePicker";
             this.TimePicker.ShowUpDown = true;
             this.TimePicker.Size = new System.Drawing.Size(51, 20);
@@ -855,24 +855,26 @@
             // 
             // txtUserWind
             // 
-            this.txtUserWind.Location = new System.Drawing.Point(179, 81);
+            this.txtUserWind.Location = new System.Drawing.Point(179, 164);
             this.txtUserWind.Name = "txtUserWind";
             this.txtUserWind.Size = new System.Drawing.Size(166, 20);
             this.txtUserWind.TabIndex = 1;
+            this.txtUserWind.Visible = false;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(32, 81);
+            this.label17.Location = new System.Drawing.Point(32, 164);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(124, 13);
             this.label17.TabIndex = 8;
             this.label17.Text = "Usuario de Administrador";
+            this.label17.Visible = false;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(32, 192);
+            this.label16.Location = new System.Drawing.Point(32, 126);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(123, 13);
             this.label16.TabIndex = 6;
@@ -880,7 +882,7 @@
             // 
             // btnCambiar
             // 
-            this.btnCambiar.Location = new System.Drawing.Point(620, 152);
+            this.btnCambiar.Location = new System.Drawing.Point(620, 86);
             this.btnCambiar.Name = "btnCambiar";
             this.btnCambiar.Size = new System.Drawing.Size(75, 23);
             this.btnCambiar.TabIndex = 4;
@@ -890,7 +892,7 @@
             // 
             // txtRutaRead
             // 
-            this.txtRutaRead.Location = new System.Drawing.Point(179, 154);
+            this.txtRutaRead.Location = new System.Drawing.Point(179, 88);
             this.txtRutaRead.Name = "txtRutaRead";
             this.txtRutaRead.Size = new System.Drawing.Size(435, 20);
             this.txtRutaRead.TabIndex = 3;
@@ -898,7 +900,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(32, 154);
+            this.label15.Location = new System.Drawing.Point(32, 88);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(95, 13);
             this.label15.TabIndex = 3;
@@ -906,20 +908,22 @@
             // 
             // txtPassWind
             // 
-            this.txtPassWind.Location = new System.Drawing.Point(179, 117);
+            this.txtPassWind.Location = new System.Drawing.Point(179, 200);
             this.txtPassWind.Name = "txtPassWind";
             this.txtPassWind.Size = new System.Drawing.Size(166, 20);
             this.txtPassWind.TabIndex = 2;
             this.txtPassWind.UseSystemPasswordChar = true;
+            this.txtPassWind.Visible = false;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(32, 117);
+            this.label14.Location = new System.Drawing.Point(32, 200);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(142, 13);
             this.label14.TabIndex = 1;
             this.label14.Text = "Contraseña de Administrador";
+            this.label14.Visible = false;
             // 
             // chkInicioW
             // 

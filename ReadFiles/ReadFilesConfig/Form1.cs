@@ -277,6 +277,7 @@ namespace ReadFilesConfig
             string[] Existen = Tareas.GetTaskNames();
             short hora = Convert.ToInt16(TimePicker.Text.Substring(0, 2));
             short min = Convert.ToInt16(TimePicker.Text.Substring(3, 2));
+            string pass = null;
 
             if (chkInicioW.Checked == true)
             {
@@ -289,8 +290,8 @@ namespace ReadFilesConfig
                         TaskScheduler.Task tarea = Tareas.CreateTask(nombreApp);
                         tarea.ApplicationName = txtRutaRead.Text;
                         tarea.Comment = "Tarea para ejecutar el ReadFiles diariamente";
-                        tarea.SetAccountInformation(txtUserWind.Text, txtPassWind.Text);
-                        tarea.Creator = txtUserWind.Text;
+                        tarea.SetAccountInformation(Environment.UserName, pass);
+                        tarea.Creator = Environment.UserName;
                         tarea.Priority = System.Diagnostics.ProcessPriorityClass.Normal;
                         tarea.Triggers.Add(new DailyTrigger(hora, min));
                         tarea.Flags = TaskFlags.RunOnlyIfLoggedOn;
@@ -300,7 +301,6 @@ namespace ReadFilesConfig
                     else if (chkEdit.Checked)
                     {
                         TaskScheduler.Task tarea = Tareas.OpenTask(nombreApp);
-                        tarea.SetAccountInformation(txtUserWind.Text, txtPassWind.Text);
                         tarea.Triggers.RemoveAt(0);
                         tarea.Triggers.Add(new DailyTrigger(hora, min));
                         tarea.Save();
@@ -347,6 +347,8 @@ namespace ReadFilesConfig
                 label18.Visible = true;
                 label18.Text = ("Proxima ejecucion: " + proxima);
                 chkEdit.Visible = true;
+                TimePicker.Value = Convert.ToDateTime(proxima);
+                tarea.Close();
 
                 Dehab();
             }
@@ -357,6 +359,8 @@ namespace ReadFilesConfig
                 chkEdit.Visible = false;
                 chkInicioW.Checked = false;
             }
+            chkEdit.Checked = false;
+            Tareas.Dispose();
         }
         private void Dehab()
         {
