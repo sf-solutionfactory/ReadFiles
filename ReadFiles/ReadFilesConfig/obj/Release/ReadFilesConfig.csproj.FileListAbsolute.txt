@@ -3,7 +3,6 @@ C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release
 C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\ReadFilesConfig.pdb
 C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\sapnco.dll
 C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\sapnco_utils.dll
-C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Release\ReadFilesConfig.csprojResolveAssemblyReference.cache
 C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Release\ReadFilesConfig.Form1.resources
 C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Release\ReadFilesConfig.Properties.Resources.resources
 C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Release\ReadFilesConfig.csproj.GenerateResource.Cache
@@ -34,3 +33,5 @@ D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Release\ReadFilesCon
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Release\ReadFilesConfig.csproj.CopyComplete
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Release\ReadFilesConfig.exe
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Release\ReadFilesConfig.pdb
+C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\TaskScheduler.dll
+C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\TaskScheduler.xml

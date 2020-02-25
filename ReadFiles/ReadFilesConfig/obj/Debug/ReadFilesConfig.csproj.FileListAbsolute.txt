@@ -30,3 +30,5 @@ D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfi
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Debug\TaskScheduler.dll
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Debug\TaskScheduler.xml
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.csprojAssemblyReference.cache
+C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Debug\TaskScheduler.dll
+C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Debug\TaskScheduler.xml
