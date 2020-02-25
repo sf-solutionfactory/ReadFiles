@@ -7,10 +7,6 @@ C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\ReadFil
 C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\ReadFiles.pdb
 C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\sapnco.dll
 C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\sapnco_utils.dll
-C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\Newtonsoft.Json.dll
-C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\SAT.Services.pdb
-C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\SW-sdk-45.pdb
-C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\Newtonsoft.Json.xml
 C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\ReadFiles.exe.config
 C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\ReadFiles.exe
 C:\Users\SF-0023\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\ReadFiles.pdb

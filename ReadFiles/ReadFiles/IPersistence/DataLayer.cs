@@ -93,28 +93,28 @@ namespace ReadFiles.IPersistence
 
                 IRfcStructure p_maildata = save_mail.GetStructure("P_MAILDATA");
                 IRfcTable p_attachments = save_mail.GetTable("P_ATTACHMENTS");
-                IRfcTable p_relacionados = save_mail.GetTable("P_RELACIONADOS");
+                //IRfcTable p_relacionados = save_mail.GetTable("P_RELACIONADOS"); Descomentar para gps
 
 
                 get_maildata_sapstr(mail_data, ref p_maildata);
 
                 get_mailattach_saptab(attachs, ref p_attachments);
-                get_relacionados_saptab(relacionados, ref p_relacionados);
+                //get_relacionados_saptab(relacionados, ref p_relacionados);
 
                 //Ejecutamos la consulta
                 save_mail.Invoke(rfcDest);
 
-                pdf = save_mail.GetByteArray("FILEPDFGEN");
+                //pdf = save_mail.GetByteArray("FILEPDFGEN");
                 IRfcStructure bapiret = save_mail.GetStructure("BAPIRET");
 
                 //string res = save_mail.GetString("MSG");
 
                 //Revisamos que la consulta haya sido exitosa
-                if (pdf.Length > 0 && String.IsNullOrEmpty(attachs[0].PATHFILEPDF) == false)
-                {
-                    if (System.IO.File.Exists(attachs[0].PATHFILEPDF) == false)
-                        System.IO.File.WriteAllBytes(attachs[0].PATHFILEPDF, pdf);
-                }
+                //if (pdf.Length > 0 && String.IsNullOrEmpty(attachs[0].PATHFILEPDF) == false)
+                //{
+                //    if (System.IO.File.Exists(attachs[0].PATHFILEPDF) == false)
+                //        System.IO.File.WriteAllBytes(attachs[0].PATHFILEPDF, pdf);
+                //}
                 if (bapiret.GetString("TYPE") == "E")
                 {
                     string mensajeError = bapiret.GetString("MESSAGE");
@@ -346,7 +346,7 @@ namespace ReadFiles.IPersistence
                     p_attach.SetValue("RETENCION", a.RETENCION);
                     p_attach.SetValue("RESSAT", a.RESSAT);
                     p_attach.SetValue("RES_PDF", a.RES_PDF);
-                    p_attach.SetValue("GENPDF", a.GENPDF);
+                    //p_attach.SetValue("GENPDF", a.GENPDF);
                 }
             }
         }

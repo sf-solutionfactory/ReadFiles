@@ -1,0 +1,198 @@
+**** Log file opened by process 12512 at 2020-02-11 13:04:30 (UTC-06:00 Hora estándar central (México))
+
+SAP .NET Connector 3.0 with file version 3.0.11.0 running on 32-bit .NET Framework 4.0.30319.42000
+Program: C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\ReadFilesConfig.exe
+Working directory: C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release
+Operating system: Windows 7 Professional 64-bit Service Pack 1
+Processor: 4x AMD64 (or x64)
+SAP release: 720, Kernel release: 720, Kernel patch level: 426
+Hostname: SF-0006, IP address: 192.168.56.1, IP_v6 address: 
+
+Default trace level: None
+
+>> Error entry 2020-02-11 13:04:30.577 [Thread 1]
+Failure to create pool for destination POLY (ORIGINAL) [NAME=POLY ASHOST=101.101.104.3 SYSNR=10 USER=CONSULTORSF PASSWD=******** CLIENT=100 LANG=EN SAPROUTER= POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcLogonException: Client 100 is not available in this system ---> SAP.Middleware.Connector.RfcAbapMessageException: Client 100 is not available in this system
+   en SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   en SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   en SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   en SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   en SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2020-02-11 13:04:30.584 [Thread 1]
+[NAME=POLY ASHOST=101.101.104.3 SYSNR=10 USER=CONSULTORSF PASSWD=******** CLIENT=100 LANG=EN SAPROUTER= POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcLogonException: Client 100 is not available in this system ---> SAP.Middleware.Connector.RfcAbapMessageException: Client 100 is not available in this system
+   en SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   en SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   en SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   en SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   en SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   en SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   en SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   en SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+**** Log file opened by process 16188 at 2020-02-12 14:06:13 (UTC-06:00 Hora estándar central (México))
+
+SAP .NET Connector 3.0 with file version 3.0.11.0 running on 32-bit .NET Framework 4.0.30319.42000
+Program: C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\ReadFilesConfig.exe
+Working directory: C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release
+Operating system: Windows 7 Professional 64-bit Service Pack 1
+Processor: 4x AMD64 (or x64)
+SAP release: 720, Kernel release: 720, Kernel patch level: 426
+Hostname: SF-0006, IP address: 192.168.56.1, IP_v6 address: 
+
+Default trace level: None
+
+>> Error entry 2020-02-12 14:06:13.678 [Thread 1]
+Failure to create pool for destination POLY (ORIGINAL) [NAME=POLY ASHOST=101.101.104.4 SYSNR=20 USER=CONSULTORSF PASSWD=******** CLIENT=200 LANG=EN SAPROUTER= POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '101.101.104.4:3320' not reached
+TIME        Wed Feb 12 14:06:13 2020
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 101.101.104.4:3320
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2020-02-12 14:06:13.691 [Thread 1]
+[NAME=POLY ASHOST=101.101.104.4 SYSNR=20 USER=CONSULTORSF PASSWD=******** CLIENT=200 LANG=EN SAPROUTER= POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '101.101.104.4:3320' not reached
+TIME        Wed Feb 12 14:06:13 2020
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 101.101.104.4:3320
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   en SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   en SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   en SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+>> Error entry 2020-02-12 14:06:41.807 [Thread 1]
+Failure to create pool for destination POLY (ORIGINAL) [NAME=POLY ASHOST=101.101.104.4 SYSNR=20 USER=CONSULTORSF PASSWD=******** CLIENT=300 LANG=EN SAPROUTER= POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '101.101.104.4:3320' not reached
+TIME        Wed Feb 12 14:06:41 2020
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 101.101.104.4:3320
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     4
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2020-02-12 14:06:41.808 [Thread 1]
+[NAME=POLY ASHOST=101.101.104.4 SYSNR=20 USER=CONSULTORSF PASSWD=******** CLIENT=300 LANG=EN SAPROUTER= POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '101.101.104.4:3320' not reached
+TIME        Wed Feb 12 14:06:41 2020
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 101.101.104.4:3320
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     4
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   en SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   en SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   en SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+**** Log file opened by process 13680 at 2020-02-12 14:07:36 (UTC-06:00 Hora estándar central (México))
+
+SAP .NET Connector 3.0 with file version 3.0.11.0 running on 32-bit .NET Framework 4.0.30319.42000
+Program: C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\ReadFilesConfig.exe
+Working directory: C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release
+Operating system: Windows 7 Professional 64-bit Service Pack 1
+Processor: 4x AMD64 (or x64)
+SAP release: 720, Kernel release: 720, Kernel patch level: 426
+Hostname: SF-0006, IP address: 192.168.56.1, IP_v6 address: 
+
+Default trace level: None
+
+>> Error entry 2020-02-12 14:07:36.542 [Thread 1]
+Failure to create pool for destination POLY (ORIGINAL) [NAME=POLY ASHOST=101.101.104.4 SYSNR=20 USER=CONSULTORSF PASSWD=******** CLIENT=300 LANG=EN SAPROUTER= POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '101.101.104.4:3320' not reached
+TIME        Wed Feb 12 14:07:36 2020
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 101.101.104.4:3320
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2020-02-12 14:07:36.546 [Thread 1]
+[NAME=POLY ASHOST=101.101.104.4 SYSNR=20 USER=CONSULTORSF PASSWD=******** CLIENT=300 LANG=EN SAPROUTER= POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '101.101.104.4:3320' not reached
+TIME        Wed Feb 12 14:07:36 2020
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 101.101.104.4:3320
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   en SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   en SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   en SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)

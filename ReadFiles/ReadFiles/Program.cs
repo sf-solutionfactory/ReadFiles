@@ -220,17 +220,10 @@ namespace ReadFiles
                     {
                         dataLayer.VALIDATE_XML(ref attach, comprobante2.metodoDePago, settings);
                     }
-                }
-                if (attach.Desc_Error.Contains("Vigente"))
-                {
-                    attach.SAT = "X";
-                    attach.RES_PDF = cargaArch(fileInfosxml[i].Name, fileInfospdf, true);
-                }
-                else 
-                {
-                    attach.XML = "";
-                }
-                
+                }                
+                attach.SAT = "X";
+                attach.RES_PDF = cargaArch(fileInfosxml[i].Name, fileInfospdf, true);                
+
                 if (attach.RFC_COMPANY == "" && attach.RFC_VENDOR == "")
                 {
                     attach.Desc_Error = attach.Desc_Error + "<@>" + "El RFC de la empresa y proveedor son incorrectos";
