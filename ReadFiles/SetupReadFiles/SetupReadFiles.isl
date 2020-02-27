@@ -2642,7 +2642,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>SolutionFactory</td><td>0</td><td/><td>-920120432</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>SolutionFactory</td><td>0</td><td/><td>-651682966</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>338114731</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>338114731</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION40CLIENT</td><td>1033</td><td>Microsoft .NET Framework 4.0 Client Package or greater needs to be installed for this installation to continue.</td><td>0</td><td/><td>338116811</td></row>
@@ -3464,7 +3464,7 @@
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME6</td><td>1033</td><td>LAUNCH~1.EXE|Launch ReadFiles.vshost.exe</td><td>0</td><td/><td>640116111</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME7</td><td>1033</td><td>LAUNCH~1.EXE|Launch ReadFiles.exe</td><td>0</td><td/><td>1361585648</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME8</td><td>1033</td><td>LAUNCH~1.EXE|Launch ReadFiles.vshost.exe</td><td>0</td><td/><td>1361585648</td></row>
-		<row><td>IDS_SHORTCUT_DISPLAY_NAME9</td><td>1033</td><td>LAUNCH~1.EXE|Launch ReadFiles.exe</td><td>0</td><td/><td>1361620528</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME9</td><td>1033</td><td>ReadFiles</td><td>0</td><td/><td>-651658422</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>1033</td><td>From the list of servers below, select the database server you would like to target.</td><td>0</td><td/><td>338114731</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_DB</td><td>1033</td><td>From the list of catalog names below, select the database catalog you would like to target.</td><td>0</td><td/><td>338114731</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_TEMPLATE</td><td>1033</td><td>[IS_SQLBROWSE_INTRO]</td><td>0</td><td/><td>338114731</td></row>
@@ -3753,11 +3753,12 @@
 		<row><td>IDS__TargetReq_DESC_PROCESSOR</td><td>1033</td><td>The processor is not adequate for running [ProductName].</td><td>0</td><td/><td>338114731</td></row>
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>338114731</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>338114731</td></row>
-		<row><td>ID_STRING1</td><td>1033</td><td>http://www.SolutionFactory.com</td><td>0</td><td/><td>-920120432</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>SolutionFactory</td><td>0</td><td/><td>-920120432</td></row>
+		<row><td>ID_STRING1</td><td>1033</td><td>http://www.SolutionFactory.com</td><td>0</td><td/><td>-651682966</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>SolutionFactory</td><td>0</td><td/><td>-651682966</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td>ReadFiles</td><td>0</td><td/><td>338154347</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>ReadFiles</td><td>0</td><td/><td>640121870</td></row>
 		<row><td>ID_STRING5</td><td>1033</td><td>ReadFiles</td><td>0</td><td/><td>774365898</td></row>
+		<row><td>ID_STRING6</td><td>1033</td><td>LAUNCH~1.EXE|Launch ReadFiles.exe</td><td>0</td><td/><td>-651680950</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>338114731</td></row>
 	</table>
 
@@ -3875,12 +3876,12 @@
 		<row><td>ReadFiles.exe1_1273EB55935C4F1E908FC492130679C1.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe</td><td>0</td></row>
 		<row><td>ReadFiles.exe1_213B233A7B8D467AA1DBCA9DC1EA56E8.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe</td><td>0</td></row>
 		<row><td>ReadFiles.exe1_387D1DC855CA422BB558A6AB0A8C1921.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe</td><td>0</td></row>
+		<row><td>ReadFiles.exe1_780C320AD5124558835E58688E536509.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe</td><td>0</td></row>
 		<row><td>ReadFiles.exe_17ECA5AEEEB141E292114D3776CD7A46.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe</td><td>0</td></row>
 		<row><td>ReadFiles.exe_3C12F0866042495BA515B3454F2AC5E4.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe</td><td>0</td></row>
 		<row><td>ReadFiles.exe_9B5860FCC66C4778B0B4D90BE30BC0FC.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe</td><td>0</td></row>
 		<row><td>ReadFiles.exe_CA3D8CFD618C4BEDB2C2057C2C037105.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe</td><td>0</td></row>
 		<row><td>ReadFiles.exe_D0119936ADC84276807C5D5352DC0453.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe</td><td>0</td></row>
-		<row><td>ReadFiles.vshost.e_189F18EB125C40A8806BF3A2EFFCE633.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>ReadFiles.vshost.e_BAB6B0FC14714FACABCD98C2D4DA4E8E.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 	</table>
 
@@ -4467,7 +4468,6 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="s72">DirProperty</col>
 		<col def="i2">InstallMode</col>
 		<row><td>ReadFiles.exe</td><td>ReadFiles.exe</td><td/><td>readfi_1_readfiles</td><td>2</td></row>
-		<row><td>ReadFiles.vshost.exe</td><td>ReadFiles.vshost.exe</td><td/><td>readfi_1_readfiles</td><td>2</td></row>
 	</table>
 
 	<table name="RemoveIniFile">
@@ -4554,7 +4554,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
 		<row><td>ReadFiles.exe</td><td>readfi_1_readfiles</td><td>##IDS_SHORTCUT_DISPLAY_NAME9##</td><td>ReadFiles.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>ReadFiles.exe_CA3D8CFD618C4BEDB2C2057C2C037105.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>ReadFiles.vshost.exe</td><td>readfi_1_readfiles</td><td>##IDS_SHORTCUT_DISPLAY_NAME10##</td><td>ReadFiles.vshost.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>ReadFiles.vshost.e_189F18EB125C40A8806BF3A2EFFCE633.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>ReadFiles.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME9##</td><td>ReadFiles.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>ReadFiles.exe1_780C320AD5124558835E58688E536509.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">

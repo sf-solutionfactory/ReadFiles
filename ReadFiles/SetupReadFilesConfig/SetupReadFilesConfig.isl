@@ -2637,7 +2637,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>SolutionFactory</td><td>0</td><td/><td>-920111823</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>SolutionFactory</td><td>0</td><td/><td>-651672726</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>338123691</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>338123691</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION40CLIENT</td><td>1033</td><td>Microsoft .NET Framework 4.0 Client Package or greater needs to be installed for this installation to continue.</td><td>0</td><td/><td>338154411</td></row>
@@ -3453,7 +3453,7 @@
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>1033</td><td>ReadFilesConfig</td><td>0</td><td/><td>338127851</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME10</td><td>1033</td><td>LAUNCH~1.EXE|Launch ReadFilesConfig.vshost.exe</td><td>0</td><td/><td>640116175</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME11</td><td>1033</td><td>LAUNCH~1.EXE|Launch ReadFilesConfig.vshost.exe</td><td>0</td><td/><td>-920101455</td></row>
-		<row><td>IDS_SHORTCUT_DISPLAY_NAME12</td><td>1033</td><td>ReadFilesConfig.exe</td><td>0</td><td/><td>-920074831</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME12</td><td>1033</td><td>ReadFilesConfig</td><td>0</td><td/><td>-651678966</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td>LAUNCH~1.EXE|Launch ReadFilesConfig.vshost.exe</td><td>0</td><td/><td>338160587</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>1033</td><td>ReadFilesConfig</td><td>0</td><td/><td>640093422</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>1033</td><td>LAUNCH~1.EXE|Launch ReadFilesConfig.vshost.exe</td><td>0</td><td/><td>640121998</td></row>
@@ -3750,13 +3750,14 @@
 		<row><td>IDS__TargetReq_DESC_PROCESSOR</td><td>1033</td><td>The processor is not adequate for running [ProductName].</td><td>0</td><td/><td>338123691</td></row>
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>338123691</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>338123691</td></row>
-		<row><td>ID_STRING1</td><td>1033</td><td>http://www.SolutionFactory.com</td><td>0</td><td/><td>-920111823</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>SolutionFactory</td><td>0</td><td/><td>-920111823</td></row>
+		<row><td>ID_STRING1</td><td>1033</td><td>http://www.SolutionFactory.com</td><td>0</td><td/><td>-651670678</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>SolutionFactory</td><td>0</td><td/><td>-651672726</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td>ReadFilesConfig</td><td>0</td><td/><td>338131947</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>LAUNCH~1.EXE|Launch ReadFilesConfig.exe</td><td>0</td><td/><td>640126094</td></row>
 		<row><td>ID_STRING5</td><td>1033</td><td>ReadFilesConfig</td><td>0</td><td/><td>640100014</td></row>
 		<row><td>ID_STRING6</td><td>1033</td><td>ReadFilesConfig</td><td>0</td><td/><td>774320778</td></row>
 		<row><td>ID_STRING7</td><td>1033</td><td>ReadFilesConfig.exe</td><td>0</td><td/><td>-920070735</td></row>
+		<row><td>ID_STRING8</td><td>1033</td><td>ReadFilesConfig</td><td>0</td><td/><td>-651676918</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>338123691</td></row>
 	</table>
 
@@ -3881,6 +3882,7 @@
 		<row><td>ReadFilesConfig.ex_840279D72F1846CCB8566F9B99967C4A.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\ReadFilesConfig.exe</td><td>0</td></row>
 		<row><td>ReadFilesConfig.ex_941C8AAB5ACA458BA31E77567B8827B7.exe</td><td/><td>&lt;VSSolutionFolder&gt;\ReadFilesConfig\ConfigMail.ico</td><td>0</td></row>
 		<row><td>ReadFilesConfig.ex_B1E7636770D449EEBF467FDA74483E57.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\ReadFilesConfig.exe</td><td>0</td></row>
+		<row><td>ReadFilesConfig.ex_D5DE699391514B1FADBD8C65D6D102B6.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\ReadFilesConfig.exe</td><td>0</td></row>
 	</table>
 
 	<table name="IniFile">
@@ -4552,6 +4554,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
 		<row><td>ReadFilesConfig.exe</td><td>readfi_1_readfilesconfig</td><td>##IDS_SHORTCUT_DISPLAY_NAME12##</td><td>ReadFilesConfig.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>ReadFilesConfig.ex_3405D034400F4AD094CACEA417F7AEF1.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>ReadFilesConfig.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME12##</td><td>ReadFilesConfig.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>ReadFilesConfig.ex_D5DE699391514B1FADBD8C65D6D102B6.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">
