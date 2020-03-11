@@ -57,7 +57,7 @@ namespace ReadFiles
             if (String.IsNullOrEmpty(settings.directorioCtes) == false && settings.esActivoDirCtes)
             {
                 MostrarMensajeConsola("Cargando Clientes");
-                directory = new DirectoryInfo(settings.directorioProv);
+                directory = new DirectoryInfo(settings.directorioCtes);
                 listfilesxml = directory.GetFiles("*.*", SearchOption.AllDirectories).Where(x => x.Extension == ".XML" || x.Extension == ".xml").ToArray();
                 listfilespdf = directory.GetFiles("*.*", SearchOption.AllDirectories).Where(x => x.Extension == ".PDF" || x.Extension == ".pdf").ToArray();
                 Procesar(listfilesxml, listfilespdf, "C");
