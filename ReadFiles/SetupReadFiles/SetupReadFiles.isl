@@ -341,12 +341,12 @@
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{F344C9B6-CDE8-4C24-ACF6-18F233C87DAE}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ReadFiles.exe</td><td>{32BCBAD8-4F19-41B0-A725-681BC5A7BDBF}</td><td>INSTALLDIR</td><td>2</td><td/><td>readfiles.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ReadFiles.vshost.exe</td><td>{E755C101-C148-4F4A-88B4-39ED7C0D96D8}</td><td>INSTALLDIR</td><td>2</td><td/><td>readfiles.vshost.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>SAT.Services.dll</td><td>{6EEC01F9-EA5A-4A8C-B9C4-29A8D21C54E3}</td><td>INSTALLDIR</td><td>2</td><td/><td>sat.services.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>SW_sdk_45.dll</td><td>{238120DB-761B-4D31-AB0E-91DE73AABA9C}</td><td>INSTALLDIR</td><td>2</td><td/><td>sw_sdk_45.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>sapnco.dll</td><td>{CE3B4914-BD12-4819-AE50-FB23FC5CF25D}</td><td>INSTALLDIR</td><td>2</td><td/><td>sapnco.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>sapnco_utils.dll</td><td>{0459B699-8317-4A56-B636-C0938CAD9B34}</td><td>INSTALLDIR</td><td>2</td><td/><td>sapnco_utils.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ReadFiles.exe</td><td>{59DA18F8-42D9-440D-89C7-3FBE846956BA}</td><td>INSTALLDIR</td><td>2</td><td/><td>readfiles.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ReadFiles.vshost.exe</td><td>{7F9536E0-0764-4795-BA1F-AB570F622EF8}</td><td>INSTALLDIR</td><td>2</td><td/><td>readfiles.vshost.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>SAT.Services.dll</td><td>{CA43F0E2-32C7-47C6-8131-02203AFDA91F}</td><td>INSTALLDIR</td><td>2</td><td/><td>sat.services.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>SW_sdk_45.dll</td><td>{0886B4FB-C33F-4A41-BEA3-8ED2DF411C0B}</td><td>INSTALLDIR</td><td>2</td><td/><td>sw_sdk_45.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>sapnco.dll</td><td>{9AC4D58C-88BD-49CA-9E0B-A097DE881A35}</td><td>INSTALLDIR</td><td>2</td><td/><td>sapnco.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>sapnco_utils.dll</td><td>{FFECE479-017E-46B5-B4B9-8C3F28EFA212}</td><td>INSTALLDIR</td><td>2</td><td/><td>sapnco_utils.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -2049,12 +2049,12 @@
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_BF5991B3_7695_4E58_A82B_3306897329C9_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ReadFiles.exe</td><td/><td/><td>_43042B9B_550E_4CE3_B776_7E73EDAAE2A1_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ReadFiles.vshost.exe</td><td/><td/><td>_43AF7177_EC34_49C1_B5BD_383C2C27A128_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>SAT.Services.dll</td><td/><td/><td>_C12C3FE4_7E85_407D_ADB6_5F8482E59E0B_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>SW_sdk_45.dll</td><td/><td/><td>_8777B2B6_8F16_4CD0_B9F9_A38A5D00E029_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>sapnco.dll</td><td/><td/><td>_2D0C788F_11A5_4C5B_8FC8_8E07134FCB90_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>sapnco_utils.dll</td><td/><td/><td>_3DCCA589_7DCA_4345_B9DC_1527E0805BC5_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ReadFiles.exe</td><td/><td/><td>_A9DB84AF_3641_48A5_BBB7_7208E209C809_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ReadFiles.vshost.exe</td><td/><td/><td>_F480FB76_8D68_4C7E_B905_2F041CFD8FCB_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>SAT.Services.dll</td><td/><td/><td>_0659A38F_2412_480F_8D0E_B8ADEBC0E234_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>SW_sdk_45.dll</td><td/><td/><td>_D51AB485_DC37_4D90_B9E2_05C7CAC2F75A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>sapnco.dll</td><td/><td/><td>_95854AEE_C37D_4EE6_95F6_E6FDB5B25B92_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>sapnco_utils.dll</td><td/><td/><td>_635D509F_B830_43B5_9360_427EABAD3525_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -3462,6 +3462,8 @@
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME13</td><td>1033</td><td>LAUNCH~1.EXE|Launch ReadFiles.exe</td><td>0</td><td/><td>1504227915</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME14</td><td>1033</td><td>ReadFiles</td><td>0</td><td/><td>1504189035</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME15</td><td>1033</td><td>LAUNCH~1.EXE|Launch ReadFiles.vshost.exe</td><td>0</td><td/><td>1504238155</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME16</td><td>1033</td><td>ReadFiles</td><td>0</td><td/><td>1504237900</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME17</td><td>1033</td><td>LAUNCH~1.EXE|Launch ReadFiles.vshost.exe</td><td>0</td><td/><td>1504229708</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td>LAUNCH~1.EXE|Launch ReadFiles.vshost.exe</td><td>0</td><td/><td>338103147</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>1033</td><td>ReadFiles</td><td>0</td><td/><td>640142318</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>1033</td><td>LAUNCH~1.EXE|Launch ReadFiles.vshost.exe</td><td>0</td><td/><td>640101358</td></row>
@@ -3766,6 +3768,7 @@
 		<row><td>ID_STRING6</td><td>1033</td><td>LAUNCH~1.EXE|Launch ReadFiles.exe</td><td>0</td><td/><td>-651680950</td></row>
 		<row><td>ID_STRING7</td><td>1033</td><td>LAUNCH~1.EXE|Launch ReadFiles.exe</td><td>0</td><td/><td>1504188683</td></row>
 		<row><td>ID_STRING8</td><td>1033</td><td>LAUNCH~1.EXE|Launch ReadFiles.exe</td><td>0</td><td/><td>1504242251</td></row>
+		<row><td>ID_STRING9</td><td>1033</td><td>ReadFiles</td><td>0</td><td/><td>1504239948</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>338114731</td></row>
 	</table>
 
@@ -3885,6 +3888,7 @@
 		<row><td>ReadFiles.exe1_387D1DC855CA422BB558A6AB0A8C1921.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe</td><td>0</td></row>
 		<row><td>ReadFiles.exe1_69705EAC76884F79B1A8DE216CE75A36.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe</td><td>0</td></row>
 		<row><td>ReadFiles.exe1_780C320AD5124558835E58688E536509.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe</td><td>0</td></row>
+		<row><td>ReadFiles.exe1_BCF2B51417A34F16B51EA5DBC3E06F66.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe</td><td>0</td></row>
 		<row><td>ReadFiles.exe1_E92CCD84D5AC4CA7A700AE9722C4A3F4.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe</td><td>0</td></row>
 		<row><td>ReadFiles.exe_17ECA5AEEEB141E292114D3776CD7A46.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe</td><td>0</td></row>
 		<row><td>ReadFiles.exe_3C12F0866042495BA515B3454F2AC5E4.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe</td><td>0</td></row>
@@ -3893,6 +3897,7 @@
 		<row><td>ReadFiles.exe_CA3D8CFD618C4BEDB2C2057C2C037105.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe</td><td>0</td></row>
 		<row><td>ReadFiles.exe_D0119936ADC84276807C5D5352DC0453.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe</td><td>0</td></row>
 		<row><td>ReadFiles.exe_DF25E3E77A09411DA36C17F99E880D45.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe</td><td>0</td></row>
+		<row><td>ReadFiles.exe_E2FFF778E4634C7F9E88309DEA152C61.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe</td><td>0</td></row>
 		<row><td>ReadFiles.exe_FB74D86B48F74476B783166109AD9D67.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Release\ReadFiles.exe</td><td>0</td></row>
 		<row><td>ReadFiles.vshost.e_BAB6B0FC14714FACABCD98C2D4DA4E8E.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 	</table>
@@ -4565,8 +4570,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>ReadFiles.exe</td><td>readfi_1_readfiles</td><td>##IDS_SHORTCUT_DISPLAY_NAME14##</td><td>ReadFiles.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>ReadFiles.exe_FB74D86B48F74476B783166109AD9D67.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>ReadFiles.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME14##</td><td>ReadFiles.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>ReadFiles.exe1_E92CCD84D5AC4CA7A700AE9722C4A3F4.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>ReadFiles.exe</td><td>readfi_1_readfiles</td><td>##IDS_SHORTCUT_DISPLAY_NAME16##</td><td>ReadFiles.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>ReadFiles.exe_E2FFF778E4634C7F9E88309DEA152C61.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>ReadFiles.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME16##</td><td>ReadFiles.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>ReadFiles.exe1_BCF2B51417A34F16B51EA5DBC3E06F66.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">
