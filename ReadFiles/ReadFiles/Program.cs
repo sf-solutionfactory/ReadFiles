@@ -153,7 +153,15 @@ namespace ReadFiles
                     attach.UUID_XML = timbre.UUID.ToUpper();
                     if (clase == "P")
                     {
-                        dataLayer.VALIDATE_XML(ref attach, comprobante.MetodoPago, settings);
+                        try
+                        {
+                            dataLayer.VALIDATE_XML(ref attach, comprobante.MetodoPago, settings);
+                        }
+                        catch(Exception e)
+                        {
+                            errorxml = true;
+                            //MostrarMensajeConsola(e.Message, false);
+                        }
                     }
                     relacionados.Clear();
                     if (pagos.Pago != null)
@@ -218,7 +226,15 @@ namespace ReadFiles
                     attach.UUID_XML = timbre.UUID.ToUpper();
                     if (clase == "P")
                     {
-                        dataLayer.VALIDATE_XML(ref attach, comprobante2.metodoDePago, settings);
+                        try
+                        {
+                            dataLayer.VALIDATE_XML(ref attach, comprobante2.metodoDePago, settings);
+                        }
+                        catch (Exception e)
+                        {
+                            errorxml = true;
+                            //MostrarMensajeConsola(e.Message, false);
+                        }
                     }
                 }
                 if (attach.Desc_Error.Contains("Vigente"))
@@ -255,7 +271,15 @@ namespace ReadFiles
                     string r = "";
                     if (errorxml == false)
                     {
-                        r = dataLayer.SAVE_MAIL_DATA(mail_data, attachments, relacionados, settings);
+                        try
+                        {
+                            r = dataLayer.SAVE_MAIL_DATA(mail_data, attachments, relacionados, settings);
+                        }
+                        catch (Exception e)
+                        {
+                            errorxml = true;
+                            //MostrarMensajeConsola(e.Message, false);
+                        }
                     }                    
                     if (errorxml == false)
                     {
@@ -473,13 +497,15 @@ namespace ReadFiles
 
             }
         }
-        public static void MostrarMensajeConsola(string mensaje)
+        public static void MostrarMensajeConsola(string mensaje, bool tipo = true)
         {
             try
             {
                 int ancho = 0;
                 ancho = Console.BufferWidth;
                 string inicioMensaje = "[] ", complementoMensaje = " []";
+                if(!tipo)
+                { inicioMensaje = "<< "; complementoMensaje = " >>"; }
                 if (mensaje.Length >= ancho - (inicioMensaje.Length + complementoMensaje.Length))
                 {
                     DividirMensaje(mensaje, ancho, complementoMensaje, inicioMensaje);
@@ -498,25 +524,36 @@ namespace ReadFiles
         {
             string[] array = new string[2];
             int recortar = ancho - complementoMensaje.Length;
-            if (recortar > 0 && mensaje.Length > recortar)
+            if (mensaje.Contains('\n'))
             {
-                array[0] = mensaje.Substring(0, recortar);
-                array[1] = mensaje.Substring(recortar, (mensaje.Length - recortar));
-                MostrarMensajeFinal(inicioMensaje, array[0], complementoMensaje, ancho);
-                //Console.WriteLine(inicioMensaje + array[0] + complementoMensaje);
-                if (array[1].Length >= ancho - (inicioMensaje.Length + complementoMensaje.Length))
+                string[] comp = mensaje.Split('\n');
+                foreach (string mess in comp)
                 {
-                    DividirMensaje(array[1], ancho, complementoMensaje, inicioMensaje);
-                }
-                else
-                {
-                    MostrarMensajeFinal(inicioMensaje, array[1], complementoMensaje, ancho);
+                    MostrarMensajeFinal(inicioMensaje, mess, complementoMensaje, ancho);
                 }
             }
             else
             {
-                array[0] = mensaje;
-                MostrarMensajeFinal(inicioMensaje, array[0], complementoMensaje, ancho);
+                if (recortar > 0 && mensaje.Length > recortar)
+                {
+                    array[0] = mensaje.Substring(0, recortar);
+                    array[1] = mensaje.Substring(recortar, (mensaje.Length - recortar));
+                    MostrarMensajeFinal(inicioMensaje, array[0], complementoMensaje, ancho);
+                    //Console.WriteLine(inicioMensaje + array[0] + complementoMensaje);
+                    if (array[1].Length >= ancho - (inicioMensaje.Length + complementoMensaje.Length))
+                    {
+                        DividirMensaje(array[1], ancho, complementoMensaje, inicioMensaje);
+                    }
+                    else
+                    {
+                        MostrarMensajeFinal(inicioMensaje, array[1], complementoMensaje, ancho);
+                    }
+                }
+                else
+                {
+                    array[0] = mensaje;
+                    MostrarMensajeFinal(inicioMensaje, array[0], complementoMensaje, ancho);
+                }
             }
             return array;
         }
