@@ -441,31 +441,31 @@ namespace ReadFiles
                 Console.ReadLine();
                 Environment.Exit(0);
             }
-            nombre = "Directorio" + thisDay.ToString();
-            nombre = nombre.Replace(':', '-');
-            nombre = nombre.Replace('\\', '-');
-            nombre = nombre.Replace('/', '-');
-            dirFile = settings.directorioLog;
-            dirFile = dirFile + "\\" + nombre + ".txt";
-            try
-            {
-                System.IO.File.WriteAllText(@dirFile, "DIRECTORIOS:");
-                using (System.IO.StreamWriter file = new System.IO.StreamWriter(@dirFile, true))
-                {
-                    file.WriteLine(" ");
-                    file.Close();
-                }
+            //nombre = "Directorio" + thisDay.ToString();
+            //nombre = nombre.Replace(':', '-');
+            //nombre = nombre.Replace('\\', '-');
+            //nombre = nombre.Replace('/', '-');
+            //dirFile = settings.directorioLog;
+            //dirFile = dirFile + "\\" + nombre + ".txt";
+            //try
+            //{
+            //    System.IO.File.WriteAllText(@dirFile, "DIRECTORIOS:");
+            //    using (System.IO.StreamWriter file = new System.IO.StreamWriter(@dirFile, true))
+            //    {
+            //        file.WriteLine(" ");
+            //        file.Close();
+            //    }
 
-                direlogdir = @dirFile;
-            }
-            catch (Exception)
-            {
-                MostrarMensajeConsola("No fue posible crear el archivo de LOG de la carga de archivos");
-                MostrarMensajeConsola("Debe indicar un directorio donde pueda ser creado");
-                MostrarMensajeConsola("Pulse enter para salir");
-                Console.ReadLine();
-                Environment.Exit(0);
-            }
+            //    direlogdir = @dirFile;
+            //}
+            //catch (Exception)
+            //{
+            //    MostrarMensajeConsola("No fue posible crear el archivo de LOG de la carga de archivos");
+            //    MostrarMensajeConsola("Debe indicar un directorio donde pueda ser creado");
+            //    MostrarMensajeConsola("Pulse enter para salir");
+            //    Console.ReadLine();
+            //    Environment.Exit(0);
+            //}
         }
         private static void Proxy()
         {

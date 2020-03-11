@@ -24,6 +24,7 @@ namespace ReadFilesConfig
             HabilitadosGeneral();
             HabilitadosProxi();
             Prox_Ejec();
+            tabControl1.TabPages.Remove(tabPage5);
         }
         private void Guardar()
         {
