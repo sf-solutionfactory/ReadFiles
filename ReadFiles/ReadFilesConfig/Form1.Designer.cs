@@ -55,12 +55,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.chkProveedor = new System.Windows.Forms.CheckBox();
-            this.txtProveedor = new System.Windows.Forms.TextBox();
-            this.btnProveedor = new System.Windows.Forms.Button();
-            this.chkCliente = new System.Windows.Forms.CheckBox();
-            this.txtCliente = new System.Windows.Forms.TextBox();
-            this.btnCliente = new System.Windows.Forms.Button();
             this.chkNomina = new System.Windows.Forms.CheckBox();
             this.txtNomina = new System.Windows.Forms.TextBox();
             this.btnNomina = new System.Windows.Forms.Button();
@@ -169,7 +163,8 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtDescripcion);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(19, 11);
+            this.groupBox1.Location = new System.Drawing.Point(38, 21);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(718, 373);
             this.groupBox1.TabIndex = 0;
@@ -224,7 +219,8 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(40, 280);
+            this.label7.Location = new System.Drawing.Point(80, 538);
+            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(103, 13);
             this.label7.TabIndex = 6;
@@ -313,7 +309,8 @@
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Location = new System.Drawing.Point(22, 305);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(688, 165);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox3.Size = new System.Drawing.Size(1376, 317);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Guardar archivos";
@@ -364,7 +361,7 @@
             this.label9.TabIndex = 3;
             this.label9.Text = "Registro del proceso (LOG):";
             // 
-            // label8
+            // txtLog
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(35, 102);
@@ -446,7 +443,7 @@
             this.btnCliente.UseVisualStyleBackColor = true;
             this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
-            // chkNomina
+            // tabPage4
             // 
             this.chkNomina.AutoSize = true;
             this.chkNomina.Location = new System.Drawing.Point(38, 190);
@@ -964,7 +961,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(800, 573);
