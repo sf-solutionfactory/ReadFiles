@@ -57,7 +57,7 @@ namespace ReadFiles
             if (String.IsNullOrEmpty(settings.directorioCtes) == false && settings.esActivoDirCtes)
             {
                 MostrarMensajeConsola("Cargando Clientes");
-                directory = new DirectoryInfo(settings.directorioProv);
+                directory = new DirectoryInfo(settings.directorioCtes);
                 listfilesxml = directory.GetFiles("*.*", SearchOption.AllDirectories).Where(x => x.Extension == ".XML" || x.Extension == ".xml").ToArray();
                 listfilespdf = directory.GetFiles("*.*", SearchOption.AllDirectories).Where(x => x.Extension == ".PDF" || x.Extension == ".pdf").ToArray();
                 Procesar(listfilesxml, listfilespdf, "C");
@@ -153,7 +153,15 @@ namespace ReadFiles
                     attach.UUID_XML = timbre.UUID.ToUpper();
                     if (clase == "P")
                     {
-                        dataLayer.VALIDATE_XML(ref attach, comprobante.MetodoPago, settings);
+                        try
+                        {
+                            dataLayer.VALIDATE_XML(ref attach, comprobante.MetodoPago, settings);
+                        }
+                        catch(Exception e)
+                        {
+                            errorxml = true;
+                            //MostrarMensajeConsola(e.Message, false);
+                        }
                     }
                     relacionados.Clear();
                     if (pagos.Pago != null)
@@ -218,7 +226,15 @@ namespace ReadFiles
                     attach.UUID_XML = timbre.UUID.ToUpper();
                     if (clase == "P")
                     {
-                        dataLayer.VALIDATE_XML(ref attach, comprobante2.metodoDePago, settings);
+                        try
+                        {
+                            dataLayer.VALIDATE_XML(ref attach, comprobante2.metodoDePago, settings);
+                        }
+                        catch (Exception e)
+                        {
+                            errorxml = true;
+                            //MostrarMensajeConsola(e.Message, false);
+                        }
                     }
                 }
                 if (attach.Desc_Error.Contains("Vigente"))
@@ -255,7 +271,15 @@ namespace ReadFiles
                     string r = "";
                     if (errorxml == false)
                     {
-                        r = dataLayer.SAVE_MAIL_DATA(mail_data, attachments, relacionados, settings);
+                        try
+                        {
+                            r = dataLayer.SAVE_MAIL_DATA(mail_data, attachments, relacionados, settings);
+                        }
+                        catch (Exception e)
+                        {
+                            errorxml = true;
+                            //MostrarMensajeConsola(e.Message, false);
+                        }
                     }                    
                     if (errorxml == false)
                     {
@@ -417,31 +441,31 @@ namespace ReadFiles
                 Console.ReadLine();
                 Environment.Exit(0);
             }
-            nombre = "Directorio" + thisDay.ToString();
-            nombre = nombre.Replace(':', '-');
-            nombre = nombre.Replace('\\', '-');
-            nombre = nombre.Replace('/', '-');
-            dirFile = settings.directorioLog;
-            dirFile = dirFile + "\\" + nombre + ".txt";
-            try
-            {
-                System.IO.File.WriteAllText(@dirFile, "DIRECTORIOS:");
-                using (System.IO.StreamWriter file = new System.IO.StreamWriter(@dirFile, true))
-                {
-                    file.WriteLine(" ");
-                    file.Close();
-                }
+            //nombre = "Directorio" + thisDay.ToString();
+            //nombre = nombre.Replace(':', '-');
+            //nombre = nombre.Replace('\\', '-');
+            //nombre = nombre.Replace('/', '-');
+            //dirFile = settings.directorioLog;
+            //dirFile = dirFile + "\\" + nombre + ".txt";
+            //try
+            //{
+            //    System.IO.File.WriteAllText(@dirFile, "DIRECTORIOS:");
+            //    using (System.IO.StreamWriter file = new System.IO.StreamWriter(@dirFile, true))
+            //    {
+            //        file.WriteLine(" ");
+            //        file.Close();
+            //    }
 
-                direlogdir = @dirFile;
-            }
-            catch (Exception)
-            {
-                MostrarMensajeConsola("No fue posible crear el archivo de LOG de la carga de archivos");
-                MostrarMensajeConsola("Debe indicar un directorio donde pueda ser creado");
-                MostrarMensajeConsola("Pulse enter para salir");
-                Console.ReadLine();
-                Environment.Exit(0);
-            }
+            //    direlogdir = @dirFile;
+            //}
+            //catch (Exception)
+            //{
+            //    MostrarMensajeConsola("No fue posible crear el archivo de LOG de la carga de archivos");
+            //    MostrarMensajeConsola("Debe indicar un directorio donde pueda ser creado");
+            //    MostrarMensajeConsola("Pulse enter para salir");
+            //    Console.ReadLine();
+            //    Environment.Exit(0);
+            //}
         }
         private static void Proxy()
         {
@@ -473,13 +497,15 @@ namespace ReadFiles
 
             }
         }
-        public static void MostrarMensajeConsola(string mensaje)
+        public static void MostrarMensajeConsola(string mensaje, bool tipo = true)
         {
             try
             {
                 int ancho = 0;
                 ancho = Console.BufferWidth;
                 string inicioMensaje = "[] ", complementoMensaje = " []";
+                if(!tipo)
+                { inicioMensaje = "<< "; complementoMensaje = " >>"; }
                 if (mensaje.Length >= ancho - (inicioMensaje.Length + complementoMensaje.Length))
                 {
                     DividirMensaje(mensaje, ancho, complementoMensaje, inicioMensaje);
@@ -498,25 +524,36 @@ namespace ReadFiles
         {
             string[] array = new string[2];
             int recortar = ancho - complementoMensaje.Length;
-            if (recortar > 0 && mensaje.Length > recortar)
+            if (mensaje.Contains('\n'))
             {
-                array[0] = mensaje.Substring(0, recortar);
-                array[1] = mensaje.Substring(recortar, (mensaje.Length - recortar));
-                MostrarMensajeFinal(inicioMensaje, array[0], complementoMensaje, ancho);
-                //Console.WriteLine(inicioMensaje + array[0] + complementoMensaje);
-                if (array[1].Length >= ancho - (inicioMensaje.Length + complementoMensaje.Length))
+                string[] comp = mensaje.Split('\n');
+                foreach (string mess in comp)
                 {
-                    DividirMensaje(array[1], ancho, complementoMensaje, inicioMensaje);
-                }
-                else
-                {
-                    MostrarMensajeFinal(inicioMensaje, array[1], complementoMensaje, ancho);
+                    MostrarMensajeFinal(inicioMensaje, mess, complementoMensaje, ancho);
                 }
             }
             else
             {
-                array[0] = mensaje;
-                MostrarMensajeFinal(inicioMensaje, array[0], complementoMensaje, ancho);
+                if (recortar > 0 && mensaje.Length > recortar)
+                {
+                    array[0] = mensaje.Substring(0, recortar);
+                    array[1] = mensaje.Substring(recortar, (mensaje.Length - recortar));
+                    MostrarMensajeFinal(inicioMensaje, array[0], complementoMensaje, ancho);
+                    //Console.WriteLine(inicioMensaje + array[0] + complementoMensaje);
+                    if (array[1].Length >= ancho - (inicioMensaje.Length + complementoMensaje.Length))
+                    {
+                        DividirMensaje(array[1], ancho, complementoMensaje, inicioMensaje);
+                    }
+                    else
+                    {
+                        MostrarMensajeFinal(inicioMensaje, array[1], complementoMensaje, ancho);
+                    }
+                }
+                else
+                {
+                    array[0] = mensaje;
+                    MostrarMensajeFinal(inicioMensaje, array[0], complementoMensaje, ancho);
+                }
             }
             return array;
         }

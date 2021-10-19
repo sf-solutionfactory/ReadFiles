@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SharedSettings;
+using TaskScheduler;
 
 namespace ReadFilesConfig
 {
@@ -19,6 +21,10 @@ namespace ReadFilesConfig
         {
             InitializeComponent();
             CargarConf();
+            HabilitadosGeneral();
+            HabilitadosProxi();
+            Prox_Ejec();
+            tabControl1.TabPages.Remove(tabPage5);
         }
         private void Guardar()
         {
@@ -57,6 +63,9 @@ namespace ReadFilesConfig
             settings.prox_puert = Convert.ToInt32(txtPuerProxy.Text);
             settings.prox_user = txtUsuProxy.Text;
             settings.prox_pass = txtPassProxy.Text;
+
+            settings.esActivoWindows = chkInicioW.Checked;
+
             if (String.IsNullOrEmpty(settings.directorioLog))
             {
                 MessageBox.Show("Agrege un directorio en el Log", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -66,6 +75,11 @@ namespace ReadFilesConfig
             if (String.IsNullOrEmpty(settings.prox_host) && chkProxy.Checked )
             {
                 MessageBox.Show("Agrege la direccion del proxy", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnGuardar.Enabled = true;
+                return;
+            }
+            if (IniciarWindows() == false)
+            {
                 btnGuardar.Enabled = true;
                 return;
             }
@@ -129,6 +143,8 @@ namespace ReadFilesConfig
             txtPuerProxy.Text = settings.prox_puert.ToString();
             txtUsuProxy.Text = settings.prox_user;
             txtPassProxy.Text = settings.prox_pass;
+
+            chkInicioW.Checked = settings.esActivoWindows;
         }
         private string examinarRuta(string dir)
         {
@@ -139,6 +155,27 @@ namespace ReadFilesConfig
             if (result == DialogResult.OK)
             {
                 res = folderBrowserDialog1.SelectedPath;
+            }
+
+            return res;
+        }
+        private string Ruta(string dir)
+        {
+            string res = dir;
+
+            openFileDialog1.FileName = Path.GetFileName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase).Replace("Config", "");
+            openFileDialog1.InitialDirectory = (Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase).Remove(0, 6));
+            openFileDialog1.Filter = "Exe Files (.exe)|*.exe|All Files (*.*)|*.*";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    res = openFileDialog1.FileName;
+                }
+                catch (Exception e)
+                {
+
+                }
             }
 
             return res;
@@ -186,6 +223,175 @@ namespace ReadFilesConfig
                     e.Handled = true;
                 }
             }
+        }
+        private void HabilitadosGeneral()
+        {
+            if (chkInicioW.Checked == true)
+            {
+                Hab();
+                chkEdit.Enabled = true;
+            }
+            else
+            {
+                Dehab();
+                chkEdit.Checked = false;
+                chkEdit.Enabled = false;
+            }
+            if ((chkEdit.Checked == true && label18.Visible == true) || (chkInicioW.Checked == true && label18.Visible == false))
+            {
+                Hab();
+            }
+            else
+            {
+                Dehab();
+            }
+        }
+        private void HabilitadosProxi()
+        {
+            if (chkProxy.Checked == true)
+            {
+                txtIPProxy.Enabled = true;
+                txtPuerProxy.Enabled = true;
+                txtUsuProxy.Enabled = true;
+                txtPassProxy.Enabled = true;
+                label10.Enabled = true;
+                label11.Enabled = true;
+                label12.Enabled = true;
+                label13.Enabled = true;
+            }
+            else
+            {
+                txtIPProxy.Enabled = false;
+                txtPuerProxy.Enabled = false;
+                txtUsuProxy.Enabled = false;
+                txtPassProxy.Enabled = false;
+                label10.Enabled = false;
+                label11.Enabled = false;
+                label12.Enabled = false;
+                label13.Enabled = false;
+            }
+        }
+        private bool IniciarWindows()
+        {
+            string nombreApp = (Path.GetFileName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase)).Replace("Config.exe", "");
+            ScheduledTasks Tareas = new ScheduledTasks();
+            string[] Existen = Tareas.GetTaskNames();
+            short hora = Convert.ToInt16(TimePicker.Text.Substring(0, 2));
+            short min = Convert.ToInt16(TimePicker.Text.Substring(3, 2));
+            string pass = null;
+
+            if (chkInicioW.Checked == true)
+            {
+                try
+                {
+                    //Referencia https://www.codeproject.com/Articles/2407/A-New-Task-Scheduler-Class-Library-for-NET
+
+                    if (!Existen.Contains(nombreApp + ".job"))
+                    {
+                        TaskScheduler.Task tarea = Tareas.CreateTask(nombreApp);
+                        tarea.ApplicationName = txtRutaRead.Text;
+                        tarea.Comment = "Tarea para ejecutar el ReadFiles diariamente";
+                        tarea.SetAccountInformation(Environment.UserName, pass);
+                        tarea.Creator = Environment.UserName;
+                        tarea.Priority = System.Diagnostics.ProcessPriorityClass.Normal;
+                        tarea.Triggers.Add(new DailyTrigger(hora, min));
+                        tarea.Flags = TaskFlags.RunOnlyIfLoggedOn;
+                        tarea.Save();
+                        tarea.Close();
+                    }
+                    else if (chkEdit.Checked)
+                    {
+                        TaskScheduler.Task tarea = Tareas.OpenTask(nombreApp);
+                        tarea.Triggers.RemoveAt(0);
+                        tarea.Triggers.Add(new DailyTrigger(hora, min));
+                        tarea.Save();
+                        tarea.Close();
+                    }
+                    Tareas.Dispose();
+                    Prox_Ejec();
+                    txtPassWind.Text = "";
+                    return true;
+                }
+                catch (Exception e)
+                {
+                    Tareas.DeleteTask(nombreApp);
+                    Tareas.Dispose();
+                    MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Prox_Ejec();
+                    return false;
+                }
+            }
+            else
+            {
+                try
+                {
+                    Tareas.DeleteTask(nombreApp);
+                    Tareas.Dispose();
+                    Prox_Ejec();
+                    return true;
+                }
+                catch (Exception e)
+                {
+                    Prox_Ejec();
+                    return false;
+                }
+            }
+        }
+        private void Prox_Ejec()
+        {
+            string nombreApp = (Path.GetFileName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase)).Replace("Config.exe", "");
+            ScheduledTasks Tareas = new ScheduledTasks();
+            TaskScheduler.Task tarea = Tareas.OpenTask(nombreApp);
+            if (chkInicioW.Checked && tarea != null)
+            {
+                string proxima = tarea.NextRunTime.ToString();
+                label18.Visible = true;
+                label18.Text = ("Proxima ejecucion: " + proxima);
+                chkEdit.Visible = true;
+                TimePicker.Value = Convert.ToDateTime(proxima);
+                tarea.Close();
+
+                Dehab();
+            }
+            else
+            {
+                label18.Visible = false;
+                label18.Text = "";
+                chkEdit.Visible = false;
+                chkInicioW.Checked = false;
+            }
+            chkEdit.Checked = false;
+            Tareas.Dispose();
+        }
+        private void Dehab()
+        {
+            txtUserWind.Enabled = false;
+            txtPassWind.Enabled = false;
+            txtRutaRead.Enabled = false;
+            btnCambiar.Enabled = false;
+            TimePicker.Enabled = false;
+            txtUserWind.Text = "";
+            txtPassWind.Text = "";
+            txtRutaRead.Text = "";
+            label14.Enabled = false;
+            label15.Enabled = false;
+            label16.Enabled = false;
+            label17.Enabled = false;
+        }
+        private void Hab()
+        {
+            string path = (Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase).Remove(0, 6) + "\\" + Path.GetFileName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase)).Replace("Config", "");
+            txtUserWind.Enabled = true;
+            txtPassWind.Enabled = true;
+            txtRutaRead.Enabled = true;
+            btnCambiar.Enabled = true;
+            TimePicker.Enabled = true;
+            txtRutaRead.Text = path;
+            txtUserWind.Text = Environment.UserDomainName + "\\" + Environment.UserName;
+            label14.Enabled = true;
+            label15.Enabled = true;
+            label16.Enabled = true;
+            label17.Enabled = true;
         }
         private void txtPuerProxy_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -260,6 +466,26 @@ namespace ReadFilesConfig
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void chkInicioW_CheckedChanged(object sender, EventArgs e)
+        {
+            HabilitadosGeneral();
+        }
+
+        private void btnCambiar_Click(object sender, EventArgs e)
+        {
+            this.txtRutaRead.Text = Ruta(txtRutaRead.Text);
+        }
+
+        private void chkProxy_CheckedChanged(object sender, EventArgs e)
+        {
+            HabilitadosProxi();
+        }
+
+        private void chkEdit_CheckedChanged(object sender, EventArgs e)
+        {
+            HabilitadosGeneral();
         }
     }
 }

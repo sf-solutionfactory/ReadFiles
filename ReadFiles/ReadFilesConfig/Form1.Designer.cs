@@ -90,9 +90,24 @@
             this.txtPuerProxy = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtIPProxy = new System.Windows.Forms.TextBox();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.chkEdit = new System.Windows.Forms.CheckBox();
+            this.TimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtUserWind = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.btnCambiar = new System.Windows.Forms.Button();
+            this.txtRutaRead = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtPassWind = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.chkInicioW = new System.Windows.Forms.CheckBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -104,6 +119,8 @@
             this.groupBox5.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -112,8 +129,8 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(24, 23);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(776, 503);
@@ -701,6 +718,7 @@
             this.chkProxy.TabIndex = 0;
             this.chkProxy.Text = "Activar Proxy";
             this.chkProxy.UseVisualStyleBackColor = true;
+            this.chkProxy.CheckedChanged += new System.EventHandler(this.chkProxy_CheckedChanged);
             // 
             // label10
             // 
@@ -768,6 +786,153 @@
             this.txtIPProxy.Size = new System.Drawing.Size(134, 20);
             this.txtIPProxy.TabIndex = 3;
             // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.groupBox7);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(768, 477);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "General";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.chkEdit);
+            this.groupBox7.Controls.Add(this.TimePicker);
+            this.groupBox7.Controls.Add(this.label18);
+            this.groupBox7.Controls.Add(this.txtUserWind);
+            this.groupBox7.Controls.Add(this.label17);
+            this.groupBox7.Controls.Add(this.label16);
+            this.groupBox7.Controls.Add(this.btnCambiar);
+            this.groupBox7.Controls.Add(this.txtRutaRead);
+            this.groupBox7.Controls.Add(this.label15);
+            this.groupBox7.Controls.Add(this.txtPassWind);
+            this.groupBox7.Controls.Add(this.label14);
+            this.groupBox7.Controls.Add(this.chkInicioW);
+            this.groupBox7.Location = new System.Drawing.Point(18, 16);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(731, 443);
+            this.groupBox7.TabIndex = 0;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Windows";
+            // 
+            // chkEdit
+            // 
+            this.chkEdit.AutoSize = true;
+            this.chkEdit.Location = new System.Drawing.Point(35, 51);
+            this.chkEdit.Name = "chkEdit";
+            this.chkEdit.Size = new System.Drawing.Size(53, 17);
+            this.chkEdit.TabIndex = 11;
+            this.chkEdit.Text = "Editar";
+            this.chkEdit.UseVisualStyleBackColor = true;
+            this.chkEdit.Visible = false;
+            this.chkEdit.CheckedChanged += new System.EventHandler(this.chkEdit_CheckedChanged);
+            // 
+            // TimePicker
+            // 
+            this.TimePicker.CustomFormat = "HH:mm";
+            this.TimePicker.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.TimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TimePicker.Location = new System.Drawing.Point(179, 126);
+            this.TimePicker.Name = "TimePicker";
+            this.TimePicker.ShowUpDown = true;
+            this.TimePicker.Size = new System.Drawing.Size(51, 20);
+            this.TimePicker.TabIndex = 10;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(182, 19);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(0, 13);
+            this.label18.TabIndex = 9;
+            this.label18.Visible = false;
+            // 
+            // txtUserWind
+            // 
+            this.txtUserWind.Location = new System.Drawing.Point(179, 164);
+            this.txtUserWind.Name = "txtUserWind";
+            this.txtUserWind.Size = new System.Drawing.Size(166, 20);
+            this.txtUserWind.TabIndex = 1;
+            this.txtUserWind.Visible = false;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(32, 164);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(124, 13);
+            this.label17.TabIndex = 8;
+            this.label17.Text = "Usuario de Administrador";
+            this.label17.Visible = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(32, 126);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(123, 13);
+            this.label16.TabIndex = 6;
+            this.label16.Text = "Hora de Ejecución diaria";
+            // 
+            // btnCambiar
+            // 
+            this.btnCambiar.Location = new System.Drawing.Point(620, 86);
+            this.btnCambiar.Name = "btnCambiar";
+            this.btnCambiar.Size = new System.Drawing.Size(75, 23);
+            this.btnCambiar.TabIndex = 4;
+            this.btnCambiar.Text = "Cambiar";
+            this.btnCambiar.UseVisualStyleBackColor = true;
+            this.btnCambiar.Click += new System.EventHandler(this.btnCambiar_Click);
+            // 
+            // txtRutaRead
+            // 
+            this.txtRutaRead.Location = new System.Drawing.Point(179, 88);
+            this.txtRutaRead.Name = "txtRutaRead";
+            this.txtRutaRead.Size = new System.Drawing.Size(435, 20);
+            this.txtRutaRead.TabIndex = 3;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(32, 88);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(95, 13);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "Ruta de ReadFiles";
+            // 
+            // txtPassWind
+            // 
+            this.txtPassWind.Location = new System.Drawing.Point(179, 200);
+            this.txtPassWind.Name = "txtPassWind";
+            this.txtPassWind.Size = new System.Drawing.Size(166, 20);
+            this.txtPassWind.TabIndex = 2;
+            this.txtPassWind.UseSystemPasswordChar = true;
+            this.txtPassWind.Visible = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(32, 200);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(142, 13);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Contraseña de Administrador";
+            this.label14.Visible = false;
+            // 
+            // chkInicioW
+            // 
+            this.chkInicioW.AutoSize = true;
+            this.chkInicioW.Location = new System.Drawing.Point(35, 19);
+            this.chkInicioW.Name = "chkInicioW";
+            this.chkInicioW.Size = new System.Drawing.Size(122, 17);
+            this.chkInicioW.TabIndex = 0;
+            this.chkInicioW.Text = "Iniciar con Windows";
+            this.chkInicioW.UseVisualStyleBackColor = true;
+            this.chkInicioW.CheckedChanged += new System.EventHandler(this.chkInicioW_CheckedChanged);
+            // 
             // btnGuardar
             // 
             this.btnGuardar.Location = new System.Drawing.Point(709, 538);
@@ -789,6 +954,11 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.DefaultExt = "exe";
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -799,7 +969,9 @@
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Configuración ReadFiles";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -818,6 +990,9 @@
             this.tabPage4.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -894,6 +1069,21 @@
         private System.Windows.Forms.CheckBox chkNominaC;
         private System.Windows.Forms.CheckBox chkClienteC;
         private System.Windows.Forms.CheckBox chkProveedorC;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.CheckBox chkInicioW;
+        private System.Windows.Forms.TextBox txtPassWind;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnCambiar;
+        private System.Windows.Forms.TextBox txtRutaRead;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtUserWind;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.DateTimePicker TimePicker;
+        private System.Windows.Forms.CheckBox chkEdit;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 

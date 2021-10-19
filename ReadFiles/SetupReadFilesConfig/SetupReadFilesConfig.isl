@@ -341,10 +341,11 @@
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{D4BBF8EA-BF6F-41E8-B8A8-D7A5A1F824EE}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ReadFilesConfig.exe</td><td>{163EE6B4-5ACA-4904-A6E9-C14BEF1043EA}</td><td>INSTALLDIR</td><td>2</td><td/><td>readfilesconfig.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ReadFilesConfig.vshost.exe</td><td>{F4646068-FC88-4DEE-89E0-2D0D5E43A53F}</td><td>INSTALLDIR</td><td>2</td><td/><td>readfilesconfig.vshost.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>sapnco.dll</td><td>{7DAD0A14-6CF4-4DF3-B166-404D4273A46F}</td><td>INSTALLDIR</td><td>2</td><td/><td>sapnco.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>sapnco_utils.dll</td><td>{738A245E-A692-4632-A6EA-C7405DCE32A1}</td><td>INSTALLDIR</td><td>2</td><td/><td>sapnco_utils.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ReadFilesConfig.exe</td><td>{F33D850F-A3D3-4D33-A6BC-7C0C9F47379E}</td><td>INSTALLDIR</td><td>2</td><td/><td>readfilesconfig.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ReadFilesConfig.vshost.exe</td><td>{D242B43C-ACED-4491-BEC0-130AEBDE0B0C}</td><td>INSTALLDIR</td><td>2</td><td/><td>readfilesconfig.vshost.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>TaskScheduler.dll</td><td>{B2423F70-2682-45A7-AD85-16881FC6389F}</td><td>INSTALLDIR</td><td>2</td><td/><td>taskscheduler.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>sapnco.dll</td><td>{D99500F3-9D62-4A6D-8E97-595FC138385C}</td><td>INSTALLDIR</td><td>2</td><td/><td>sapnco.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>sapnco_utils.dll</td><td>{AE6D9B6F-FF82-4BCC-818C-3BE02DBC5C49}</td><td>INSTALLDIR</td><td>2</td><td/><td>sapnco_utils.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1056,6 +1057,7 @@
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>INSTALLDIR</td><td>ReadFilesConfig.exe</td></row>
 		<row><td>INSTALLDIR</td><td>ReadFilesConfig.vshost.exe</td></row>
+		<row><td>INSTALLDIR</td><td>TaskScheduler.dll</td></row>
 		<row><td>INSTALLDIR</td><td>sapnco.dll</td></row>
 		<row><td>INSTALLDIR</td><td>sapnco_utils.dll</td></row>
 	</table>
@@ -1873,6 +1875,7 @@
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>ReadFilesConfig.exe</td></row>
 		<row><td>AlwaysInstall</td><td>ReadFilesConfig.vshost.exe</td></row>
+		<row><td>AlwaysInstall</td><td>TaskScheduler.dll</td></row>
 		<row><td>AlwaysInstall</td><td>sapnco.dll</td></row>
 		<row><td>AlwaysInstall</td><td>sapnco_utils.dll</td></row>
 	</table>
@@ -1897,6 +1900,8 @@
 		<row><td>readfilesconfig.vshost.exe.m</td><td>ISX_DEFAULTCOMPONENT</td><td>READFI~1.MAN|ReadFilesConfig.vshost.exe.manifest</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\ReadFilesConfig.vshost.exe.manifest</td><td>1</td><td/></row>
 		<row><td>sapnco.dll</td><td>sapnco.dll</td><td>sapnco.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\sapnco.dll</td><td>1</td><td/></row>
 		<row><td>sapnco_utils.dll</td><td>sapnco_utils.dll</td><td>SAPNCO~1.DLL|sapnco_utils.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\sapnco_utils.dll</td><td>1</td><td/></row>
+		<row><td>taskscheduler.dll</td><td>TaskScheduler.dll</td><td>TASKSC~1.DLL|TaskScheduler.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\TaskScheduler.dll</td><td>1</td><td/></row>
+		<row><td>taskscheduler.xml</td><td>ISX_DEFAULTCOMPONENT</td><td>TASKSC~1.XML|TaskScheduler.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\TaskScheduler.xml</td><td>1</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2040,10 +2045,11 @@
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_9B563447_7C0E_446D_8A96_8F4FBFF7B3D9_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ReadFilesConfig.exe</td><td/><td/><td>_B5D22E14_3536_4650_A897_5D780B2244A1_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ReadFilesConfig.vshost.exe</td><td/><td/><td>_9D2B75F6_EABD_4AB9_B9F8_E11606C7C27C_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>sapnco.dll</td><td/><td/><td>_52281584_AA14_49A8_A803_63D2A2310779_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>sapnco_utils.dll</td><td/><td/><td>_16004A9A_3C85_4E7B_B41C_E8DF2988BEC6_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ReadFilesConfig.exe</td><td/><td/><td>_4DB58F56_D285_4E69_B1B5_A28DF36B8C0C_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ReadFilesConfig.vshost.exe</td><td/><td/><td>_ACA0B39F_1CFF_425A_9CDE_1289BC8BC9A9_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>TaskScheduler.dll</td><td/><td/><td>_CEA5507D_A384_4430_AC9E_F2A3212D3ED0_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>sapnco.dll</td><td/><td/><td>_73CAB002_AA8E_4DCB_B160_D067C51A31EC_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>sapnco_utils.dll</td><td/><td/><td>_010F464D_8BD8_4699_88BA_7288A69F86A3_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -2631,7 +2637,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>SolutionFactory</td><td>0</td><td/><td>338123691</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>SolutionFactory</td><td>0</td><td/><td>1504217388</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>338123691</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>338123691</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION40CLIENT</td><td>1033</td><td>Microsoft .NET Framework 4.0 Client Package or greater needs to be installed for this installation to continue.</td><td>0</td><td/><td>338154411</td></row>
@@ -3445,7 +3451,21 @@
 		<row><td>IDS_SETUPEXE_EXPIRE_MSG</td><td>1033</td><td>This setup works until %s. The setup will now exit.</td><td>0</td><td/><td>338123691</td></row>
 		<row><td>IDS_SETUPEXE_LAUNCH_COND_E</td><td>1033</td><td>This setup was built with an evaluation version of InstallShield and can only be launched from setup.exe.</td><td>0</td><td/><td>338123691</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>1033</td><td>ReadFilesConfig</td><td>0</td><td/><td>338127851</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME10</td><td>1033</td><td>LAUNCH~1.EXE|Launch ReadFilesConfig.vshost.exe</td><td>0</td><td/><td>640116175</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME11</td><td>1033</td><td>LAUNCH~1.EXE|Launch ReadFilesConfig.vshost.exe</td><td>0</td><td/><td>-920101455</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME12</td><td>1033</td><td>ReadFilesConfig</td><td>0</td><td/><td>-651678966</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME13</td><td>1033</td><td>ReadFilesConfig</td><td>0</td><td/><td>1504211595</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME14</td><td>1033</td><td>LAUNCH~1.EXE|Launch ReadFilesConfig.vshost.exe</td><td>0</td><td/><td>1504197259</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME15</td><td>1033</td><td>ReadFilesConfig</td><td>0</td><td/><td>1504190796</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME16</td><td>1033</td><td>LAUNCH~1.EXE|Launch ReadFilesConfig.vshost.exe</td><td>0</td><td/><td>1504241964</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td>LAUNCH~1.EXE|Launch ReadFilesConfig.vshost.exe</td><td>0</td><td/><td>338160587</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>1033</td><td>ReadFilesConfig</td><td>0</td><td/><td>640093422</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>1033</td><td>LAUNCH~1.EXE|Launch ReadFilesConfig.vshost.exe</td><td>0</td><td/><td>640121998</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME5</td><td>1033</td><td>ReadFilesConfig</td><td>0</td><td/><td>640097966</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME6</td><td>1033</td><td>LAUNCH~1.EXE|Launch ReadFilesConfig.vshost.exe</td><td>0</td><td/><td>640140942</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME7</td><td>1033</td><td>ReadFilesConfig</td><td>0</td><td/><td>640099791</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME8</td><td>1033</td><td>LAUNCH~1.EXE|Launch ReadFilesConfig.vshost.exe</td><td>0</td><td/><td>640138671</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME9</td><td>1033</td><td>ReadFilesConfig</td><td>0</td><td/><td>640124367</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>1033</td><td>From the list of servers below, select the database server you would like to target.</td><td>0</td><td/><td>338123691</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_DB</td><td>1033</td><td>From the list of catalog names below, select the database catalog you would like to target.</td><td>0</td><td/><td>338123691</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_TEMPLATE</td><td>1033</td><td>[IS_SQLBROWSE_INTRO]</td><td>0</td><td/><td>338123691</td></row>
@@ -3734,9 +3754,16 @@
 		<row><td>IDS__TargetReq_DESC_PROCESSOR</td><td>1033</td><td>The processor is not adequate for running [ProductName].</td><td>0</td><td/><td>338123691</td></row>
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>338123691</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>338123691</td></row>
-		<row><td>ID_STRING1</td><td>1033</td><td>http://www.SolutionFactory.com</td><td>0</td><td/><td>338123691</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>SolutionFactory</td><td>0</td><td/><td>338123691</td></row>
+		<row><td>ID_STRING1</td><td>1033</td><td>http://www.SolutionFactory.com</td><td>0</td><td/><td>1504217388</td></row>
+		<row><td>ID_STRING10</td><td>1033</td><td>ReadFilesConfig</td><td>0</td><td/><td>1504192844</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>SolutionFactory</td><td>0</td><td/><td>1504217388</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td>ReadFilesConfig</td><td>0</td><td/><td>338131947</td></row>
+		<row><td>ID_STRING4</td><td>1033</td><td>LAUNCH~1.EXE|Launch ReadFilesConfig.exe</td><td>0</td><td/><td>640126094</td></row>
+		<row><td>ID_STRING5</td><td>1033</td><td>ReadFilesConfig</td><td>0</td><td/><td>640100014</td></row>
+		<row><td>ID_STRING6</td><td>1033</td><td>ReadFilesConfig</td><td>0</td><td/><td>774320778</td></row>
+		<row><td>ID_STRING7</td><td>1033</td><td>ReadFilesConfig.exe</td><td>0</td><td/><td>-920070735</td></row>
+		<row><td>ID_STRING8</td><td>1033</td><td>ReadFilesConfig</td><td>0</td><td/><td>-651676918</td></row>
+		<row><td>ID_STRING9</td><td>1033</td><td>LAUNCH~1.EXE|Launch ReadFilesConfig.exe</td><td>0</td><td/><td>1504205451</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>338123691</td></row>
 	</table>
 
@@ -3851,8 +3878,21 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I2">ISIconIndex</col>
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\setupicon.ico</td><td>0</td></row>
+		<row><td>ReadFilesConfig.ex_0DFB864F50494212805047FA9E0C5E25.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
+		<row><td>ReadFilesConfig.ex_10BD6F27E0E0433DB7586D59D8C3F422.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\ReadFilesConfig.exe</td><td>0</td></row>
 		<row><td>ReadFilesConfig.ex_1E0B95FD68304D69A7AA316745C167BF.exe</td><td/><td>&lt;VSSolutionFolder&gt;\ReadFilesConfig\ConfigMail.ico</td><td>0</td></row>
+		<row><td>ReadFilesConfig.ex_24D2D839A4A14F0DB5C6ACEB5F4EC593.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\ReadFilesConfig.exe</td><td>0</td></row>
+		<row><td>ReadFilesConfig.ex_30FFB35B4B2E4897B6D9581B4E9B9B55.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\ReadFilesConfig.exe</td><td>0</td></row>
+		<row><td>ReadFilesConfig.ex_3405D034400F4AD094CACEA417F7AEF1.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\ReadFilesConfig.exe</td><td>0</td></row>
+		<row><td>ReadFilesConfig.ex_4880E5E49F1E43A49041C8C424A6734D.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\ReadFilesConfig.exe</td><td>0</td></row>
+		<row><td>ReadFilesConfig.ex_4D2D2DFEAD6641F39599E2A17FDBCA78.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
+		<row><td>ReadFilesConfig.ex_8173BAFAAF2341B6ABB0D84330CB9D26.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\ReadFilesConfig.exe</td><td>0</td></row>
+		<row><td>ReadFilesConfig.ex_840279D72F1846CCB8566F9B99967C4A.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\ReadFilesConfig.exe</td><td>0</td></row>
 		<row><td>ReadFilesConfig.ex_941C8AAB5ACA458BA31E77567B8827B7.exe</td><td/><td>&lt;VSSolutionFolder&gt;\ReadFilesConfig\ConfigMail.ico</td><td>0</td></row>
+		<row><td>ReadFilesConfig.ex_B1E7636770D449EEBF467FDA74483E57.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\ReadFilesConfig.exe</td><td>0</td></row>
+		<row><td>ReadFilesConfig.ex_D5DE699391514B1FADBD8C65D6D102B6.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\ReadFilesConfig.exe</td><td>0</td></row>
+		<row><td>ReadFilesConfig.ex_F3E92262D3F443D18D4E86E4D95829D2.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\ReadFilesConfig.exe</td><td>0</td></row>
+		<row><td>ReadFilesConfig.ex_FC8C514BAD964CFEA7100E0835F4EAFB.exe</td><td/><td>C:\Users\SF0006\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\ReadFilesConfig.exe</td><td>0</td></row>
 	</table>
 
 	<table name="IniFile">
@@ -4361,7 +4401,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>ProductCode</td><td>{856E23E3-307D-44E9-8E8F-80DDBC64FE56}</td><td/></row>
 		<row><td>ProductName</td><td>ReadFilesConfig</td><td/></row>
-		<row><td>ProductVersion</td><td>11.00.0000</td><td/></row>
+		<row><td>ProductVersion</td><td>11.00.0001</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
@@ -4437,8 +4477,6 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="L255">FileName</col>
 		<col def="s72">DirProperty</col>
 		<col def="i2">InstallMode</col>
-		<row><td>FileKey1</td><td>ReadFilesConfig.exe</td><td/><td>soluti_1_solutionfactory</td><td>2</td></row>
-		<row><td>FileKey2</td><td>ReadFilesConfig.exe</td><td/><td>readfi_1_readfilesconfig</td><td>2</td></row>
 		<row><td>ReadFilesConfig.exe</td><td>ReadFilesConfig.exe</td><td/><td>readfi_1_readfilesconfig</td><td>2</td></row>
 	</table>
 
@@ -4525,8 +4563,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>ReadFilesConfig.exe</td><td>readfi_1_readfilesconfig</td><td>##IDS_SHORTCUT_DISPLAY_NAME1##</td><td>ReadFilesConfig.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>ReadFilesConfig.ex_941C8AAB5ACA458BA31E77567B8827B7.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>ReadFilesConfig.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME1##</td><td>ReadFilesConfig.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>ReadFilesConfig.ex_1E0B95FD68304D69A7AA316745C167BF.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>ReadFilesConfig.exe</td><td>readfi_1_readfilesconfig</td><td>##IDS_SHORTCUT_DISPLAY_NAME15##</td><td>ReadFilesConfig.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>ReadFilesConfig.ex_4880E5E49F1E43A49041C8C424A6734D.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>ReadFilesConfig.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME15##</td><td>ReadFilesConfig.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>ReadFilesConfig.ex_F3E92262D3F443D18D4E86E4D95829D2.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">
