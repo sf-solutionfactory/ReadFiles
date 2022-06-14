@@ -276,12 +276,12 @@ namespace ReadFilesConfig
             string nombreApp = (Path.GetFileName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase)).Replace("Config.exe", "");
             ScheduledTasks Tareas = new ScheduledTasks();
             string[] Existen = Tareas.GetTaskNames();
-            short hora = Convert.ToInt16(TimePicker.Text.Substring(0, 2));
-            short min = Convert.ToInt16(TimePicker.Text.Substring(3, 2));
             string pass = null;
 
             if (chkInicioW.Checked == true)
             {
+                short hora = Convert.ToInt16(TimePicker.Text.Substring(0, 2));
+                short min = Convert.ToInt16(TimePicker.Text.Substring(3, 2));
                 try
                 {
                     //Referencia https://www.codeproject.com/Articles/2407/A-New-Task-Scheduler-Class-Library-for-NET

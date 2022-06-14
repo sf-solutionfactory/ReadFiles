@@ -32,3 +32,16 @@ D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfi
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.csproj.CopyComplete
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.exe
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.pdb
+D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Debug\ReadFilesConfig.exe.config
+D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Debug\ReadFilesConfig.exe
+D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Debug\ReadFilesConfig.pdb
+D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Debug\TaskScheduler.dll
+D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Debug\TaskScheduler.xml
+D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.csproj.AssemblyReference.cache
+D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.Form1.resources
+D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.Properties.Resources.resources
+D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.csproj.GenerateResource.cache
+D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.csproj.CoreCompileInputs.cache
+D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.csproj.CopyComplete
+D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.exe
+D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\obj\Debug\ReadFilesConfig.pdb
