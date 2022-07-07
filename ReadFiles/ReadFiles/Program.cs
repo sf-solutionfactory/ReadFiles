@@ -85,6 +85,7 @@ namespace ReadFiles
             TimbreFiscalDigital timbre = new TimbreFiscalDigital();
             Comprobante comprobante = new Comprobante();
             Comprobante2 comprobante2 = new Comprobante2();
+            Comprobante40 comprobante40 = new Comprobante40();
             Nomina nomina = new Nomina();
             XmlSerializer serializer;
             Pagos pagos = new Pagos();
@@ -102,7 +103,30 @@ namespace ReadFiles
                 MostrarMensajeConsola(fileInfosxml[i].Name);
                 xmlobj.Load(new MemoryStream(cargaArch(fileInfosxml[i].Name,fileInfosxml,false)));
                 attach.XML = xml = xmlobj.InnerXml;
-                if (xml.Contains("Version=\"3.3\""))
+                if (xml.Contains("Version=\"4.0\""))
+                {
+                    serializer = new XmlSerializer(typeof(Comprobante40));
+                    comprobante40 = (Comprobante40)serializer.Deserialize(new StringReader(xml));
+                    serializer = new XmlSerializer(typeof(TimbreFiscalDigital));
+                    timbre = (TimbreFiscalDigital)serializer.Deserialize(
+                        new StringReader(comprobante.Complemento[0].Any.Where(x => x.LocalName == "TimbreFiscalDigital").Select(x => x.OuterXml).ToArray()[0]));
+                    attach.Desc_Error = EstatusCFDI(comprobante40.Emisor.Rfc, comprobante40.Receptor.Rfc, comprobante40.Total.ToString(), timbre.UUID);
+                    attach.WRBTR = decimal.Round(comprobante40.Total, 2);
+
+                    if (clase == "P")
+                    {
+                        attach.EXT = "XML";
+                        if (xml.Contains("pago10:Pagos"))
+                        {
+                            serializer = new XmlSerializer(typeof(Pagos));
+                            pagos = (Pagos)serializer.Deserialize(
+                                new StringReader(comprobante.Complemento[0].Any.Where(x => x.LocalName == "Pagos").Select(x => x.OuterXml).ToArray()[0]));
+                            attach.WRBTR = decimal.Round(pagos.Pago.Sum(x => x.Monto), 2);
+                        }
+                    }
+
+                }
+                else if (xml.Contains("Version=\"3.3\""))
                 {
                     serializer = new XmlSerializer(typeof(Comprobante));
                     comprobante = (Comprobante)serializer.Deserialize(new StringReader(xml));
