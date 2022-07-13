@@ -110,8 +110,7 @@ namespace ReadFiles
                     serializer = new XmlSerializer(typeof(TimbreFiscalDigital));
                     timbre = (TimbreFiscalDigital)serializer.Deserialize(
                         new StringReader(comprobante.Complemento[0].Any.Where(x => x.LocalName == "TimbreFiscalDigital").Select(x => x.OuterXml).ToArray()[0]));
-                    attach.Desc_Error = EstatusCFDI(comprobante40.Emisor.Rfc, comprobante40.Receptor.Rfc, comprobante40.Total.ToString(), timbre.UUID);
-                    attach.WRBTR = decimal.Round(comprobante40.Total, 2);
+                    
 
                     if (clase == "P")
                     {
