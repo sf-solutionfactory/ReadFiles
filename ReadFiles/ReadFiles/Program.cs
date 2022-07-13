@@ -85,7 +85,8 @@ namespace ReadFiles
             TimbreFiscalDigital timbre = new TimbreFiscalDigital();
             Comprobante comprobante = new Comprobante();
             Comprobante2 comprobante2 = new Comprobante2();
-            Comprobante40 comprobante40 = new Comprobante40();
+            //Comprobante40 comprobante40 = new Comprobante40();
+            Comprobante4 comprobante4 = new Comprobante4();
             Nomina nomina = new Nomina();
             XmlSerializer serializer;
             Pagos pagos = new Pagos();
@@ -105,11 +106,14 @@ namespace ReadFiles
                 attach.XML = xml = xmlobj.InnerXml;
                 if (xml.Contains("Version=\"4.0\""))
                 {
-                    serializer = new XmlSerializer(typeof(Comprobante40));
-                    comprobante40 = (Comprobante40)serializer.Deserialize(new StringReader(xml));
+                    //serializer = new XmlSerializer(typeof(Comprobante40));
+                    //comprobante40 = (Comprobante40)serializer.Deserialize(new StringReader(xml));
+                    xml = xml.Replace("Comprobante", "Comprobante4");
+                    serializer = new XmlSerializer(typeof(Comprobante4));
+                    comprobante4 = (Comprobante4)serializer.Deserialize(new StringReader(xml));
                     serializer = new XmlSerializer(typeof(TimbreFiscalDigital));
                     timbre = (TimbreFiscalDigital)serializer.Deserialize(
-                        new StringReader(comprobante.Complemento[0].Any.Where(x => x.LocalName == "TimbreFiscalDigital").Select(x => x.OuterXml).ToArray()[0]));
+                        new StringReader(comprobante4.Complemento[0].Any.Where(x => x.LocalName == "TimbreFiscalDigital").Select(x => x.OuterXml).ToArray()[0]));
                     
 
                     if (clase == "P")
