@@ -13,7 +13,7 @@ namespace ReadFiles.IPersistence
 {
     class DataLayer
     {
-        
+
         public int SAVE_MAIL_DATA(List<MAIL_DATA_BE> mail_data, SharedSettings.Settings settings)
         {
             try
@@ -27,12 +27,12 @@ namespace ReadFiles.IPersistence
                 //Creamos repositorio para la función
                 RfcRepository repo = rfcDest.Repository;
                 IRfcFunction save_mail = repo.CreateFunction("Z_MAIL_SAVE");
-                
+
                 IRfcTable p_maildata = save_mail.GetTable("P_MAILDATA");
                 get_maildata_saptab(mail_data, ref p_maildata);
-                
+
                 save_mail.Invoke(rfcDest);
-                
+
                 IRfcStructure bapiret = save_mail.GetStructure("BAPIRET");
 
                 //Ejecutamos la consulta
@@ -75,7 +75,7 @@ namespace ReadFiles.IPersistence
 
         }
 
-        public string SAVE_MAIL_DATA(MAIL_DATA_BE mail_data, List<Attachment_BE> attachs, List<Relacionados>relacionados, SharedSettings.Settings settings)
+        public string SAVE_MAIL_DATA(MAIL_DATA_BE mail_data, List<Attachment_BE> attachs, List<Relacionados> relacionados, SharedSettings.Settings settings)
         {
             byte[] pdf;
             try
@@ -93,20 +93,27 @@ namespace ReadFiles.IPersistence
 
                 IRfcStructure p_maildata = save_mail.GetStructure("P_MAILDATA");
                 IRfcTable p_attachments = save_mail.GetTable("P_ATTACHMENTS");
-                IRfcTable p_relacionados = save_mail.GetTable("P_RELACIONADOS");
-
-
                 get_maildata_sapstr(mail_data, ref p_maildata);
+                get_mailattach_saptab(attachs, ref p_attachments, settings.sap_name);
 
-                get_mailattach_saptab(attachs, ref p_attachments);
-                get_relacionados_saptab(relacionados, ref p_relacionados);
+                if (!settings.sap_name.Contains("POLY"))    //ADD SF RSG 14.07.2022
+                {
+                    IRfcTable p_relacionados = save_mail.GetTable("P_RELACIONADOS");
+                    get_relacionados_saptab(relacionados, ref p_relacionados);
+                }
 
                 //Ejecutamos la consulta
                 save_mail.Invoke(rfcDest);
 
-                pdf = save_mail.GetByteArray("FILEPDFGEN");
+                if (!settings.sap_name.Contains("POLY"))   //ADD SF RSG 14.07.2022
+                {
+                    pdf = save_mail.GetByteArray("FILEPDFGEN");
+                }
+                else   //ADD SF RSG 14.07.2022
+                {
+                    pdf = new byte[0];
+                }
                 IRfcStructure bapiret = save_mail.GetStructure("BAPIRET");
-
                 //string res = save_mail.GetString("MSG");
 
                 //Revisamos que la consulta haya sido exitosa
@@ -312,7 +319,7 @@ namespace ReadFiles.IPersistence
             p_maildata.SetValue("SUBJECT", mail.SUBJECT);
             p_maildata.SetValue("CONTA", mail.CONTA);
         }
-        public static void get_mailattach_saptab(List<Attachment_BE> attachs, ref IRfcTable p_attach)
+        public static void get_mailattach_saptab(List<Attachment_BE> attachs, ref IRfcTable p_attach, string sap_name)
         {
             if (attachs.Count > 0)
             {
@@ -346,13 +353,16 @@ namespace ReadFiles.IPersistence
                     p_attach.SetValue("RETENCION", a.RETENCION);
                     p_attach.SetValue("RESSAT", a.RESSAT);
                     p_attach.SetValue("RES_PDF", a.RES_PDF);
-                    p_attach.SetValue("GENPDF", a.GENPDF);
+                    if (!sap_name.Contains("POLY"))    //ADD SF RSG 14.07.2022
+                    {
+                        p_attach.SetValue("GENPDF", a.GENPDF);
+                    }
                 }
             }
         }
-        public static void get_relacionados_saptab(List<Relacionados>relacionados, ref IRfcTable p_relacionados)
+        public static void get_relacionados_saptab(List<Relacionados> relacionados, ref IRfcTable p_relacionados)
         {
-            if (relacionados.Count>0)
+            if (relacionados.Count > 0)
             {
                 for (int i = 0; i < relacionados.Count; i++)
                 {
