@@ -114,7 +114,8 @@ namespace ReadFiles
                     serializer = new XmlSerializer(typeof(TimbreFiscalDigital));
                     timbre = (TimbreFiscalDigital)serializer.Deserialize(
                         new StringReader(comprobante4.Complemento[0].Any.Where(x => x.LocalName == "TimbreFiscalDigital").Select(x => x.OuterXml).ToArray()[0]));
-                    
+                    attach.Desc_Error = EstatusCFDI(comprobante4.Emisor.Rfc, comprobante4.Receptor.Rfc, comprobante4.Total.ToString(), timbre.UUID);
+                    attach.WRBTR = decimal.Round(comprobante4.Total, 2);
 
                     if (clase == "P")
                     {
@@ -123,11 +124,88 @@ namespace ReadFiles
                         {
                             serializer = new XmlSerializer(typeof(Pagos));
                             pagos = (Pagos)serializer.Deserialize(
-                                new StringReader(comprobante.Complemento[0].Any.Where(x => x.LocalName == "Pagos").Select(x => x.OuterXml).ToArray()[0]));
+                                new StringReader(comprobante4.Complemento[0].Any.Where(x => x.LocalName == "Pagos").Select(x => x.OuterXml).ToArray()[0]));
                             attach.WRBTR = decimal.Round(pagos.Pago.Sum(x => x.Monto), 2);
                         }
                     }
+                    else if (clase == "C")
+                    {
+                        attach.EXT = "CTE";
+                        if (xml.Contains("nomina12:Nomina"))
+                        {
+                            serializer = new XmlSerializer(typeof(Nomina));
+                            nomina = (Nomina)serializer.Deserialize(
+                                new StringReader(comprobante4.Complemento[0].Any.Where(x => x.LocalName == "Nomina").Select(x => x.OuterXml).ToArray()[0]));
+                            attach.EXT = "NOM";
+                        }
+                    }
+                    if (comprobante4.Impuestos != null)
+                    {
+                        if (comprobante4.Impuestos.TotalImpuestosRetenidos != 0)
+                        {
+                            attach.RETENCION = "X";
+                        }
+                    }
+                    attach.RFC_VENDOR = "X";
+                    attach.RFC_COMPANY = "X";
+                    attach.WAERS = comprobante4.Moneda;
+                    attach.FechaDocumento = comprobante4.Fecha;
+                    attach.SerFolio = comprobante4.Serie + " " + comprobante4.Folio;
+                    attach.BLDAT = FechaFormatoSAP(comprobante4.Fecha);
+                    attach.FILE = fileInfosxml[i].Name;
+                    attach.RFC_VEND = comprobante4.Emisor.Rfc;
+                    attach.RFC_COMP = comprobante4.Receptor.Rfc;
+                    attach.XBLNR = comprobante4.Serie + comprobante4.Folio;
+                    attach.UUID_XML = timbre.UUID.ToUpper();
+                    if (clase == "P")
+                    {
+                        try
+                        {
+                            dataLayer.VALIDATE_XML(ref attach, comprobante4.MetodoPago, settings);
+                        }
+                        catch (Exception e)
+                        {
+                            errorxml = true;
+                            //MostrarMensajeConsola(e.Message, false);
+                        }
+                    }
+                    relacionados.Clear();
 
+                    if (pagos.Pago != null)
+                    {
+                        for (int j = 0; j < pagos.Pago.Length; j++)
+                        {
+                            if (pagos.Pago[j].DoctoRelacionado != null)
+                            {
+                                foreach (var relacionado in pagos.Pago[j].DoctoRelacionado)
+                                {
+                                    if (relacionados.Exists(x => x.UUID == relacionado.IdDocumento.ToUpper()) == false)
+                                    {
+                                        relacionados.Add(new Relacionados(
+                                        attach.BUKRS,
+                                        timbre.UUID.ToUpper(),
+                                        relacionado.IdDocumento.ToUpper(),
+                                        fileInfosxml[i].Name,
+                                        relacionado.ImpPagado,
+                                        relacionado.Folio,
+                                        relacionado.Serie,
+                                        relacionado.MonedaDR.ToString(),
+                                        relacionado.MetodoDePagoDR.ToString(),
+                                        ""
+                                        ));
+                                    }
+                                }
+
+                            }
+                            else
+                            {
+                                errorxml = true;
+                                MostrarMensajeConsola("Coprobante de pago tiene estructura incorrecta");
+                                break;
+                            }
+                        }
+                    }
+                    pagos = new Pagos();
                 }
                 else if (xml.Contains("Version=\"3.3\""))
                 {

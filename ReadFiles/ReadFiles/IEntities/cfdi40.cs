@@ -1249,7 +1249,7 @@ public partial class ComprobanteConceptoImpuestosRetencion4
 [System.SerializableAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.sat.gob.mx/cfd/4")]
-public partial class ComprobanteConceptoACuentaTerceros
+public partial class ComprobanteConceptoACuentaTerceros4
 {
 
     private string rfcACuentaTercerosField;
