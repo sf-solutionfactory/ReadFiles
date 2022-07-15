@@ -33,3 +33,16 @@ D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Debug\ReadFiles.csprojAsse
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Debug\ReadFiles.csproj.CopyComplete
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Debug\ReadFiles.exe
 D:\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Debug\ReadFiles.pdb
+D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Debug\ReadFiles.csproj.CoreCompileInputs.cache
+D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Debug\ReadFiles.exe
+D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Debug\ReadFiles.pdb
+D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\ReadFiles.exe.config
+D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\ReadFiles.exe
+D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\ReadFiles.pdb
+D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\sapnco.dll
+D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\sapnco_utils.dll
+D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Debug\ReadFiles.csproj.CopyComplete
+D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\ReadFiles.exe.manifest
+D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\ReadFiles.application
+D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Debug\ReadFiles.exe.manifest
+D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Debug\ReadFiles.application

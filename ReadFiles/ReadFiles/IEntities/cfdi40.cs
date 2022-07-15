@@ -777,7 +777,7 @@ public partial class ComprobanteConcepto4
 
     private ComprobanteConceptoImpuestos impuestosField;
 
-    private ComprobanteConceptoACuentaTerceros aCuentaTercerosField;
+    private ComprobanteConceptoACuentaTerceros4 aCuentaTercerosField;
 
     private ComprobanteConceptoInformacionAduanera[] informacionAduaneraField;
 
@@ -821,7 +821,7 @@ public partial class ComprobanteConcepto4
     }
 
     /// <remarks/>
-    public ComprobanteConceptoACuentaTerceros ACuentaTerceros
+    public ComprobanteConceptoACuentaTerceros4 ACuentaTerceros
     {
         get
         {

@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ReadFiles.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ReadFiles_mx_gob_sat_facturaelectronica_consultaqr_ConsultaCFDIService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://consultaqr.facturaelectronica.sat.gob.mx/ConsultaCFDIService.svc</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

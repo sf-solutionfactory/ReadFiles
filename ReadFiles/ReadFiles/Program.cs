@@ -7,9 +7,10 @@ using System.Xml;
 using System.Xml.Serialization;
 using ReadFiles.IPersistence;
 using ReadMail.IEntities;
-using SAT.Services.ConsultaCFDIService;
 using SharedSettings;
-using SW.Services.Status;
+//using SW.Services.Status;
+//using SAT.Services.ConsultaCFDIService;
+using ReadFiles.mx.gob.sat.facturaelectronica.consultaqr;
 
 namespace ReadFiles
 {
@@ -17,8 +18,7 @@ namespace ReadFiles
     {
         static Settings settings = new Settings();
         static string direlog;
-        static string direlogdir;
-        static Status status = new Status("https://consultaqr.facturaelectronica.sat.gob.mx/ConsultaCFDIService.svc");
+        //static Status status = new Status("https://consultaqr.facturaelectronica.sat.gob.mx/ConsultaCFDIService.svc");
         static Acuse response = new Acuse();
         static void Main(string[] args)
         {
@@ -46,8 +46,8 @@ namespace ReadFiles
             {
                 MostrarMensajeConsola("Cargando Proveedores");
                 directory = new DirectoryInfo(settings.directorioProv);
-                listfilesxml =  directory.GetFiles("*.*", SearchOption.AllDirectories).Where(x=>x.Extension == ".XML" || x.Extension == ".xml").ToArray();
-                listfilespdf =  directory.GetFiles("*.*", SearchOption.AllDirectories).Where(x=>x.Extension == ".PDF" || x.Extension == ".pdf").ToArray();
+                listfilesxml = directory.GetFiles("*.*", SearchOption.AllDirectories).Where(x => x.Extension == ".XML" || x.Extension == ".xml").ToArray();
+                listfilespdf = directory.GetFiles("*.*", SearchOption.AllDirectories).Where(x => x.Extension == ".PDF" || x.Extension == ".pdf").ToArray();
                 Procesar(listfilesxml, listfilespdf, "P");
             }
             else
@@ -102,7 +102,7 @@ namespace ReadFiles
                 MostrarLinea("*");
                 MostrarMensajeConsola((i + 1) + " de " + fileInfosxml.Length);
                 MostrarMensajeConsola(fileInfosxml[i].Name);
-                xmlobj.Load(new MemoryStream(cargaArch(fileInfosxml[i].Name,fileInfosxml,false)));
+                xmlobj.Load(new MemoryStream(cargaArch(fileInfosxml[i].Name, fileInfosxml, false)));
                 attach.XML = xml = xmlobj.InnerXml;
                 if (xml.Contains("Version=\"4.0\""))
                 {
@@ -114,7 +114,8 @@ namespace ReadFiles
                     serializer = new XmlSerializer(typeof(TimbreFiscalDigital));
                     timbre = (TimbreFiscalDigital)serializer.Deserialize(
                         new StringReader(comprobante4.Complemento[0].Any.Where(x => x.LocalName == "TimbreFiscalDigital").Select(x => x.OuterXml).ToArray()[0]));
-                    attach.Desc_Error = EstatusCFDI(comprobante4.Emisor.Rfc, comprobante4.Receptor.Rfc, comprobante4.Total.ToString(), timbre.UUID);
+                    attach.Desc_Error = EstatusCFDI(comprobante4.Emisor.Rfc, comprobante4.Receptor.Rfc, comprobante4.Total.ToString(), timbre.UUID
+                                                    , comprobante4.Sello.Substring(comprobante4.Sello.Length-8,8));
                     attach.WRBTR = decimal.Round(comprobante4.Total, 2);
 
                     if (clase == "P")
@@ -214,7 +215,8 @@ namespace ReadFiles
                     serializer = new XmlSerializer(typeof(TimbreFiscalDigital));
                     timbre = (TimbreFiscalDigital)serializer.Deserialize(
                         new StringReader(comprobante.Complemento[0].Any.Where(x => x.LocalName == "TimbreFiscalDigital").Select(x => x.OuterXml).ToArray()[0]));
-                    attach.Desc_Error = EstatusCFDI(comprobante.Emisor.Rfc, comprobante.Receptor.Rfc, comprobante.Total.ToString(), timbre.UUID);
+                    attach.Desc_Error = EstatusCFDI(comprobante.Emisor.Rfc, comprobante.Receptor.Rfc, comprobante.Total.ToString(), timbre.UUID
+                                                    , comprobante.Sello.Substring(comprobante.Sello.Length - 8, 8));
                     attach.WRBTR = decimal.Round(comprobante.Total, 2);
                     if (clase == "P")
                     {
@@ -224,7 +226,7 @@ namespace ReadFiles
                             serializer = new XmlSerializer(typeof(Pagos));
                             pagos = (Pagos)serializer.Deserialize(
                                 new StringReader(comprobante.Complemento[0].Any.Where(x => x.LocalName == "Pagos").Select(x => x.OuterXml).ToArray()[0]));
-                            attach.WRBTR = decimal.Round(pagos.Pago.Sum(x=>x.Monto), 2);
+                            attach.WRBTR = decimal.Round(pagos.Pago.Sum(x => x.Monto), 2);
                         }
                     }
                     else if (clase == "C")
@@ -262,7 +264,7 @@ namespace ReadFiles
                         {
                             dataLayer.VALIDATE_XML(ref attach, comprobante.MetodoPago, settings);
                         }
-                        catch(Exception e)
+                        catch (Exception e)
                         {
                             errorxml = true;
                             //MostrarMensajeConsola(e.Message, false);
@@ -277,7 +279,7 @@ namespace ReadFiles
                             {
                                 foreach (var relacionado in pagos.Pago[j].DoctoRelacionado)
                                 {
-                                    if (relacionados.Exists(x=>x.UUID == relacionado.IdDocumento.ToUpper()) == false)
+                                    if (relacionados.Exists(x => x.UUID == relacionado.IdDocumento.ToUpper()) == false)
                                     {
                                         relacionados.Add(new Relacionados(
                                         attach.BUKRS,
@@ -293,7 +295,7 @@ namespace ReadFiles
                                         ));
                                     }
                                 }
-                                
+
                             }
                             else
                             {
@@ -305,13 +307,14 @@ namespace ReadFiles
                     }
                     pagos = new Pagos();
                 }
-                else if(xml.Contains("Version=\"3.2\""))
+                else if (xml.Contains("Version=\"3.2\""))
                 {
                     serializer = new XmlSerializer(typeof(Comprobante2));
                     comprobante2 = (Comprobante2)serializer.Deserialize(new StringReader(xml));
                     serializer = new XmlSerializer(typeof(TimbreFiscalDigital));
                     timbre = (TimbreFiscalDigital)serializer.Deserialize(new StringReader(comprobante.Complemento[0].ToString()));
-                    attach.Desc_Error = EstatusCFDI(comprobante2.Emisor.rfc, comprobante2.Receptor.rfc, comprobante2.total.ToString(), timbre.UUID);
+                    //attach.Desc_Error = EstatusCFDI(comprobante2.Emisor.rfc, comprobante2.Receptor.rfc, comprobante2.total.ToString(), timbre.UUID
+                    //                                , comprobante2.Sello.Substring(comprobante2.Sello.Length - 8, 8));
                     if (comprobante2.Impuestos.totalImpuestosRetenidos != 0)
                     {
                         attach.RETENCION = "X";
@@ -347,11 +350,11 @@ namespace ReadFiles
                     attach.SAT = "X";
                     attach.RES_PDF = cargaArch(fileInfosxml[i].Name, fileInfospdf, true);
                 }
-                else 
+                else
                 {
                     attach.XML = "";
                 }
-                
+
                 if (attach.RFC_COMPANY == "" && attach.RFC_VENDOR == "")
                 {
                     attach.Desc_Error = attach.Desc_Error + "<@>" + "El RFC de la empresa y proveedor son incorrectos";
@@ -385,7 +388,7 @@ namespace ReadFiles
                             errorxml = true;
                             //MostrarMensajeConsola(e.Message, false);
                         }
-                    }                    
+                    }
                     if (errorxml == false)
                     {
                         MostrarMensajeConsola("Información guardada en SAP");
@@ -405,7 +408,7 @@ namespace ReadFiles
                         Mover(fileInfosxml[i], attach.EXT, false);
                         if (fileInfospdf.Length > 0)
                         {
-                            FileInfo info = fileInfospdf.Where(x => x.Name.Substring(0,x.Name.Length-4) == (fileInfosxml[i].Name.Substring(0, (fileInfosxml[i].Name.Length - 4)))).SingleOrDefault();
+                            FileInfo info = fileInfospdf.Where(x => x.Name.Substring(0, x.Name.Length - 4) == (fileInfosxml[i].Name.Substring(0, (fileInfosxml[i].Name.Length - 4)))).SingleOrDefault();
                             if (info != null)
                             {
                                 Mover(info, attach.EXT, false);
@@ -431,12 +434,19 @@ namespace ReadFiles
                 errorxml = false;
             }
         }
-        private static string EstatusCFDI(string rfcemisor, string rfcreceptor, string total, string uuid)
+        private static string EstatusCFDI(string rfcemisor, string rfcreceptor, string total, string uuid, string sello)
         {
             try
             {
+                //response = new Acuse();
+                //response = status.GetStatusCFDI(rfcemisor, rfcreceptor, total, uuid);
+                ////response.Estado = "Vigente";
+                //MostrarMensajeConsola("El XML es " + response.Estado + " según el SAT");
+                //return "El XML es " + response.Estado + " según el SAT";
                 response = new Acuse();
-                response = status.GetStatusCFDI(rfcemisor, rfcreceptor, total, uuid);
+                ConsultaCFDIService status = new ConsultaCFDIService();
+                response = status.Consulta("?re=" + rfcemisor + "&rr=" + rfcreceptor + "&tt=" + total + "&id=" + uuid + "&fe="+ sello);
+                //response.Estado = "Vigente";
                 MostrarMensajeConsola("El XML es " + response.Estado + " según el SAT");
                 return "El XML es " + response.Estado + " según el SAT";
             }
@@ -448,7 +458,7 @@ namespace ReadFiles
         private static void Mover(FileInfo fileInfo, string extencion, bool correcto)
         {
             string pathfolder = "";
-            
+
             if (correcto)
             {
                 switch (extencion)
@@ -609,7 +619,7 @@ namespace ReadFiles
                 int ancho = 0;
                 ancho = Console.BufferWidth;
                 string inicioMensaje = "[] ", complementoMensaje = " []";
-                if(!tipo)
+                if (!tipo)
                 { inicioMensaje = "<< "; complementoMensaje = " >>"; }
                 if (mensaje.Length >= ancho - (inicioMensaje.Length + complementoMensaje.Length))
                 {
@@ -705,8 +715,8 @@ namespace ReadFiles
                 {
                     direccion = fileInfos.Where(x => x.Name == nomxml).Select(x => x.FullName).ToArray()[0];
                 }
-                catch (Exception){}
-                
+                catch (Exception) { }
+
                 if (!String.IsNullOrEmpty(direccion))
                 {
                     DateTime start;
