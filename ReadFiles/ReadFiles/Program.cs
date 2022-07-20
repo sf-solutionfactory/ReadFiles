@@ -8,9 +8,9 @@ using System.Xml.Serialization;
 using ReadFiles.IPersistence;
 using ReadMail.IEntities;
 using SharedSettings;
-//using SW.Services.Status;
-//using SAT.Services.ConsultaCFDIService;
-using ReadFiles.mx.gob.sat.facturaelectronica.consultaqr;
+using SW.Services.Status;
+using SAT.Services.ConsultaCFDIService;
+//using ReadFiles.mx.gob.sat.facturaelectronica.consultaqr;
 
 namespace ReadFiles
 {
@@ -18,7 +18,8 @@ namespace ReadFiles
     {
         static Settings settings = new Settings();
         static string direlog;
-        //static Status status = new Status("https://consultaqr.facturaelectronica.sat.gob.mx/ConsultaCFDIService.svc");
+        static string direlogdir;
+        static Status status = new Status("https://consultaqr.facturaelectronica.sat.gob.mx/ConsultaCFDIService.svc");
         static Acuse response = new Acuse();
         static void Main(string[] args)
         {
@@ -27,13 +28,9 @@ namespace ReadFiles
             MostrarMensajeConsola("Inicio");
             MostrarMensajeConsola("Configuracion Cargada");
             if (settings.prox_act)
-            {
                 Proxy();
-            }
             if (settings.esActivoDirProv || settings.esActivoDirCtes || settings.esActivoNomina)
-            {
                 CargarArchivos();
-            }
             MostrarMensajeConsola("Fin.");
         }
         private static void CargarArchivos()
@@ -115,7 +112,7 @@ namespace ReadFiles
                     timbre = (TimbreFiscalDigital)serializer.Deserialize(
                         new StringReader(comprobante4.Complemento[0].Any.Where(x => x.LocalName == "TimbreFiscalDigital").Select(x => x.OuterXml).ToArray()[0]));
                     attach.Desc_Error = EstatusCFDI(comprobante4.Emisor.Rfc, comprobante4.Receptor.Rfc, comprobante4.Total.ToString(), timbre.UUID
-                                                    , comprobante4.Sello.Substring(comprobante4.Sello.Length-8,8));
+                                                    , comprobante4.Sello.Substring(comprobante4.Sello.Length - 8, 8));
                     attach.WRBTR = decimal.Round(comprobante4.Total, 2);
 
                     if (clase == "P")
@@ -140,13 +137,9 @@ namespace ReadFiles
                             attach.EXT = "NOM";
                         }
                     }
-                    if (comprobante4.Impuestos != null)
-                    {
-                        if (comprobante4.Impuestos.TotalImpuestosRetenidos != 0)
-                        {
-                            attach.RETENCION = "X";
-                        }
-                    }
+                    if (comprobante4.Impuestos != null && comprobante4.Impuestos.TotalImpuestosRetenidos != 0)
+                        attach.RETENCION = "X";
+
                     attach.RFC_VENDOR = "X";
                     attach.RFC_COMPANY = "X";
                     attach.WAERS = comprobante4.Moneda;
@@ -176,6 +169,7 @@ namespace ReadFiles
                     {
                         for (int j = 0; j < pagos.Pago.Length; j++)
                         {
+                            attach.WAERS = pagos.Pago[j].MonedaP; //-BDR
                             if (pagos.Pago[j].DoctoRelacionado != null)
                             {
                                 foreach (var relacionado in pagos.Pago[j].DoctoRelacionado)
@@ -275,6 +269,7 @@ namespace ReadFiles
                     {
                         for (int j = 0; j < pagos.Pago.Length; j++)
                         {
+                            attach.WAERS = pagos.Pago[j].MonedaP; //-BDR
                             if (pagos.Pago[j].DoctoRelacionado != null)
                             {
                                 foreach (var relacionado in pagos.Pago[j].DoctoRelacionado)
@@ -345,7 +340,7 @@ namespace ReadFiles
                         }
                     }
                 }
-                if (attach.Desc_Error.Contains("Vigente"))
+                if (attach.Desc_Error.Contains("Vigente") || settings.sap_name.Contains("BADER")) //-BDR
                 {
                     attach.SAT = "X";
                     attach.RES_PDF = cargaArch(fileInfosxml[i].Name, fileInfospdf, true);
@@ -438,17 +433,17 @@ namespace ReadFiles
         {
             try
             {
-                //response = new Acuse();
-                //response = status.GetStatusCFDI(rfcemisor, rfcreceptor, total, uuid);
-                ////response.Estado = "Vigente";
-                //MostrarMensajeConsola("El XML es " + response.Estado + " según el SAT");
-                //return "El XML es " + response.Estado + " según el SAT";
                 response = new Acuse();
-                ConsultaCFDIService status = new ConsultaCFDIService();
-                response = status.Consulta("?re=" + rfcemisor + "&rr=" + rfcreceptor + "&tt=" + total + "&id=" + uuid + "&fe="+ sello);
+                response = status.GetStatusCFDI(rfcemisor, rfcreceptor, total, uuid);
                 //response.Estado = "Vigente";
                 MostrarMensajeConsola("El XML es " + response.Estado + " según el SAT");
                 return "El XML es " + response.Estado + " según el SAT";
+                //response = new Acuse();
+                //ConsultaCFDIService status = new ConsultaCFDIService();
+                //response = status.Consulta("?re=" + rfcemisor + "&rr=" + rfcreceptor + "&tt=" + total + "&id=" + uuid + "&fe=" + sello);
+                ////response.Estado = "Vigente";
+                //MostrarMensajeConsola("El XML es " + response.Estado + " según el SAT");
+                //return "El XML es " + response.Estado + " según el SAT";
             }
             catch (Exception)
             {
@@ -556,31 +551,34 @@ namespace ReadFiles
                 Console.ReadLine();
                 Environment.Exit(0);
             }
-            //nombre = "Directorio" + thisDay.ToString();
-            //nombre = nombre.Replace(':', '-');
-            //nombre = nombre.Replace('\\', '-');
-            //nombre = nombre.Replace('/', '-');
-            //dirFile = settings.directorioLog;
-            //dirFile = dirFile + "\\" + nombre + ".txt";
-            //try
-            //{
-            //    System.IO.File.WriteAllText(@dirFile, "DIRECTORIOS:");
-            //    using (System.IO.StreamWriter file = new System.IO.StreamWriter(@dirFile, true))
-            //    {
-            //        file.WriteLine(" ");
-            //        file.Close();
-            //    }
+            if (settings.sap_name.Contains("BADER"))
+            {
+                nombre = "Directorio" + thisDay.ToString();
+                nombre = nombre.Replace(':', '-');
+                nombre = nombre.Replace('\\', '-');
+                nombre = nombre.Replace('/', '-');
+                dirFile = settings.directorioLog;
+                dirFile = dirFile + "\\" + nombre + ".txt";
+                try
+                {
+                    System.IO.File.WriteAllText(@dirFile, "DIRECTORIOS:");
+                    using (System.IO.StreamWriter file = new System.IO.StreamWriter(@dirFile, true))
+                    {
+                        file.WriteLine(" ");
+                        file.Close();
+                    }
 
-            //    direlogdir = @dirFile;
-            //}
-            //catch (Exception)
-            //{
-            //    MostrarMensajeConsola("No fue posible crear el archivo de LOG de la carga de archivos");
-            //    MostrarMensajeConsola("Debe indicar un directorio donde pueda ser creado");
-            //    MostrarMensajeConsola("Pulse enter para salir");
-            //    Console.ReadLine();
-            //    Environment.Exit(0);
-            //}
+                    direlogdir = @dirFile;
+                }
+                catch (Exception)
+                {
+                    MostrarMensajeConsola("No fue posible crear el archivo de LOG de la carga de archivos");
+                    MostrarMensajeConsola("Debe indicar un directorio donde pueda ser creado");
+                    MostrarMensajeConsola("Pulse enter para salir");
+                    Console.ReadLine();
+                    Environment.Exit(0);
+                }
+            }
         }
         private static void Proxy()
         {
