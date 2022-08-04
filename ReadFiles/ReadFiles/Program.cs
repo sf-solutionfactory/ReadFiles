@@ -20,6 +20,7 @@ namespace ReadFiles
         static string direlog;
         static string direlogdir;
         static Status status = new Status("https://consultaqr.facturaelectronica.sat.gob.mx/ConsultaCFDIService.svc");
+        //static Status status = new Status("https://pruebacfdiconsultaqr.cloudapp.net/ConsultaCFDIService.svc");
         static Acuse response = new Acuse();
         static void Main(string[] args)
         {
@@ -78,17 +79,18 @@ namespace ReadFiles
         }
         private static void Procesar(FileInfo[] fileInfosxml, FileInfo[] fileInfospdf, string clase)
         {
-            XmlDocument xmlobj = new XmlDocument();
-            TimbreFiscalDigital timbre = new TimbreFiscalDigital();
-            Comprobante comprobante = new Comprobante();
-            Comprobante2 comprobante2 = new Comprobante2();
+            XmlDocument xmlobj          = new XmlDocument();
+            TimbreFiscalDigital timbre  = new TimbreFiscalDigital();
+            Comprobante comprobante     = new Comprobante();
+            Comprobante2 comprobante2   = new Comprobante2();
             //Comprobante40 comprobante40 = new Comprobante40();
-            Comprobante4 comprobante4 = new Comprobante4();
-            Nomina nomina = new Nomina();
+            Comprobante4 comprobante4   = new Comprobante4();
+            Nomina nomina               = new Nomina();
             XmlSerializer serializer;
-            Pagos pagos = new Pagos();
-            DataLayer dataLayer = new DataLayer();
-            Attachment_BE attach = new Attachment_BE();
+            Pagos pagos                 = new Pagos();
+            Pagos20 pagos2              = new Pagos20();
+            DataLayer dataLayer         = new DataLayer();
+            Attachment_BE attach        = new Attachment_BE();
             List<Attachment_BE> attachments = new List<Attachment_BE>();
             List<Relacionados> relacionados = new List<Relacionados>();
             string xml = "";
@@ -118,12 +120,16 @@ namespace ReadFiles
                     if (clase == "P")
                     {
                         attach.EXT = "XML";
-                        if (xml.Contains("pago10:Pagos"))
+                        if (xml.Contains("pago20:Pagos"))
                         {
-                            serializer = new XmlSerializer(typeof(Pagos));
-                            pagos = (Pagos)serializer.Deserialize(
-                                new StringReader(comprobante4.Complemento[0].Any.Where(x => x.LocalName == "Pagos").Select(x => x.OuterXml).ToArray()[0]));
-                            attach.WRBTR = decimal.Round(pagos.Pago.Sum(x => x.Monto), 2);
+                            serializer = new XmlSerializer(typeof(Pagos20));
+                            string temp = comprobante4.Complemento[0].Any.Where(x => x.LocalName == "Pagos").Select(x => x.OuterXml).ToArray()[0];
+                            temp = temp.Replace(":Pagos", ":Pagos20");
+                            pagos2 = (Pagos20)serializer.Deserialize(new StringReader(temp));
+                            //serializer = new XmlSerializer(typeof(Pagos));
+                            //string temp = comprobante4.Complemento[0].Any.Where(x => x.LocalName == "Pagos").Select(x => x.OuterXml).ToArray()[0];
+                            //pagos = (Pagos)serializer.Deserialize(new StringReader(temp));
+                            attach.WRBTR = decimal.Round(pagos2.Pago.Sum(x => x.Monto), 2);
                         }
                     }
                     else if (clase == "C")
@@ -165,14 +171,14 @@ namespace ReadFiles
                     }
                     relacionados.Clear();
 
-                    if (pagos.Pago != null)
+                    if (pagos2.Pago != null)
                     {
-                        for (int j = 0; j < pagos.Pago.Length; j++)
+                        for (int j = 0; j < pagos2.Pago.Length; j++)
                         {
-                            attach.WAERS = pagos.Pago[j].MonedaP; //-BDR
-                            if (pagos.Pago[j].DoctoRelacionado != null)
+                            attach.WAERS = pagos2.Pago[j].MonedaP; //-BDR
+                            if (pagos2.Pago[j].DoctoRelacionado != null)
                             {
-                                foreach (var relacionado in pagos.Pago[j].DoctoRelacionado)
+                                foreach (var relacionado in pagos2.Pago[j].DoctoRelacionado)
                                 {
                                     if (relacionados.Exists(x => x.UUID == relacionado.IdDocumento.ToUpper()) == false)
                                     {
@@ -185,7 +191,8 @@ namespace ReadFiles
                                         relacionado.Folio,
                                         relacionado.Serie,
                                         relacionado.MonedaDR.ToString(),
-                                        relacionado.MetodoDePagoDR.ToString(),
+                                        //relacionado.MetodoDePagoDR.ToString(),
+                                        "",
                                         ""
                                         ));
                                     }
@@ -200,7 +207,7 @@ namespace ReadFiles
                             }
                         }
                     }
-                    pagos = new Pagos();
+                    pagos2 = new Pagos20();
                 }
                 else if (xml.Contains("Version=\"3.3\""))
                 {

@@ -2586,3 +2586,567 @@ COUNTER     4
    en SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
    en SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
    en SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+**** Log file opened by process 20512 at 2022-07-29 18:32:12 (UTC-05:00 Hora de verano central (México))
+
+SAP .NET Connector 3.0 with file version 3.0.11.0 running on 32-bit .NET Framework 4.0.30319.42000
+Program: D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\ReadFiles.exe
+Working directory: D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug
+Operating system:   64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 720, Kernel release: 720, Kernel patch level: 426
+Hostname: DESKTOP-8E05UBG, IP address: 192.168.1.4, IP_v6 address: 
+
+Default trace level: None
+
+>> Error entry 2022-07-29 18:32:12.847 [Thread 1]
+Failure to create pool for destination BADER DEV (ORIGINAL) [NAME=BADER DEV ASHOST=10.255.136.65 SYSNR=04 USER=UTE PASSWD=******** CLIENT=910 LANG=EN SAPROUTER=/H/172.20.1.42/H/10.255.136.37 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '172.20.1.42:3299' not reached
+TIME        Fri Jul 29 18:32:12 2022
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 172.20.1.42:3299
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2022-07-29 18:32:12.862 [Thread 1]
+[NAME=BADER DEV ASHOST=10.255.136.65 SYSNR=04 USER=UTE PASSWD=******** CLIENT=910 LANG=EN SAPROUTER=/H/172.20.1.42/H/10.255.136.37 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '172.20.1.42:3299' not reached
+TIME        Fri Jul 29 18:32:12 2022
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 172.20.1.42:3299
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   en SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   en SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   en SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+>> Error entry 2022-07-29 18:33:21.611 [Thread 1]
+Failure to create pool for destination BADER DEV (ORIGINAL) [NAME=BADER DEV ASHOST=10.255.136.65 SYSNR=04 USER=UTE PASSWD=******** CLIENT=910 LANG=EN SAPROUTER=/H/172.20.1.42/H/10.255.136.37 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '172.20.1.42:3299' not reached
+TIME        Fri Jul 29 18:33:21 2022
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 172.20.1.42:3299
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     4
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2022-07-29 18:33:21.629 [Thread 1]
+[NAME=BADER DEV ASHOST=10.255.136.65 SYSNR=04 USER=UTE PASSWD=******** CLIENT=910 LANG=EN SAPROUTER=/H/172.20.1.42/H/10.255.136.37 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '172.20.1.42:3299' not reached
+TIME        Fri Jul 29 18:33:21 2022
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 172.20.1.42:3299
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     4
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   en SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   en SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   en SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+>> Error entry 2022-07-29 18:34:07.954 [Thread 1]
+Failure to create pool for destination BADER DEV (ORIGINAL) [NAME=BADER DEV ASHOST=10.255.136.65 SYSNR=04 USER=UTE PASSWD=******** CLIENT=910 LANG=EN SAPROUTER=/H/172.20.1.42/H/10.255.136.37 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '172.20.1.42:3299' not reached
+TIME        Fri Jul 29 18:34:07 2022
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 172.20.1.42:3299
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     6
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2022-07-29 18:34:07.954 [Thread 1]
+[NAME=BADER DEV ASHOST=10.255.136.65 SYSNR=04 USER=UTE PASSWD=******** CLIENT=910 LANG=EN SAPROUTER=/H/172.20.1.42/H/10.255.136.37 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '172.20.1.42:3299' not reached
+TIME        Fri Jul 29 18:34:07 2022
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 172.20.1.42:3299
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     6
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   en SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   en SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   en SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+>> Error entry 2022-07-29 18:34:35.477 [Thread 1]
+Failure to create pool for destination BADER DEV (ORIGINAL) [NAME=BADER DEV ASHOST=10.255.136.65 SYSNR=04 USER=UTE PASSWD=******** CLIENT=910 LANG=EN SAPROUTER=/H/172.20.1.42/H/10.255.136.37 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '172.20.1.42:3299' not reached
+TIME        Fri Jul 29 18:34:35 2022
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 172.20.1.42:3299
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     8
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2022-07-29 18:34:35.477 [Thread 1]
+[NAME=BADER DEV ASHOST=10.255.136.65 SYSNR=04 USER=UTE PASSWD=******** CLIENT=910 LANG=EN SAPROUTER=/H/172.20.1.42/H/10.255.136.37 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '172.20.1.42:3299' not reached
+TIME        Fri Jul 29 18:34:35 2022
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 172.20.1.42:3299
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     8
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   en SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   en SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   en SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+>> Error entry 2022-07-29 18:35:02.866 [Thread 1]
+Failure to create pool for destination BADER DEV (ORIGINAL) [NAME=BADER DEV ASHOST=10.255.136.65 SYSNR=04 USER=UTE PASSWD=******** CLIENT=910 LANG=EN SAPROUTER=/H/172.20.1.42/H/10.255.136.37 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '172.20.1.42:3299' not reached
+TIME        Fri Jul 29 18:35:02 2022
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 172.20.1.42:3299
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     10
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2022-07-29 18:35:02.867 [Thread 1]
+[NAME=BADER DEV ASHOST=10.255.136.65 SYSNR=04 USER=UTE PASSWD=******** CLIENT=910 LANG=EN SAPROUTER=/H/172.20.1.42/H/10.255.136.37 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '172.20.1.42:3299' not reached
+TIME        Fri Jul 29 18:35:02 2022
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 172.20.1.42:3299
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     10
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   en SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   en SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   en SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+>> Error entry 2022-07-29 18:35:30.583 [Thread 1]
+Failure to create pool for destination BADER DEV (ORIGINAL) [NAME=BADER DEV ASHOST=10.255.136.65 SYSNR=04 USER=UTE PASSWD=******** CLIENT=910 LANG=EN SAPROUTER=/H/172.20.1.42/H/10.255.136.37 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '172.20.1.42:3299' not reached
+TIME        Fri Jul 29 18:35:30 2022
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 172.20.1.42:3299
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     12
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2022-07-29 18:35:30.583 [Thread 1]
+[NAME=BADER DEV ASHOST=10.255.136.65 SYSNR=04 USER=UTE PASSWD=******** CLIENT=910 LANG=EN SAPROUTER=/H/172.20.1.42/H/10.255.136.37 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '172.20.1.42:3299' not reached
+TIME        Fri Jul 29 18:35:30 2022
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 172.20.1.42:3299
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     12
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   en SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   en SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   en SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+>> Error entry 2022-07-29 18:35:57.945 [Thread 1]
+Failure to create pool for destination BADER DEV (ORIGINAL) [NAME=BADER DEV ASHOST=10.255.136.65 SYSNR=04 USER=UTE PASSWD=******** CLIENT=910 LANG=EN SAPROUTER=/H/172.20.1.42/H/10.255.136.37 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '172.20.1.42:3299' not reached
+TIME        Fri Jul 29 18:35:57 2022
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 172.20.1.42:3299
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     14
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2022-07-29 18:35:57.946 [Thread 1]
+[NAME=BADER DEV ASHOST=10.255.136.65 SYSNR=04 USER=UTE PASSWD=******** CLIENT=910 LANG=EN SAPROUTER=/H/172.20.1.42/H/10.255.136.37 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '172.20.1.42:3299' not reached
+TIME        Fri Jul 29 18:35:57 2022
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 172.20.1.42:3299
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     14
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   en SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   en SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   en SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+>> Error entry 2022-07-29 18:36:26.506 [Thread 1]
+Failure to create pool for destination BADER DEV (ORIGINAL) [NAME=BADER DEV ASHOST=10.255.136.65 SYSNR=04 USER=UTE PASSWD=******** CLIENT=910 LANG=EN SAPROUTER=/H/172.20.1.42/H/10.255.136.37 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '172.20.1.42:3299' not reached
+TIME        Fri Jul 29 18:36:26 2022
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 172.20.1.42:3299
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     16
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2022-07-29 18:36:26.507 [Thread 1]
+[NAME=BADER DEV ASHOST=10.255.136.65 SYSNR=04 USER=UTE PASSWD=******** CLIENT=910 LANG=EN SAPROUTER=/H/172.20.1.42/H/10.255.136.37 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '172.20.1.42:3299' not reached
+TIME        Fri Jul 29 18:36:26 2022
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 172.20.1.42:3299
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     16
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   en SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   en SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   en SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+>> Error entry 2022-07-29 18:36:53.405 [Thread 1]
+Failure to create pool for destination BADER DEV (ORIGINAL) [NAME=BADER DEV ASHOST=10.255.136.65 SYSNR=04 USER=UTE PASSWD=******** CLIENT=910 LANG=EN SAPROUTER=/H/172.20.1.42/H/10.255.136.37 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '172.20.1.42:3299' not reached
+TIME        Fri Jul 29 18:36:53 2022
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 172.20.1.42:3299
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     18
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2022-07-29 18:36:53.406 [Thread 1]
+[NAME=BADER DEV ASHOST=10.255.136.65 SYSNR=04 USER=UTE PASSWD=******** CLIENT=910 LANG=EN SAPROUTER=/H/172.20.1.42/H/10.255.136.37 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '172.20.1.42:3299' not reached
+TIME        Fri Jul 29 18:36:53 2022
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 172.20.1.42:3299
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     18
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   en SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   en SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   en SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+>> Error entry 2022-07-29 18:37:20.924 [Thread 1]
+Failure to create pool for destination BADER DEV (ORIGINAL) [NAME=BADER DEV ASHOST=10.255.136.65 SYSNR=04 USER=UTE PASSWD=******** CLIENT=910 LANG=EN SAPROUTER=/H/172.20.1.42/H/10.255.136.37 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '172.20.1.42:3299' not reached
+TIME        Fri Jul 29 18:37:20 2022
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 172.20.1.42:3299
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     20
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2022-07-29 18:37:20.924 [Thread 1]
+[NAME=BADER DEV ASHOST=10.255.136.65 SYSNR=04 USER=UTE PASSWD=******** CLIENT=910 LANG=EN SAPROUTER=/H/172.20.1.42/H/10.255.136.37 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '172.20.1.42:3299' not reached
+TIME        Fri Jul 29 18:37:20 2022
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 172.20.1.42:3299
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     20
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   en SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   en SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   en SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+>> Error entry 2022-07-29 18:37:47.659 [Thread 1]
+Failure to create pool for destination BADER DEV (ORIGINAL) [NAME=BADER DEV ASHOST=10.255.136.65 SYSNR=04 USER=UTE PASSWD=******** CLIENT=910 LANG=EN SAPROUTER=/H/172.20.1.42/H/10.255.136.37 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '172.20.1.42:3299' not reached
+TIME        Fri Jul 29 18:37:47 2022
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 172.20.1.42:3299
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     22
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2022-07-29 18:37:47.660 [Thread 1]
+[NAME=BADER DEV ASHOST=10.255.136.65 SYSNR=04 USER=UTE PASSWD=******** CLIENT=910 LANG=EN SAPROUTER=/H/172.20.1.42/H/10.255.136.37 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '172.20.1.42:3299' not reached
+TIME        Fri Jul 29 18:37:47 2022
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 172.20.1.42:3299
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     22
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   en SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   en SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   en SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+**** Log file opened by process 22576 at 2022-08-01 14:13:19 (UTC-05:00 Hora de verano central (México))
+
+SAP .NET Connector 3.0 with file version 3.0.11.0 running on 32-bit .NET Framework 4.0.30319.42000
+Program: D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\ReadFiles.exe
+Working directory: D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug
+Operating system:   64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 720, Kernel release: 720, Kernel patch level: 426
+Hostname: DESKTOP-8E05UBG, IP address: 192.168.1.4, IP_v6 address: 
+
+Default trace level: None
+
+>> Error entry 2022-08-01 14:13:19.872 [Thread 1]
+Failure to create pool for destination BADER DEV (ORIGINAL) [NAME=BADER DEV ASHOST=10.255.136.65 SYSNR=04 USER=UTE PASSWD=******** CLIENT=910 LANG=EN SAPROUTER=/H/172.20.1.42/H/10.255.136.37 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '172.20.1.42:3299' not reached
+TIME        Mon Aug 01 14:13:19 2022
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 172.20.1.42:3299
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2022-08-01 14:13:19.876 [Thread 1]
+[NAME=BADER DEV ASHOST=10.255.136.65 SYSNR=04 USER=UTE PASSWD=******** CLIENT=910 LANG=EN SAPROUTER=/H/172.20.1.42/H/10.255.136.37 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '172.20.1.42:3299' not reached
+TIME        Mon Aug 01 14:13:19 2022
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 172.20.1.42:3299
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   en SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   en SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   en SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)

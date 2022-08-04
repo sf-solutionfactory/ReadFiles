@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="ReadFilesConfig.exe" version="1.0.0.0" publicKeyToken="035aaa7e12cdda9e" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="ConfigMail.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="ReadFilesConfig" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="ReadFilesConfig.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3" />
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ReadFilesConfig.exe" size="140768">
+      <assemblyIdentity name="ReadFilesConfig" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>7lVdrCVmT+hD7NKCgeAYvjLn+cy4KxfRsHXZh8F5s8s=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sapnco.dll" size="484864">
+      <assemblyIdentity name="sapnco" version="3.0.0.42" publicKeyToken="50436DCA5C7F7D23" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>BW0ZrurUHrmZDSPoEaG3cr4GkLkqHqsQcbHfprFSU2Q=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sapnco_utils.dll" size="5117440">
+      <assemblyIdentity name="sapnco_utils" version="3.0.0.42" publicKeyToken="50436DCA5C7F7D23" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>B6uHYuY1xgEvunpsDz9Y8vvel7T+V0eknbOInhpXHMU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TaskScheduler.dll" size="45056">
+      <assemblyIdentity name="TaskScheduler" version="1.3.2889.25680" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>bmSLZv1VmDdZWJHORoYQkV3cEibRJvpz6/bP6UrPz2k=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="ConfigMail.ico" size="48048">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>b+2B9gw2OgUO/9qC2/U0V5EvLvP3NfYsk3CUKSO9Bf8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ReadFilesConfig.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>rl5/qDc7Jz+tB+BIbOv9iMGPlRe6YJwrjmU09dnlPcs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- Una lista de las versiones de Windows en la que se ha probado esta aplicación y
+           con la que se ha diseñado para que trabaje. Quite la marca de comentario de los elementos adecuados y Windows seleccionará 
+           automáticamente el entorno más compatible. -->
+      <!-- Windows Vista -->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}" />-->
+      <!-- Windows 7 -->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}" />-->
+      <!-- Windows 8 -->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}" />-->
+      <!-- Windows 8.1 -->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />-->
+      <!-- Windows 10 -->
+      <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=DESKTOP-8E05UBG\rogel" issuerKeyHash="d7b26d8be40b1b61df880a9419c7767e2ff7ef2e" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>cu+jwj9ycI7d8LJh65EGyjc04bI9GpmpP2a0fJtaxdE=</DigestValue></Reference></SignedInfo><SignatureValue>TpAKV+jjQplmDACBrKla53bA44NYbe7MNY64nC1mH/RPuHnQWpG/Tzqu+iXGMBBwECtVX0g+JtWbi/4R5sl4vQb9JPWfCikNxquM1qQH4coDXFQwhIM9ZfBqJM6eplrE20O8tfd4MQl93/IuXWqYeGVS0nN97GxJ13KreI61M6M=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>3BE646w9673KNtLsCi6D1kN1w0BFAO/wqJrid8D2Va8hy5Ktdm++hRnXgwjbJcM/aK1rqhUUUg77etVCVrG50BARKsiRN04IikEUJ4X6LnVbGZ0hC4q8D8XeRRgPHUfku0SmhBwQ+wjbiUDRy4yQT6owYPKlA+sWmAstlQahhuk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="d1c55a9b7cb4663fa9991a3db2e13437ca0691eb61b2f0dd8e70723fc2a3ef72" Description="" Url=""><as:assemblyIdentity name="ReadFilesConfig.exe" version="1.0.0.0" publicKeyToken="035aaa7e12cdda9e" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-8E05UBG\rogel</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>mPN0qgSrJJiy3Ve0HRoT2p1okl9+plSi1QVeYfXlVnY=</DigestValue></Reference></SignedInfo><SignatureValue>e7iDijt6LP+eP7d7Gzr59cwBDDIOikRegl+HFOsgzICsRxmAGQZzOmgtwDLZQM4QPU7afxBXAOp0gfYgWenHVVs2rY+lurBQuRO79vBf7IQhvZGX/D+vtRWMk9Il7SbGY/Y67k2+USleP1jnrMflSJhhDMo3SohcgJXz/lk64bI=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>3BE646w9673KNtLsCi6D1kN1w0BFAO/wqJrid8D2Va8hy5Ktdm++hRnXgwjbJcM/aK1rqhUUUg77etVCVrG50BARKsiRN04IikEUJ4X6LnVbGZ0hC4q8D8XeRRgPHUfku0SmhBwQ+wjbiUDRy4yQT6owYPKlA+sWmAstlQahhuk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB7TCCAVagAwIBAgIQUAWRGQRo55tMWXQqA8ts0jANBgkqhkiG9w0BAQsFADA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtADgARQAwADUAVQBCAEcAXAByAG8AZwBlAGwwHhcNMjIwODAzMTg1ODE4WhcNMjMwODA0MDA1ODE4WjA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtADgARQAwADUAVQBCAEcAXAByAG8AZwBlAGwwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBANwROuOsPeu9yjbS7Aoug9ZDdcNARQDv8Kia4nfA9lWvIcuSrXZvvoUZ14MI2yXDP2ita6oVFFIO+3rVQlaxudAQESrIkTdOCIpBFCeF+i51WxmdIQuKvA/F3kUYDx1H5LtEpoQcEPsI24lA0cuMkE+qMGDypQPrFpgLLZUGoYbpAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAqRzel92uSXWt8yOmTKJfcDRS0EjXxjnn6VE3/hLA2X9pXFKnTIN2bTu2Nm389zIzyaRRKuV2nAdZrT9kacSxa/yawZf/LuGE/w1Hv+p8faBJtlEa4iGG1dNXU4QKWyAt6wMwKysWmXo41VlUoz+wvTHO19UfhPZV60v06adzqVI=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

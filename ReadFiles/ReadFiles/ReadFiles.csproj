@@ -13,7 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>D:\Users\rogel\Documents\GitHub\ReadFiles\Install\v2\</PublishUrl>
+    <PublishUrl>D:\Users\rogel\Documents\GitHub\ReadFiles\Install\20220803\ReadFiles\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -100,6 +100,7 @@
     <Compile Include="IEntities\cfdv32.cs" />
     <Compile Include="IEntities\MAIL_DATA_BE.cs" />
     <Compile Include="IEntities\nomina12_catCFDI_tdCFDI_catNomina.cs" />
+    <Compile Include="IEntities\Pagos20.cs" />
     <Compile Include="IEntities\Pagos10_catCFDI_tdCFDI_catPagos.cs" />
     <Compile Include="IEntities\PARAMETROS_BE.cs" />
     <Compile Include="IPersistence\DataLayer.cs" />

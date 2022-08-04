@@ -46,3 +46,4 @@ D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\ReadFile
 D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\bin\Debug\ReadFiles.application
 D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Debug\ReadFiles.exe.manifest
 D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Debug\ReadFiles.application
+D:\Users\rogel\Documents\GitHub\ReadFiles\ReadFiles\ReadFiles\obj\Debug\ReadFiles.csproj.AssemblyReference.cache
