@@ -1,0 +1,147 @@
+**** Log file opened by process 31300 at 2024-01-17 17:00:51 (UTC-06:00 Hora estándar central (México))
+
+SAP .NET Connector 3.0 with file version 3.0.11.0 running on 32-bit .NET Framework 4.0.30319.42000
+Program: C:\Users\rogel\OneDrive\Documentos\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release\ReadFilesConfig.exe
+Working directory: C:\Users\rogel\OneDrive\Documentos\GitHub\ReadFiles\ReadFiles\ReadFilesConfig\bin\Release
+Operating system:   64-bit 
+Processor: 16x AMD64 (or x64)
+SAP release: 720, Kernel release: 720, Kernel patch level: 426
+Hostname: SF-0034, IP address: 192.168.1.18, IP_v6 address: 
+
+Default trace level: None
+
+>> Error entry 2024-01-17 17:00:51.197 [Thread 1]
+Failure to create pool for destination Cliente (ORIGINAL) [NAME=Cliente ASHOST=192.168.2.4 SYSNR=00 USER=BASIS PASSWD=******** CLIENT=300 LANG=EN SAPROUTER=/H/201.151.136.18 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '201.151.136.18:3299' not reached
+TIME        Wed Jan 17 17:00:51 2024
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 201.151.136.18:3299
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2024-01-17 17:00:51.204 [Thread 1]
+[NAME=Cliente ASHOST=192.168.2.4 SYSNR=00 USER=BASIS PASSWD=******** CLIENT=300 LANG=EN SAPROUTER=/H/201.151.136.18 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '201.151.136.18:3299' not reached
+TIME        Wed Jan 17 17:00:51 2024
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 201.151.136.18:3299
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   en SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   en SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   en SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+>> Error entry 2024-01-17 17:02:42.109 [Thread 1]
+Failure to create pool for destination Cliente (ORIGINAL) [NAME=Cliente ASHOST=192.168.2.4 SYSNR=00 USER=BASIS PASSWD=******** CLIENT=300 LANG=EN SAPROUTER=/H/45.190.236.168 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    SAProuter 40.4 on 'diseko-01a'
+ERROR       partner '192.168.2.4:sapgw00' not reached
+TIME        Wed Jan 17 17:02:41 2024
+RELEASE     754
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -92
+MODULE      D:/depot/bas/754_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 192.168.2.4:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     123599
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2024-01-17 17:02:42.109 [Thread 1]
+[NAME=Cliente ASHOST=192.168.2.4 SYSNR=00 USER=BASIS PASSWD=******** CLIENT=300 LANG=EN SAPROUTER=/H/45.190.236.168 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    SAProuter 40.4 on 'diseko-01a'
+ERROR       partner '192.168.2.4:sapgw00' not reached
+TIME        Wed Jan 17 17:02:41 2024
+RELEASE     754
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -92
+MODULE      D:/depot/bas/754_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 192.168.2.4:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     123599
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   en SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   en SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   en SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+>> Error entry 2024-01-17 17:03:43.928 [Thread 1]
+Failure to create pool for destination Cliente (ORIGINAL) [NAME=Cliente ASHOST=192.168.2.4 SYSNR=00 USER=BASIS PASSWD=******** CLIENT=300 LANG=EN SAPROUTER=/H/45.190.236.168 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    SAProuter 40.4 on 'diseko-01a'
+ERROR       partner '192.168.2.4:sapgw00' not reached
+TIME        Wed Jan 17 17:03:43 2024
+RELEASE     754
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -92
+MODULE      D:/depot/bas/754_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 192.168.2.4:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     123612
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2024-01-17 17:03:43.929 [Thread 1]
+[NAME=Cliente ASHOST=192.168.2.4 SYSNR=00 USER=BASIS PASSWD=******** CLIENT=300 LANG=EN SAPROUTER=/H/45.190.236.168 POOL_SIZE=5 MAX_POOL_SIZE=10 POOL_IDLE_TIMEOUT=600]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    SAProuter 40.4 on 'diseko-01a'
+ERROR       partner '192.168.2.4:sapgw00' not reached
+TIME        Wed Jan 17 17:03:43 2024
+RELEASE     754
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -92
+MODULE      D:/depot/bas/754_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 192.168.2.4:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     123612
+
+   en SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   en SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   en SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   en SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   en SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)

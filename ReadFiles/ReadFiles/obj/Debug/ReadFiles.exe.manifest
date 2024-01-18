@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ReadFiles.exe" size="190432">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ReadFiles.exe" size="190464">
       <assemblyIdentity name="ReadFiles" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>tp3kdNdRTboYs0KNZh8TJ4PT/LgJQHg7j3w7Tnmrf9w=</dsig:DigestValue>
+        <dsig:DigestValue>9xP4C2EN7E374YJFmpBmMbdazGKOzNU/X5gAHUNoe0Y=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

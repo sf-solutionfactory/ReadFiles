@@ -38,6 +38,7 @@ namespace ReadFiles
         {
             FileInfo[] listfilesxml;
             FileInfo[] listfilespdf;
+            nombres[] listfilespdfName;
             DirectoryInfo directory;
             MostrarMensajeConsola("Cargando archivos");
             if (String.IsNullOrEmpty(settings.directorioProv) == false && settings.esActivoDirProv)
@@ -46,7 +47,14 @@ namespace ReadFiles
                 directory = new DirectoryInfo(settings.directorioProv);
                 listfilesxml = directory.GetFiles("*.*", SearchOption.AllDirectories).Where(x => x.Extension == ".XML" || x.Extension == ".xml").ToArray();
                 listfilespdf = directory.GetFiles("*.*", SearchOption.AllDirectories).Where(x => x.Extension == ".PDF" || x.Extension == ".pdf").ToArray();
-                Procesar(listfilesxml, listfilespdf, "P");
+                listfilespdfName = new nombres[listfilespdf.Length];
+                for (int i = 0; i < listfilespdf.Length; i++)
+                {
+                    listfilespdfName[i] = new nombres();
+                    listfilespdfName[i].name = listfilespdf[i].Name;
+                    listfilespdfName[i].upper = listfilespdf[i].Name.ToUpper();
+                }
+                Procesar(listfilesxml, listfilespdf, "P", listfilespdfName);
             }
             else
             {
@@ -58,7 +66,14 @@ namespace ReadFiles
                 directory = new DirectoryInfo(settings.directorioCtes);
                 listfilesxml = directory.GetFiles("*.*", SearchOption.AllDirectories).Where(x => x.Extension == ".XML" || x.Extension == ".xml").ToArray();
                 listfilespdf = directory.GetFiles("*.*", SearchOption.AllDirectories).Where(x => x.Extension == ".PDF" || x.Extension == ".pdf").ToArray();
-                Procesar(listfilesxml, listfilespdf, "C");
+                listfilespdfName = new nombres[listfilespdf.Length];
+                for (int i = 0; i < listfilespdf.Length; i++)
+                {
+                    listfilespdfName[i].name = listfilespdf[i].Name;
+                    listfilespdfName[i].upper = listfilespdf[i].Name.ToUpper();
+                }
+                //Procesar(listfilesxml, listfilespdf, "C");
+                Procesar(listfilesxml, listfilespdf, "P", listfilespdfName);
             }
             else
             {
@@ -70,14 +85,21 @@ namespace ReadFiles
                 directory = new DirectoryInfo(settings.directorioNomina);
                 listfilesxml = directory.GetFiles("*.*", SearchOption.AllDirectories).Where(x => x.Extension == ".XML" || x.Extension == ".xml").ToArray();
                 listfilespdf = directory.GetFiles("*.*", SearchOption.AllDirectories).Where(x => x.Extension == ".PDF" || x.Extension == ".pdf").ToArray();
-                Procesar(listfilesxml, listfilespdf, "C");
+                listfilespdfName = new nombres[listfilespdf.Length];
+                for (int i = 0; i < listfilespdf.Length; i++)
+                {
+                    listfilespdfName[i].name = listfilespdf[i].Name;
+                    listfilespdfName[i].upper = listfilespdf[i].Name.ToUpper();
+                }
+                //Procesar(listfilesxml, listfilespdf, "C");
+                Procesar(listfilesxml, listfilespdf, "P", listfilespdfName);
             }
             else
             {
                 MostrarMensajeConsola("No se agrego directorio de facturas de Nomina Carga Nomina desactivado");
             }
         }
-        private static void Procesar(FileInfo[] fileInfosxml, FileInfo[] fileInfospdf, string clase)
+        private static void Procesar(FileInfo[] fileInfosxml, FileInfo[] fileInfospdf, string clase, nombres[] namesPDF)
         {
             XmlDocument xmlobj          = new XmlDocument();
             TimbreFiscalDigital timbre  = new TimbreFiscalDigital();
@@ -351,6 +373,19 @@ namespace ReadFiles
                 {
                     attach.SAT = "X";
                     attach.RES_PDF = cargaArch(fileInfosxml[i].Name, fileInfospdf, true);
+                    if(attach.RES_PDF.Length==0)
+                    {
+                        string name = fileInfosxml[i].Name.Replace("XML", "PDF").Replace("xml", "pdf").ToUpper();
+                        try
+                        {
+                            name = namesPDF.Where(x => x.upper == name).Select(x => x.name).ToArray()[0];
+                            attach.RES_PDF = cargaArch(name, fileInfospdf, true);
+                        }
+                        catch (Exception)
+                        {
+                            MostrarMensajeConsola("No se encontro archivo PDF");
+                        }
+                    }
                 }
                 else
                 {
@@ -749,7 +784,7 @@ namespace ReadFiles
                 }
                 else
                 {
-                    MostrarMensajeConsola("No se encontro archivo PDF");
+                    //MostrarMensajeConsola("No se encontro archivo PDF");
                 }
             }
             else
